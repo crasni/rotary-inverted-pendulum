@@ -1,0 +1,12 @@
+{
+  "algorithm": "dqn",
+  "seed": 73,
+  "source": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+  "initial_steps": 300000,
+  "final_steps": 375000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

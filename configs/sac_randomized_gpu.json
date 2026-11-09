@@ -1,0 +1,11 @@
+{
+  "seed": 73,
+  "total_steps": 600000,
+  "device": "cuda",
+  "checkpoint_every": 100000,
+  "normalize_observations": true,
+  "reward_scale": 0.2,
+  "resume_checkpoint": "runs/sac_robustness_20261016/train/policy.zip",
+  "resume_warmup_steps": 10000,
+  "save_replay_buffer": false
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "run": 13,
+    "release_s": 5.547,
+    "limited_ticks_in_final_200ms": 3,
+    "initial_limit_lead_ms": 61,
+    "initial_limit_pendulum_deg": 20.3,
+    "initial_limit_arm_speed_rad_s": 3.09,
+    "optimistic_irrecoverable_lead_ms": 80
+  },
+  {
+    "run": 13,
+    "release_s": 7.827,
+    "limited_ticks_in_final_200ms": 9,
+    "initial_limit_lead_ms": 202,
+    "initial_limit_pendulum_deg": 15.2,
+    "initial_limit_arm_speed_rad_s": 2.79,
+    "optimistic_irrecoverable_lead_ms": 80
+  },
+  {
+    "run": 13,
+    "release_s": 11.227,
+    "limited_ticks_in_final_200ms": 9,
+    "initial_limit_lead_ms": 182,
+    "initial_limit_pendulum_deg": 12.2,
+    "initial_limit_arm_speed_rad_s": 3.25,
+    "optimistic_irrecoverable_lead_ms": 81
+  },
+  {
+    "run": 13,
+    "release_s": 11.787,
+    "limited_ticks_in_final_200ms": 1,
+    "initial_limit_lead_ms": 21,
+    "initial_limit_pendulum_deg": 28.6,
+    "initial_limit_arm_speed_rad_s": 3.36,
+    "optimistic_irrecoverable_lead_ms": 81
+  },
+  {
+    "run": 13,
+    "release_s": 14.306,
+    "limited_ticks_in_final_200ms": 10,
+    "initial_limit_lead_ms": 200,
+    "initial_limit_pendulum_deg": 9.8,
+    "initial_limit_arm_speed_rad_s": 2.89,
+    "optimistic_irrecoverable_lead_ms": 200
+  },
+  {
+    "run": 14,
+    "release_s": 6.827,
+    "limited_ticks_in_final_200ms": 7,
+    "initial_limit_lead_ms": 140,
+    "initial_limit_pendulum_deg": 9.6,
+    "initial_limit_arm_speed_rad_s": 3.42,
+    "optimistic_irrecoverable_lead_ms": 121
+  },
+  {
+    "run": 14,
+    "release_s": 10.126,
+    "limited_ticks_in_final_200ms": 8,
+    "initial_limit_lead_ms": 160,
+    "initial_limit_pendulum_deg": 5.1,
+    "initial_limit_arm_speed_rad_s": 3.31,
+    "optimistic_irrecoverable_lead_ms": 140
+  },
+  {
+    "run": 14,
+    "release_s": 12.547,
+    "limited_ticks_in_final_200ms": 10,
+    "initial_limit_lead_ms": 201,
+    "initial_limit_pendulum_deg": 9.1,
+    "initial_limit_arm_speed_rad_s": 4.41,
+    "optimistic_irrecoverable_lead_ms": 102
+  },
+  {
+    "run": 14,
+    "release_s": 14.907,
+    "limited_ticks_in_final_200ms": 6,
+    "initial_limit_lead_ms": 122,
+    "initial_limit_pendulum_deg": 12.5,
+    "initial_limit_arm_speed_rad_s": 2.94,
+    "optimistic_irrecoverable_lead_ms": 161
+  }
+]

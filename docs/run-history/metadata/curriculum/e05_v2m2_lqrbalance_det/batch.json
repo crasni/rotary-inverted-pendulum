@@ -1,0 +1,31 @@
+{
+  "checkpoint": "runs/curriculum/versions/v2m2/policy.zip",
+  "checkpoint_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+  "stage": "lqr_balance",
+  "stage_parameters": {
+    "lift": "lqr",
+    "hold_s": [
+      0.3,
+      0.6
+    ],
+    "theta_deg": 10,
+    "pen_speed": 2.0,
+    "arm_deg": 40,
+    "arm_speed": 3.0,
+    "hanging_fraction": 0.0,
+    "end_after_fall_s": 0.5
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 6.0,
+  "seed": 0,
+  "target": "/dev/ttyUSB0",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-08T03:04:54",
+  "stop_reason": "completed",
+  "episodes_completed": 4
+}

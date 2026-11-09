@@ -1,0 +1,158 @@
+{
+  "docs/results/rig_rl_disturbance/sac_long/policy.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.21176470588235294,
+      "real_held": 0.0,
+      "full_strength": 0.06482969318263436
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/A/checkpoints/sac_1775000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.12643258959822423
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/A/checkpoints/sac_1875000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.2,
+      "real_held": 0.0,
+      "full_strength": 0.11035431302976942
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/A/checkpoints/sac_1975000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.21176470588235294,
+      "real_held": 0.0,
+      "full_strength": 0.08935610410350894
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/A/checkpoints/sac_2075000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.2,
+      "real_held": 0.0,
+      "full_strength": 0.09306899924373971
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/B/checkpoints/sac_1775000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.10115745788237139
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/B/checkpoints/sac_1875000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.08826534903005491
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/B/checkpoints/sac_1975000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.1400696133931428
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/B/checkpoints/sac_2075000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.2,
+      "real_held": 0.0,
+      "full_strength": 0.22081450844426623
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/C/checkpoints/sac_1775000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.2,
+      "real_held": 0.0,
+      "full_strength": 0.11712437167235927
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/C/checkpoints/sac_1875000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.2,
+      "real_held": 0.0,
+      "full_strength": 0.17682869943355878
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/C/checkpoints/sac_1975000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.24651036457219302
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  },
+  "runs/sac_real_starts/C/checkpoints/sac_2075000_steps.zip": {
+    "real_heldout": {
+      "states": 85,
+      "sim_held": 0.18823529411764706,
+      "real_held": 0.0,
+      "full_strength": 0.2758181523852622
+    },
+    "rig_exact": 1,
+    "rig_varied": 10,
+    "combined": 10,
+    "rig_delay30": 10
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "method": "SAC on simulator experience (V1's training simulator) with each batch 50% on-rig policy ticks; no imitation, no other controllers' data",
+  "parent": "runs/sac_finetune/V1/policy.zip",
+  "parent_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "batches": [
+    {
+      "batch": "runs/curriculum/b03_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 2
+    },
+    {
+      "batch": "runs/curriculum/b04_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 9
+    },
+    {
+      "batch": "runs/curriculum/b05_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 10
+    }
+  ],
+  "transitions": 4823,
+  "sim_steps": 60000,
+  "rig_fraction": 0.5,
+  "learning_rate": 0.0001,
+  "seed": 3,
+  "policy_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+  "created": "2026-11-07T23:20:13"
+}

@@ -1,0 +1,11 @@
+{
+  "waveform": "step",
+  "scale": 0.3333,
+  "command_hz": 50,
+  "sample_hz": 200.0,
+  "params": "configs/my_rig.json",
+  "sim_only": false,
+  "complete": false,
+  "replay_tick_s": 0.005,
+  "angle_frame": "firmware hanging-zero, no sign inversion"
+}

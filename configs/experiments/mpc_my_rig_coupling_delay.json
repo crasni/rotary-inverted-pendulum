@@ -1,0 +1,22 @@
+{
+  "arm_command_limits": {
+    "delay_s": 0.015,
+    "speed_rad_s": 4.7,
+    "travel_rad": 1.42
+  },
+  "mpc": {
+    "swing_up": "sac",
+    "approach_brake_speed_rad_s": 4.5,
+    "delay": 0.015,
+    "pendulum_input_delay_s": 0.025,
+    "capture_angle": 0.45,
+    "capture_speed": 6.0,
+    "capture_arm_angle": 0.8,
+    "capture_arm_speed": 3.0,
+    "capture_max_action": 1.0,
+    "r": 30,
+    "horizon": 8,
+    "max_iterations": 20,
+    "solver_ftol": 1e-8
+  }
+}

@@ -1,0 +1,1 @@
+Report run (filmed). Reward-only SAC v6b; run used runs/curriculum/versions/v6b_runner/policy.zip, committed unchanged as rig_rl_disturbance/sac_v6b_reward_only/policy.zip (sha256 7b652fd4…80a4). Video kept by the team, not committed.

@@ -1,0 +1,431 @@
+{
+  "date": "2026-10-16",
+  "gpu": "NVIDIA GeForce RTX 4070 Ti",
+  "contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+  },
+  "training_seed": 0,
+  "training_start": "mixed",
+  "evaluation_seed": 10000,
+  "limitations": "Synthetic starter model. One training seed. Exact hanging start is deterministic. Upright trials are diagnostics. No hardware validation. Jobs overlapped, so runtimes are not isolated device benchmarks. PPO uses CPU rollouts with CUDA gradient updates. Initial fully-CUDA PPO prototype was interrupted and restarted; its time is excluded.",
+  "final": [
+    {
+      "algorithm": "ppo",
+      "steps": 1007616,
+      "training_seconds": 367.5,
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+      "hanging": {
+        "episodes": 1,
+        "successes": 1,
+        "mean_longest_balance_s": 11.8,
+        "safety_stops": 0
+      },
+      "upright": {
+        "episodes": 5,
+        "successes": 5,
+        "mean_longest_balance_s": 14.6,
+        "safety_stops": 0
+      },
+      "perturbed_hanging": {
+        "episodes": 20,
+        "successes": 20,
+        "distribution": "pendulum +/-0.05 rad from hanging, arm +/-5 degrees, zero initial velocities; synthetic starter parameters"
+      }
+    },
+    {
+      "algorithm": "sac",
+      "steps": 300000,
+      "training_seconds": 771.7,
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/policy.zip",
+      "hanging": {
+        "episodes": 1,
+        "successes": 0,
+        "mean_longest_balance_s": 1.64,
+        "safety_stops": 0
+      },
+      "upright": {
+        "episodes": 5,
+        "successes": 5,
+        "mean_longest_balance_s": 14.892000000000001,
+        "safety_stops": 0
+      }
+    },
+    {
+      "algorithm": "dqn",
+      "steps": 300000,
+      "training_seconds": 335.7,
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+      "hanging": {
+        "episodes": 1,
+        "successes": 1,
+        "mean_longest_balance_s": 12.56,
+        "safety_stops": 0
+      },
+      "upright": {
+        "episodes": 5,
+        "successes": 5,
+        "mean_longest_balance_s": 15.0,
+        "safety_stops": 0
+      },
+      "perturbed_hanging": {
+        "episodes": 20,
+        "successes": 20,
+        "distribution": "pendulum +/-0.05 rad from hanging, arm +/-5 degrees, zero initial velocities; synthetic starter parameters"
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_1000000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 1,
+      "mean_longest_balance_s": 11.86,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_1000000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 14.248,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_100000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.0,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_100000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.156,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_200000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.2,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_200000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.176,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_300000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.14,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_300000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.14400000000000002,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_400000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.12,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_400000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.188,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_500000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.3,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_500000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.26,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_600000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.38,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_600000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.23199999999999998,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_700000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.34,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_700000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.33199999999999996,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_800000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.54,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_800000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.36,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_900000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.86,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/checkpoints/ppo_900000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.64,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 1,
+      "mean_longest_balance_s": 11.8,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "ppo",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 14.6,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_100000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.0,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_100000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.22800000000000004,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_200000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.42,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_200000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.372,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_300000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 1.4,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/checkpoints/sac_300000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 14.284,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/policy.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 1.64,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "sac",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/policy.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 14.892000000000001,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_100000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 0,
+      "mean_longest_balance_s": 0.0,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_100000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 0,
+      "mean_longest_balance_s": 0.156,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_200000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 1,
+      "mean_longest_balance_s": 13.14,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_200000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 3,
+      "mean_longest_balance_s": 9.224,
+      "safety_stops": 2
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_300000_steps.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 1,
+      "mean_longest_balance_s": 12.7,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/checkpoints/dqn_300000_steps.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 15.0,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+      "start": "hanging",
+      "episodes": 1,
+      "successes": 1,
+      "mean_longest_balance_s": 12.56,
+      "safety_stops": 0
+    },
+    {
+      "algorithm": "dqn",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+      "start": "upright",
+      "episodes": 5,
+      "successes": 5,
+      "mean_longest_balance_s": 15.0,
+      "safety_stops": 0
+    }
+  ]
+}

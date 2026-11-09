@@ -1,0 +1,20 @@
+{
+  "algorithm": "ppo",
+  "seed": 174,
+  "source": "docs/results/rig_rl/ppo/policy.zip",
+  "source_sha256": "13b525b6f15e049a18af1f93b41c7b0796e645fb91f53ff3a189cd0538acb082",
+  "disturbance_rms_range": [
+    0,
+    12.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0001,
+  "requested_steps": 131072,
+  "initial_steps": 1073152,
+  "final_steps": 1204224,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

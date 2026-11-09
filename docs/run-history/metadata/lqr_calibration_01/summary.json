@@ -1,0 +1,331 @@
+{
+  "baseline_params": "configs/my_rig.json",
+  "training": [
+    "runs/lqr_hw_01",
+    "runs/lqr_hw_02",
+    "runs/lqr_hw_03",
+    "runs/lqr_hw_04"
+  ],
+  "validation": "runs/lqr_hw_05",
+  "holdout": "runs/lqr_hw_06",
+  "metric": "Wrapped pendulum-angle RMSE in degrees, pairs ordered [baseline, fitted]",
+  "method": "Replay recorded acceleration commands at their logged host times using the repository's 5 ms simulator. Each window starts from the recorded state. Fit COM, pivot inertia and friction factors to runs 01\u201304 with a robust angle-error loss.",
+  "short_window_fit": {
+    "window_s": 0.8,
+    "fit_factors": [
+      0.9896338706566483,
+      1.000090095933527,
+      1.0072125037604498,
+      1.0000381560776073
+    ],
+    "metrics": {
+      "training": [
+        45.52853506298741,
+        45.32854188303857
+      ],
+      "validation": [
+        61.05339990466006,
+        59.670502043219045
+      ],
+      "holdout": [
+        44.86829828396785,
+        45.65726577399207
+      ],
+      "run06_first_1s": [
+        4.566340945520108,
+        4.062148679665955
+      ],
+      "run06_first_2s": [
+        34.666617201836516,
+        34.943988349710295
+      ],
+      "run06_first_3s": [
+        59.67538430329157,
+        46.77723650028271
+      ],
+      "run06_first_4s": [
+        71.54524174273686,
+        55.116424835353165
+      ]
+    },
+    "params": {
+      "pendulum": {
+        "derived": {
+          "coulomb_friction_N_m": 9.509361197939949e-06,
+          "inertia_measured_kg_m2": 4.7026311119445216e-05,
+          "inertia_predicted_kg_m2": 4.4473999999999995e-05,
+          "viscous_friction_N_m_s": 1.0363081550887304e-05
+        },
+        "fit": {
+          "decay_constant_s_inv": 0.11446350601894308,
+          "decay_constant_s_inv_all_runs": [
+            0.1157512785155988,
+            0.10714549576373732,
+            0.11446350601894308
+          ],
+          "decay_constant_s_inv_stdev": 0.0037899154031994517,
+          "decay_constant_visc_only_s_inv": 0.1319805597029426,
+          "delta_c_per_half_cycle_rad": 0.002686785364502172,
+          "delta_c_per_half_cycle_rad_all_runs": [
+            0.004008450162436483,
+            0.002686785364502172,
+            0.0007161061651887703
+          ],
+          "delta_c_per_half_cycle_rad_stdev": 0.0013527709562605316,
+          "envelope_rmse_combined_rad": 0.015508123226573032,
+          "envelope_rmse_visc_only_rad": 0.04878381349390821,
+          "initial_amplitude_rad": 1.863769549213628,
+          "mean_pair_amplitude_rad": 0.9745850112433819,
+          "median_run_index": 0,
+          "n_extrema_used": 35,
+          "n_runs": 3,
+          "omega_d_rad_s": 11.303493352900011,
+          "omega_d_rad_s_all_runs": [
+            11.303493352900011,
+            11.244365870420317,
+            11.307639614818129
+          ],
+          "omega_d_rad_s_stdev": 0.028899860442569043,
+          "omega_n_rad_s": 11.304086001863782,
+          "omega_n_rad_s_all_runs": [
+            11.304086001863782,
+            11.244876343701415,
+            11.308218938135857
+          ],
+          "omega_n_rad_s_stdev": 0.028935078771506327,
+          "omega_n_small_amp_rad_s": 12.268612256183182,
+          "omega_n_small_amp_rad_s_all_runs": [
+            12.14363251911491,
+            12.268612256183182,
+            12.29003940601307
+          ],
+          "omega_n_small_amp_rad_s_stdev": 0.064561799815455,
+          "period_s": 0.5558622552352437,
+          "period_s_all_runs": [
+            0.5558622552352437,
+            0.5587852067059002,
+            0.5556584328126064
+          ],
+          "period_s_stdev": 0.0014283597375842544,
+          "r_per_half_cycle": 0.9686990374666767,
+          "r_per_half_cycle_all_runs": [
+            0.9683410945592147,
+            0.9705079749943298,
+            0.9686990374666767
+          ],
+          "r_per_half_cycle_stdev": 0.0009484343194056955,
+          "rest_angle_rad": 0.018354865916073323,
+          "small_amp_period_s": 0.5121349648989814,
+          "small_amp_period_s_all_runs": [
+            0.5174057513095379,
+            0.5121349648989814,
+            0.5112420798346221
+          ],
+          "small_amp_period_s_stdev": 0.002719666629377668,
+          "zeta": 0.01012215156472839,
+          "zeta_all_runs": [
+            0.010239773343595767,
+            0.00952838363791814,
+            0.01012215156472839
+          ],
+          "zeta_stdev": 0.0003113537729044585
+        }
+      },
+      "run_meta": {
+        "collected_at": "2026-11-06T21:11:23",
+        "firmware": "LowLevelServer.ino",
+        "fitted_at": "2026-11-06T21:12:30",
+        "hanging_zero_rad": 0.0,
+        "in_dir": "/home/crasni/ntu/RPL2026/HW1/RPL-hw1-group8/runs/sysid_train_01",
+        "method": "original_peak_envelope_and_CAD_friction",
+        "n_free_swing_runs": 3,
+        "pendulum_com_m": 0.051004594892609875,
+        "pendulum_total_mass_kg": 0.014,
+        "training_sources": [
+          {
+            "file": "free_run_1.npz",
+            "sha256": "7ed7a929caed6c63313a5f776b54367eb498930e24729404cc530c9311fe0f06"
+          },
+          {
+            "file": "free_run_2.npz",
+            "sha256": "dd724419781fb07ce771a224cef6ed166d493baba88523e42d838d434c80b3e9"
+          },
+          {
+            "file": "free_run_3.npz",
+            "sha256": "648ab19b1c8609d19b001ab26aa426fcb43db34ec1096bf84db0a3896f639757"
+          }
+        ],
+        "wizard_version": "2026-05-20"
+      }
+    }
+  },
+  "long_window_fit": {
+    "window_s": 2.8,
+    "fit_factors": [
+      1.016371531016213,
+      0.9999838495631737,
+      1.1039180613214175,
+      1.0171373547909384
+    ],
+    "metrics": {
+      "training": [
+        63.74888377847754,
+        51.99769145214877
+      ],
+      "validation": [
+        67.9807902284491,
+        54.797700537369025
+      ],
+      "holdout": [
+        44.018664260163575,
+        63.26338464870291
+      ],
+      "run06_first_1s": [
+        4.566340945520108,
+        5.362814522868559
+      ],
+      "run06_first_2s": [
+        34.666617201836516,
+        34.389764037332554
+      ],
+      "run06_first_3s": [
+        59.67538430329157,
+        72.97029924171565
+      ],
+      "run06_first_4s": [
+        71.54524174273686,
+        83.76263871114307
+      ]
+    },
+    "params": {
+      "pendulum": {
+        "derived": {
+          "coulomb_friction_N_m": 9.416517021824863e-06,
+          "inertia_measured_kg_m2": 4.578432663591126e-05,
+          "inertia_predicted_kg_m2": 4.4473999999999995e-05,
+          "viscous_friction_N_m_s": 1.1058101315570738e-05
+        },
+        "fit": {
+          "decay_constant_s_inv": 0.11446350601894308,
+          "decay_constant_s_inv_all_runs": [
+            0.1157512785155988,
+            0.10714549576373732,
+            0.11446350601894308
+          ],
+          "decay_constant_s_inv_stdev": 0.0037899154031994517,
+          "decay_constant_visc_only_s_inv": 0.1319805597029426,
+          "delta_c_per_half_cycle_rad": 0.002686785364502172,
+          "delta_c_per_half_cycle_rad_all_runs": [
+            0.004008450162436483,
+            0.002686785364502172,
+            0.0007161061651887703
+          ],
+          "delta_c_per_half_cycle_rad_stdev": 0.0013527709562605316,
+          "envelope_rmse_combined_rad": 0.015508123226573032,
+          "envelope_rmse_visc_only_rad": 0.04878381349390821,
+          "initial_amplitude_rad": 1.863769549213628,
+          "mean_pair_amplitude_rad": 0.9745850112433819,
+          "median_run_index": 0,
+          "n_extrema_used": 35,
+          "n_runs": 3,
+          "omega_d_rad_s": 11.303493352900011,
+          "omega_d_rad_s_all_runs": [
+            11.303493352900011,
+            11.244365870420317,
+            11.307639614818129
+          ],
+          "omega_d_rad_s_stdev": 0.028899860442569043,
+          "omega_n_rad_s": 11.304086001863782,
+          "omega_n_rad_s_all_runs": [
+            11.304086001863782,
+            11.244876343701415,
+            11.308218938135857
+          ],
+          "omega_n_rad_s_stdev": 0.028935078771506327,
+          "omega_n_small_amp_rad_s": 12.268612256183182,
+          "omega_n_small_amp_rad_s_all_runs": [
+            12.14363251911491,
+            12.268612256183182,
+            12.29003940601307
+          ],
+          "omega_n_small_amp_rad_s_stdev": 0.064561799815455,
+          "period_s": 0.5558622552352437,
+          "period_s_all_runs": [
+            0.5558622552352437,
+            0.5587852067059002,
+            0.5556584328126064
+          ],
+          "period_s_stdev": 0.0014283597375842544,
+          "r_per_half_cycle": 0.9686990374666767,
+          "r_per_half_cycle_all_runs": [
+            0.9683410945592147,
+            0.9705079749943298,
+            0.9686990374666767
+          ],
+          "r_per_half_cycle_stdev": 0.0009484343194056955,
+          "rest_angle_rad": 0.018354865916073323,
+          "small_amp_period_s": 0.5121349648989814,
+          "small_amp_period_s_all_runs": [
+            0.5174057513095379,
+            0.5121349648989814,
+            0.5112420798346221
+          ],
+          "small_amp_period_s_stdev": 0.002719666629377668,
+          "zeta": 0.01012215156472839,
+          "zeta_all_runs": [
+            0.010239773343595767,
+            0.00952838363791814,
+            0.01012215156472839
+          ],
+          "zeta_stdev": 0.0003113537729044585
+        }
+      },
+      "run_meta": {
+        "collected_at": "2026-11-06T21:11:23",
+        "firmware": "LowLevelServer.ino",
+        "fitted_at": "2026-11-06T21:12:30",
+        "hanging_zero_rad": 0.0,
+        "in_dir": "/home/crasni/ntu/RPL2026/HW1/RPL-hw1-group8/runs/sysid_train_01",
+        "method": "original_peak_envelope_and_CAD_friction",
+        "n_free_swing_runs": 3,
+        "pendulum_com_m": 0.05099917632772185,
+        "pendulum_total_mass_kg": 0.014,
+        "training_sources": [
+          {
+            "file": "free_run_1.npz",
+            "sha256": "7ed7a929caed6c63313a5f776b54367eb498930e24729404cc530c9311fe0f06"
+          },
+          {
+            "file": "free_run_2.npz",
+            "sha256": "dd724419781fb07ce771a224cef6ed166d493baba88523e42d838d434c80b3e9"
+          },
+          {
+            "file": "free_run_3.npz",
+            "sha256": "648ab19b1c8609d19b001ab26aa426fcb43db34ec1096bf84db0a3896f639757"
+          }
+        ],
+        "wizard_version": "2026-05-20"
+      }
+    }
+  },
+  "envelope": {
+    "source": "runs/envelope_lqr_01",
+    "fit": {
+      "tangential_coupling": -0.996975516814124,
+      "centrifugal_coupling": 0.9077617026475843,
+      "constant_bias_rad_s2": -0.5830642138228015,
+      "r2": 0.7570561217939618,
+      "samples_used": 247,
+      "sim_coupling_gain": 0.999652973171443
+    }
+  },
+  "swing_up_screens": {
+    "holdout_rigs": 48,
+    "baseline_successes": 5,
+    "best_fixed_kick_successes": 6,
+    "best_fixed_kick_arm_guard_stops": 7,
+    "best_energy_target_successes": 5,
+    "baseline_arm_guard_stops": 7
+  },
+  "decision": "Neither fit improved held-out predictions consistently across the tested windows. The swing-up screens also did not provide a reliable replacement. Retain the existing plant and guarded preset."
+}

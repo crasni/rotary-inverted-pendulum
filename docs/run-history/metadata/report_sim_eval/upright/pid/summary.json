@@ -1,0 +1,182 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 43.50093937839673,
+    "final_theta_deg": -0.24291733584504094
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 28.607619685351835,
+    "final_theta_deg": 0.3709065686287994
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 25.106797628184243,
+    "final_theta_deg": 0.1971351026215967
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 5.927292653545844,
+    "final_theta_deg": -0.1129753922550364
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 61.28361776225812,
+    "final_theta_deg": -0.07699658760447471
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 49.91638521002614,
+    "final_theta_deg": 0.12069068529704224
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 58.20702991123361,
+    "final_theta_deg": -0.28380108914372104
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 5.285654270818103,
+    "final_theta_deg": 0.14779017706423234
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.006666666666666667,
+    "longest_balance_s": 0.04,
+    "max_arm_deg": 54.631042350475525,
+    "final_theta_deg": 70.0455633337749
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9493333333333334,
+    "longest_balance_s": 14.14,
+    "max_arm_deg": 60.29035921769447,
+    "final_theta_deg": 0.23121412554244958
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 54.94338197252191,
+    "final_theta_deg": 0.017054470330786668
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 24.26366670477005,
+    "final_theta_deg": 0.10872431313691701
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9666666666666667,
+    "longest_balance_s": 14.48,
+    "max_arm_deg": 22.320833322111866,
+    "final_theta_deg": -0.25035238433649976
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.017333333333333333,
+    "longest_balance_s": 0.08,
+    "max_arm_deg": 52.32123530471203,
+    "final_theta_deg": -44.40256967718461
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.016,
+    "longest_balance_s": 0.12,
+    "max_arm_deg": 57.7475964468206,
+    "final_theta_deg": -31.03457821288118
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.017333333333333333,
+    "longest_balance_s": 0.08,
+    "max_arm_deg": 58.53553538229846,
+    "final_theta_deg": -83.07031397979044
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.018666666666666668,
+    "longest_balance_s": 0.1,
+    "max_arm_deg": 53.10534967746541,
+    "final_theta_deg": -33.29172648390004
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9453333333333334,
+    "longest_balance_s": 14.18,
+    "max_arm_deg": 59.85306508287529,
+    "final_theta_deg": -0.0910826124390581
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9706666666666667,
+    "longest_balance_s": 14.42,
+    "max_arm_deg": 17.170535371613603,
+    "final_theta_deg": 0.3503376137015244
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9653333333333334,
+    "longest_balance_s": 14.48,
+    "max_arm_deg": 15.11835118515873,
+    "final_theta_deg": -0.10104262583666786
+  }
+]

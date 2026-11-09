@@ -1,0 +1,38 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 600,
+    "success": false,
+    "balanced_fraction": 0.06,
+    "longest_balance_s": 0.2,
+    "max_arm_deg": 52.81875102158446,
+    "final_theta_deg": -14.660626309304806,
+    "episode": 0,
+    "policy_updates": 0,
+    "deterministic": true
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 600,
+    "success": false,
+    "balanced_fraction": 0.18833333333333332,
+    "longest_balance_s": 0.9,
+    "max_arm_deg": 61.200004435120825,
+    "final_theta_deg": -157.7858533883066,
+    "episode": 1,
+    "policy_updates": 0,
+    "deterministic": true
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 600,
+    "success": false,
+    "balanced_fraction": 0.09333333333333334,
+    "longest_balance_s": 0.76,
+    "max_arm_deg": 52.14375416176336,
+    "final_theta_deg": -75.33299090042522,
+    "episode": 2,
+    "policy_updates": 0,
+    "deterministic": true
+  }
+]

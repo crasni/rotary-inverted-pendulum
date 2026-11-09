@@ -1,0 +1,8 @@
+{
+  "device": "cpu",
+  "arm_command_limits": {
+    "delay_s": 0.018,
+    "speed_rad_s": 4.4,
+    "travel_rad": 1.35
+  }
+}

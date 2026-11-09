@@ -1,0 +1,15 @@
+{
+  "method": "SAC fine-tuned in V1's training simulator, reward only, with a near-upright penalty on the command change per tick; swing-up anchored to the parent; no rig data, no imitation",
+  "parent": "runs/curriculum/versions/v6b_runner/policy.zip",
+  "parent_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "weight": 15.0,
+  "sigma_deg": 30.0,
+  "steps": 150000,
+  "learning_rate": 0.0001,
+  "anchor_min_deg": 45.0,
+  "anchor_states": 65239,
+  "seed": 0,
+  "minutes": 4.2,
+  "policy_sha256": "86180eeb9c37d726d347a706f3b7744f61739349a17e5fb2b89c61050aad82b0",
+  "created": "2026-11-08T23:25:21"
+}

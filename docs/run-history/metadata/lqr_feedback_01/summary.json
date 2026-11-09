@@ -1,0 +1,77 @@
+{
+  "description": "Paired perturbed MuJoCo rigs with recorded hardware starts. Extra feedback stress adds 4\u201312 ms relative pendulum sensor lag and 0.30 rad/s RMS pendulum velocity noise.",
+  "metrics": [
+    "passes",
+    "arm_guard_stops",
+    "releases",
+    "mean_clipped_balance_commands",
+    "max_arm_deg"
+  ],
+  "episodes_per_batch": 24,
+  "results": {
+    "50196": {
+      "15ms": [
+        10,
+        2,
+        5,
+        24.8,
+        104.2
+      ],
+      "filtered": [
+        11,
+        0,
+        1,
+        8.5,
+        78.5
+      ]
+    },
+    "69561": {
+      "15ms": [
+        13,
+        3,
+        1,
+        19.5,
+        105.7
+      ],
+      "filtered": [
+        12,
+        1,
+        0,
+        13.2,
+        102.7
+      ]
+    },
+    "71319": {
+      "15ms": [
+        10,
+        2,
+        2,
+        36.5,
+        103.6
+      ],
+      "filtered": [
+        13,
+        0,
+        2,
+        21.0,
+        96.3
+      ]
+    },
+    "80589": {
+      "15ms": [
+        15,
+        1,
+        2,
+        30.5,
+        104.4
+      ],
+      "filtered": [
+        16,
+        0,
+        0,
+        16.9,
+        77.9
+      ]
+    }
+  }
+}

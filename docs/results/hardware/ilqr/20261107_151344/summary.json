@@ -1,0 +1,11 @@
+[
+  {
+    "stop_reason": "RuntimeError: Non-finite feedback (firmware fault bits=2, encoder)",
+    "samples": 702,
+    "success": false,
+    "balanced_fraction": 0.16381766381766383,
+    "longest_balance_s": 1.18,
+    "max_arm_deg": 82.01250608149846,
+    "final_theta_deg": 4.3144178510842925
+  }
+]

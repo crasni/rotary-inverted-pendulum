@@ -1,0 +1,8 @@
+{
+  "parent": "sac_v6b_reward_only (runs/curriculum/versions/v6b_runner)",
+  "parent_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "change": "none: runs/curriculum/versions/rnA/policy.zip committed unchanged",
+  "training": "scripts/train_smooth_sac.py --checkpoint runs/curriculum/versions/v6b_runner/policy.zip --rig-noise 1 --steps 200000 (reward-only SAC in V1's training simulator with rig-like heavy-tailed reading noise; swing-up anchored to v6b on SAC's own rig swing-up states; no imitation, no other controllers' data); details in rnA_training.json",
+  "weights_identical": true,
+  "sha256": "02b6eb568131dc1bd37a0f708c86103a3fe8b12d5719cfcb1b75b45f4290a4c5"
+}

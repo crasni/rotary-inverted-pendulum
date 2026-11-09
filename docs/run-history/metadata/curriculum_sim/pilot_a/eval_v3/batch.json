@@ -1,0 +1,30 @@
+{
+  "checkpoint": "runs/curriculum_sim/pilot_a/v3/policy.zip",
+  "checkpoint_sha256": "45b1b209a423e8abd00ab0efdc8672ed93d403e9bbd9a954e868ac61eba702dd",
+  "stage": "balance",
+  "stage_parameters": {
+    "target_energy": [
+      0.985,
+      0.997
+    ],
+    "tolerance": 0.03,
+    "theta_deg": 12,
+    "pen_speed": 3.0,
+    "arm_deg": 20,
+    "arm_speed": 1.5,
+    "hanging_fraction": 0.0
+  },
+  "deterministic": true,
+  "episodes_requested": 8,
+  "episode_seconds": 6.0,
+  "seed": 100,
+  "target": "sim",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T22:28:16",
+  "stop_reason": "completed",
+  "episodes_completed": 8
+}

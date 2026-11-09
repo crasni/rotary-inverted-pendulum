@@ -1,0 +1,20 @@
+{
+  "algorithm": "sac",
+  "seed": 174,
+  "source": "docs/results/rig_rl/sac/policy.zip",
+  "source_sha256": "82826b47765700d9405f7e21e325c19156a81e9305c6193cae05671deba0ab9d",
+  "disturbance_rms_range": [
+    0,
+    12.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0001,
+  "requested_steps": 100000,
+  "initial_steps": 1275000,
+  "final_steps": 1375000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

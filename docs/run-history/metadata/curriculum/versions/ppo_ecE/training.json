@@ -1,0 +1,45 @@
+{
+  "algorithm": "ppo",
+  "seed": 73,
+  "source": "runs/curriculum/versions/ppo_ecB/policy.zip",
+  "source_sha256": "1fea683b45a417d4bd7b17e101f4aa5d69944ddc7a639296c98deca23511ca40",
+  "disturbance_rms_range": [
+    0,
+    6.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0003,
+  "requested_steps": 800000,
+  "initial_steps": 2129920,
+  "final_steps": 2932736,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  },
+  "reset_bank": null,
+  "bank_frac": 0.0,
+  "delay_range": [
+    0.006,
+    0.02
+  ],
+  "action_rate_weight": 0.0,
+  "pen_lag_range": [
+    0.0,
+    0.0
+  ],
+  "fast_arrival_frac": 0.4,
+  "fast_arrival_speed": [
+    6.0,
+    35.0
+  ],
+  "residual": null,
+  "residual_gain": [
+    1.0,
+    1.0
+  ],
+  "random_physics": null,
+  "rig_noise": 0.0,
+  "energy_cap": 60.0,
+  "energy_threshold": 1.05
+}

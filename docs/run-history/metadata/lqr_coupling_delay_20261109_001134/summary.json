@@ -1,0 +1,11 @@
+[
+  {
+    "stop_reason": "KeyboardInterrupt: ",
+    "samples": 281,
+    "success": false,
+    "balanced_fraction": 0.021352313167259787,
+    "longest_balance_s": 0.08,
+    "max_arm_deg": 82.3500062189563,
+    "final_theta_deg": 110.9179741107863
+  }
+]

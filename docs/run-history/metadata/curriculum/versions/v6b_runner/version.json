@@ -1,0 +1,7 @@
+{
+  "parent": "v6b",
+  "parent_sha256": "0888e24dc345034d0267a15534f07d6d99aeb238e0577bbdbc729a763870361d",
+  "change": "replay_buffer_class set to SB3 ReplayBuffer and the training-only anchor wrapper (saved as `train`) removed, so the runner loads it without scripts/; weights unchanged",
+  "weights_identical": true,
+  "sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4"
+}

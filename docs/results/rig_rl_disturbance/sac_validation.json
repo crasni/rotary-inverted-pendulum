@@ -1,0 +1,295 @@
+{
+  "seed": 61000,
+  "episodes": 5,
+  "scenarios": {
+    "rig_varied": [
+      {
+        "delay_s": 0.018,
+        "speed_limit": 4.4,
+        "varied_start": true
+      },
+      0
+    ],
+    "disturbance_9": [
+      {
+        "delay_s": 0.018,
+        "speed_limit": 4.4,
+        "varied_start": true
+      },
+      9
+    ],
+    "disturbance_12": [
+      {
+        "delay_s": 0.018,
+        "speed_limit": 4.4,
+        "varied_start": true
+      },
+      12
+    ],
+    "combined": [
+      {
+        "varied_start": true,
+        "friction_factor": 1.5,
+        "inertia_factor": 1.1,
+        "delay_s": 0.02,
+        "angle_noise": 0.003,
+        "velocity_noise": 0.1,
+        "max_accel": 45.0,
+        "speed_limit": 4.5
+      },
+      0
+    ]
+  },
+  "config": "configs/sac_my_rig.json",
+  "params": "configs/my_rig.json",
+  "results": {
+    "sac_final": {
+      "algorithm": "sac",
+      "checkpoint": "runs/disturbance_rl_v2/sac/policy.zip",
+      "sha256": "5635c82a175150020423551f0936534d2f0ae64dfa3c610a8565a8f71d8988fa",
+      "cases": {
+        "rig_varied": {
+          "passed": 5,
+          "episodes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.192000000000002,
+          "max_arm_deg": 53.77471927815159,
+          "records": [
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.88,
+              "longest_balance_s": 13.2,
+              "max_arm_deg": 50.350659035293546,
+              "final_theta_deg": -0.03468386628535433,
+              "seed": 61000
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8786666666666667,
+              "longest_balance_s": 13.18,
+              "max_arm_deg": 53.77471927815159,
+              "final_theta_deg": 0.15338385757128817,
+              "seed": 61001
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8786666666666667,
+              "longest_balance_s": 13.18,
+              "max_arm_deg": 52.1239765701674,
+              "final_theta_deg": -0.003672561909934456,
+              "seed": 61002
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.88,
+              "longest_balance_s": 13.2,
+              "max_arm_deg": 53.553486601354294,
+              "final_theta_deg": -0.06928470024065281,
+              "seed": 61003
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.88,
+              "longest_balance_s": 13.2,
+              "max_arm_deg": 51.213391907211495,
+              "final_theta_deg": -0.26530807189438305,
+              "seed": 61004
+            }
+          ]
+        },
+        "disturbance_9": {
+          "passed": 2,
+          "episodes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.068000000000001,
+          "max_arm_deg": 74.74489211993573,
+          "records": [
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.8546666666666667,
+              "longest_balance_s": 8.78,
+              "max_arm_deg": 61.58127228357045,
+              "final_theta_deg": 0.8236384890090439,
+              "seed": 61000
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8786666666666667,
+              "longest_balance_s": 13.18,
+              "max_arm_deg": 64.3242393179317,
+              "final_theta_deg": -0.028329428816052365,
+              "seed": 61001
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.904,
+              "longest_balance_s": 13.56,
+              "max_arm_deg": 63.47224687848793,
+              "final_theta_deg": -0.9051763512868229,
+              "seed": 61002
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.8266666666666667,
+              "longest_balance_s": 11.64,
+              "max_arm_deg": 74.74489211993573,
+              "final_theta_deg": -0.9922103542688314,
+              "seed": 61003
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.8266666666666667,
+              "longest_balance_s": 8.18,
+              "max_arm_deg": 58.61426129296321,
+              "final_theta_deg": -1.3819479635457377,
+              "seed": 61004
+            }
+          ]
+        },
+        "disturbance_12": {
+          "passed": 1,
+          "episodes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 6.851999999999999,
+          "max_arm_deg": 80.26777514295148,
+          "records": [
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.7173333333333334,
+              "longest_balance_s": 3.96,
+              "max_arm_deg": 65.99078742777684,
+              "final_theta_deg": 1.5300815572138895,
+              "seed": 61000
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.8506666666666667,
+              "longest_balance_s": 8.94,
+              "max_arm_deg": 78.2805187214989,
+              "final_theta_deg": 0.6385784033377789,
+              "seed": 61001
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8186666666666667,
+              "longest_balance_s": 10.04,
+              "max_arm_deg": 75.8565489259963,
+              "final_theta_deg": -1.6467824056963876,
+              "seed": 61002
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.6093333333333333,
+              "longest_balance_s": 3.36,
+              "max_arm_deg": 80.26777514295148,
+              "final_theta_deg": -1.6335296307011795,
+              "seed": 61003
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": false,
+              "balanced_fraction": 0.7946666666666666,
+              "longest_balance_s": 7.96,
+              "max_arm_deg": 70.11798066466316,
+              "final_theta_deg": -2.7424596237582834,
+              "seed": 61004
+            }
+          ]
+        },
+        "combined": {
+          "passed": 5,
+          "episodes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.128,
+          "max_arm_deg": 56.78788108082117,
+          "records": [
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.876,
+              "longest_balance_s": 13.14,
+              "max_arm_deg": 51.65294492303107,
+              "final_theta_deg": 0.25840918681252867,
+              "seed": 61000
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8746666666666667,
+              "longest_balance_s": 13.12,
+              "max_arm_deg": 56.78788108082117,
+              "final_theta_deg": 0.4013283385827525,
+              "seed": 61001
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8746666666666667,
+              "longest_balance_s": 13.12,
+              "max_arm_deg": 54.57735930709566,
+              "final_theta_deg": 0.8034621774573953,
+              "seed": 61002
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.876,
+              "longest_balance_s": 13.14,
+              "max_arm_deg": 55.694199539032596,
+              "final_theta_deg": 0.6936561214032594,
+              "seed": 61003
+            },
+            {
+              "stop_reason": "duration",
+              "samples": 750,
+              "success": true,
+              "balanced_fraction": 0.8746666666666667,
+              "longest_balance_s": 13.12,
+              "max_arm_deg": 53.45327289419105,
+              "final_theta_deg": 0.7013352338079878,
+              "seed": 61004
+            }
+          ]
+        }
+      }
+    }
+  },
+  "note": "Simulation only; surrogate disturbance is not hardware validation.",
+  "input_sha256": {
+    "configs/sac_my_rig.json": "3e536dbe6f78564aa159325584a0cab6a8c54f033c20132b4fe78c4c0f7a26a3",
+    "configs/my_rig.json": "14d0eab5d939b8fbae869114473ea37e68382706417d076ff1db4ecb0dd4e80f"
+  }
+}

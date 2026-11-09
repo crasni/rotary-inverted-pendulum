@@ -1,0 +1,35 @@
+{
+  "method": "offline SAC updates (ordinary SAC losses) on on-rig policy ticks only; no imitation, no other controllers' data",
+  "parent": "runs/sac_finetune/V1/policy.zip",
+  "parent_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "batches": [
+    {
+      "batch": "runs/curriculum/b03_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 2
+    },
+    {
+      "batch": "runs/curriculum/b04_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 9
+    },
+    {
+      "batch": "runs/curriculum/b05_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 10
+    }
+  ],
+  "transitions": 4823,
+  "critic_warmup": 2000,
+  "gradient_steps": 2500,
+  "learning_rate": 3e-05,
+  "seed": 2,
+  "policy_sha256": "9e3a5558774a8775ea0fc39f9e2abba48bd81ad846f72444e36a58d18e335ee8",
+  "created": "2026-11-07T23:28:30"
+}

@@ -1,0 +1,93 @@
+{
+  "description": "Assisted-start stages for on-rig SAC learning (scripts/rig_curriculum.py). target_energy is the normalized pendulum energy the lift aims for (1 = upright at rest; cos(a) = rises to a from upright); the policy takes over inside the window. Training only: every evaluation of the graded task starts hanging with no lift. Stages with \"lift\": \"lqr\" place the pendulum with the rig-proven LQR preset (configs/lqr_my_rig_coupling_delay.json) and hand over after LQR has held upright for hold_s (sampled from the range) and the state is inside the window; LQR ticks are never training data.",
+  "stages": {
+    "lqr_balance": {
+      "lift": "lqr",
+      "hold_s": [
+        0.3,
+        0.6
+      ],
+      "theta_deg": 10,
+      "pen_speed": 2.0,
+      "arm_deg": 40,
+      "arm_speed": 3.0,
+      "hanging_fraction": 0.0,
+      "end_after_fall_s": 0.5
+    },
+    "lqr_capture": {
+      "lift": "lqr",
+      "hold_s": [
+        0.0,
+        0.3
+      ],
+      "theta_deg": 20,
+      "pen_speed": 4.5,
+      "arm_deg": 35,
+      "arm_speed": 3.0,
+      "hanging_fraction": 0.0
+    },
+    "lqr_mixed": {
+      "lift": "lqr",
+      "hold_s": [
+        0.0,
+        1.0
+      ],
+      "theta_deg": 20,
+      "pen_speed": 4.5,
+      "arm_deg": 35,
+      "arm_speed": 3.0,
+      "hanging_fraction": 0.34
+    },
+    "balance": {
+      "target_energy": [
+        0.985,
+        0.997
+      ],
+      "tolerance": 0.03,
+      "theta_deg": 12,
+      "pen_speed": 3.0,
+      "arm_deg": 20,
+      "arm_speed": 1.5,
+      "hanging_fraction": 0.0
+    },
+    "capture": {
+      "target_energy": [
+        0.965,
+        1.005
+      ],
+      "tolerance": 0.04,
+      "theta_deg": 20,
+      "pen_speed": 4.5,
+      "arm_deg": 25,
+      "arm_speed": 2.0,
+      "hanging_fraction": 0.0
+    },
+    "recover": {
+      "target_energy": [
+        0.91,
+        1.02
+      ],
+      "tolerance": 0.05,
+      "theta_deg": 30,
+      "pen_speed": 6.0,
+      "arm_deg": 30,
+      "arm_speed": 2.5,
+      "hanging_fraction": 0.0
+    },
+    "mixed": {
+      "target_energy": [
+        0.91,
+        1.02
+      ],
+      "tolerance": 0.05,
+      "theta_deg": 30,
+      "pen_speed": 6.0,
+      "arm_deg": 30,
+      "arm_speed": 2.5,
+      "hanging_fraction": 0.34
+    },
+    "hanging": {
+      "hanging_fraction": 1.0
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "seed": 0,
+  "total_steps": 1000000,
+  "learning_rate": 0.0003,
+  "device": "cuda",
+  "checkpoint_every": 100000,
+  "ppo": {
+    "n_steps": 8192,
+    "batch_size": 1024,
+    "n_epochs": 10,
+    "ent_coef": 0.01,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          128,
+          128
+        ],
+        "vf": [
+          128,
+          128
+        ]
+      }
+    }
+  },
+  "normalize_observations": true,
+  "reward_scale": 0.05,
+  "cpu_rollouts": true
+}

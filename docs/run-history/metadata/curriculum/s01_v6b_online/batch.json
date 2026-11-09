@@ -1,0 +1,58 @@
+{
+  "checkpoint": "runs/curriculum/versions/v6b_runner/policy.zip",
+  "checkpoint_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "stage": "online",
+  "training_stage": "lqr_balance",
+  "stage_parameters": {
+    "lift": "lqr",
+    "hold_s": [
+      0.3,
+      0.6
+    ],
+    "theta_deg": 10,
+    "pen_speed": 2.0,
+    "arm_deg": 40,
+    "arm_speed": 3.0,
+    "hanging_fraction": 0.0,
+    "end_after_fall_s": 0.5
+  },
+  "deterministic": false,
+  "method": "on-rig SAC: LayerNorm/dropout critics, symmetric sampling with earlier SAC rig data, swing-up anchor, pink exploration noise, arm-guard reward; no imitation, no other controllers' data",
+  "arguments": {
+    "checkpoint": "runs/curriculum/versions/v6b_runner/policy.zip",
+    "output": "runs/curriculum/s01_v6b_online",
+    "port": "/dev/ttyUSB0",
+    "sim": "False",
+    "realtime": "False",
+    "episodes": "60",
+    "train_seconds": "8.0",
+    "eval_seconds": "15.0",
+    "eval_every": "5",
+    "stage": "lqr_balance",
+    "noise": "pink",
+    "utd": "8.0",
+    "prior_fraction": "0.5",
+    "learning_rate": "0.0001",
+    "critic_hidden": "[256, 256]",
+    "critic_dropout": "0.01",
+    "critic_warmup": "20000",
+    "anchor_min_deg": "30.0",
+    "anchor_steps": "2",
+    "critic_per_actor": "8.0",
+    "guard_weight": "20.0",
+    "guard_start_deg": "45.0",
+    "buffer_size": "300000",
+    "learner_threads": "4",
+    "no_catch_up": "False",
+    "seed": "0"
+  },
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "target": "/dev/ttyUSB0",
+  "started": "2026-11-08T22:14:58",
+  "stop_reason": "completed",
+  "episodes_completed": 60
+}

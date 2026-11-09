@@ -1,0 +1,102 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 300,
+    "success": false,
+    "balanced_fraction": 0.3,
+    "longest_balance_s": 0.42,
+    "max_arm_deg": 57.825,
+    "final_theta_deg": 15.468749999999998,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": null,
+    "max_arm_while_upright_deg": 57.825,
+    "limiter_override_fraction": 0.016666666666666666,
+    "lift_s": 4.9,
+    "handover": [
+      0.049087385212340524,
+      -0.0644271930911966,
+      -1.472621556370215,
+      1.1504855909142409
+    ],
+    "episode": 0,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9882374405651664,
+    "reset_s": 5.48
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 300,
+    "success": false,
+    "balanced_fraction": 0.4533333333333333,
+    "longest_balance_s": 1.06,
+    "max_arm_deg": 68.79375,
+    "final_theta_deg": 8.70117187500005,
+    "holds_over_1s": 1,
+    "arm_drift_while_upright_deg_s": 62.47248427672956,
+    "max_arm_while_upright_deg": 68.79375,
+    "limiter_override_fraction": 0.06333333333333334,
+    "lift_s": 4.32,
+    "handover": [
+      0.13548118318605984,
+      0.0766990393942848,
+      1.4726215563702159,
+      -1.3422331894004103
+    ],
+    "episode": 1,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9851983316263423,
+    "reset_s": 5.16
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 300,
+    "success": false,
+    "balanced_fraction": 0.38666666666666666,
+    "longest_balance_s": 0.7,
+    "max_arm_deg": 72.05625,
+    "final_theta_deg": 71.36718749999997,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 90.99776785714288,
+    "max_arm_while_upright_deg": 71.43750000000001,
+    "limiter_override_fraction": 0.06,
+    "lift_s": 4.82,
+    "handover": [
+      0.1796598298771663,
+      -0.056757289151768475,
+      -1.4726215563702176,
+      1.7257283863711947
+    ],
+    "episode": 2,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9959530669273327,
+    "reset_s": 4.62
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 300,
+    "success": false,
+    "balanced_fraction": 0.31333333333333335,
+    "longest_balance_s": 0.74,
+    "max_arm_deg": 57.4875,
+    "final_theta_deg": -37.617187500000085,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 84.14695945945947,
+    "max_arm_while_upright_deg": 57.4875,
+    "limiter_override_fraction": 0.03666666666666667,
+    "lift_s": 4.9,
+    "handover": [
+      0.0471238898038469,
+      0.0322135965455983,
+      -1.4726215563702159,
+      2.1092235833427564
+    ],
+    "episode": 3,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9937539587318079,
+    "reset_s": 3.84
+  }
+]

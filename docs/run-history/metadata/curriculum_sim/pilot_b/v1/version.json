@@ -1,0 +1,21 @@
+{
+  "method": "offline SAC updates (ordinary SAC losses) on on-rig policy ticks only; no imitation, no other controllers' data",
+  "parent": "runs/sac_finetune/V1/policy.zip",
+  "parent_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "batches": [
+    {
+      "batch": "runs/curriculum_sim/pilot_b/train_1",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "balance",
+      "deterministic": false,
+      "episodes": 10
+    }
+  ],
+  "transitions": 2980,
+  "critic_warmup": 2000,
+  "gradient_steps": 6000,
+  "learning_rate": 3e-05,
+  "seed": 1,
+  "policy_sha256": "ce85157bcc8b164799cb9a9ab096651d020528d56b9f6d47fecea59dad5685da",
+  "created": "2026-11-07T22:39:25"
+}

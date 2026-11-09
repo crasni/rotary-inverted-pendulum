@@ -1,0 +1,173 @@
+{
+  "method": "RLPD-style mixed replay: SAC updates on half hardware, half simulator transitions",
+  "source": "docs/results/rig_rl_disturbance/sac_long/policy.zip",
+  "source_sha256": "fd817f79951cc0705e896e0babf86cbdd20237205b8d8361db0bb47a5e239797",
+  "real_fraction": 0.0,
+  "steps": 600000,
+  "seed": 1301,
+  "velocity_noise": [
+    0.4,
+    1.2
+  ],
+  "learning_rate": 0.0001,
+  "train_runs": [
+    "docs/results/hardware/ilqr/20261107_151344",
+    "docs/results/hardware/ilqr/20261107_151433",
+    "docs/results/hardware/ilqr/20261107_151547",
+    "docs/results/hardware/ilqr/20261107_152428",
+    "docs/results/hardware/ilqr/20261107_160844",
+    "docs/results/hardware/ilqr/20261107_160921",
+    "docs/results/hardware/ilqr/20261107_160955",
+    "docs/results/hardware/ilqr/20261107_161026",
+    "docs/results/hardware/lqr/20261107_022206",
+    "docs/results/hardware/lqr/20261107_022230",
+    "docs/results/hardware/lqr/20261107_022340",
+    "docs/results/hardware/lqr/20261107_022408",
+    "docs/results/hardware/lqr/20261107_022637",
+    "docs/results/hardware/lqr/20261107_023430",
+    "docs/results/hardware/lqr/20261107_025142",
+    "docs/results/hardware/lqr/20261107_025340",
+    "docs/results/hardware/lqr/20261107_025738",
+    "docs/results/hardware/lqr/20261107_025826",
+    "docs/results/hardware/lqr/20261107_025856",
+    "docs/results/hardware/lqr/20261107_030130",
+    "docs/results/hardware/lqr/20261107_145456",
+    "docs/results/hardware/lqr/20261107_145555",
+    "docs/results/hardware/mpc/20261107_150201",
+    "docs/results/hardware/mpc/20261107_150408",
+    "docs/results/hardware/mpc/20261107_150642",
+    "docs/results/hardware/mpc/20261107_150748",
+    "docs/results/hardware/mpc/20261107_150833",
+    "docs/results/hardware/mpc/20261107_151046",
+    "docs/results/hardware/mpc/20261107_151807",
+    "docs/results/hardware/mpc/20261107_151820",
+    "docs/results/hardware/mpc/20261107_151856",
+    "docs/results/hardware/mpc/20261107_151926",
+    "docs/results/hardware/mpc/20261107_152024",
+    "docs/results/hardware/mpc/20261107_152120",
+    "docs/results/hardware/mpc/20261107_152222",
+    "docs/results/hardware/mpc/20261107_152353",
+    "docs/results/hardware/mpc/20261107_153838",
+    "docs/results/hardware/mpc/20261107_153932",
+    "docs/results/hardware/mpc/20261107_154431",
+    "docs/results/hardware/mpc/20261107_154510",
+    "docs/results/hardware/mpc/20261107_155316",
+    "docs/results/hardware/mpc/20261107_155325",
+    "docs/results/hardware/mpc/20261107_155419",
+    "docs/results/hardware/mpc/20261107_155533",
+    "docs/results/hardware/pid/20261107_152516",
+    "docs/results/hardware/pid/20261107_160634",
+    "docs/results/hardware/pid/20261107_160701",
+    "docs/results/hardware/pid/20261107_160734",
+    "docs/results/hardware/pid/20261107_161536",
+    "docs/results/hardware/pid/20261107_161611",
+    "docs/results/hardware/pid/20261107_161650",
+    "docs/results/hardware/sac/20261107_163311",
+    "docs/results/hardware/sac/20261107_163427",
+    "docs/results/hardware/sac/20261107_165548",
+    "docs/results/hardware/sac/20261107_165619",
+    "docs/results/hardware/sac/20261107_165745",
+    "runs/ppo_rig_20261107_175250",
+    "runs/sac_A_20261107_171816",
+    "runs/sac_A_20261107_171906",
+    "runs/sac_A_20261107_171940",
+    "runs/sac_D_20261107_172520",
+    "runs/sac_D_20261107_172552",
+    "runs/sac_F_20261107_174757",
+    "runs/sac_F_20261107_174832",
+    "runs/sac_J_20261107_181415",
+    "runs/sac_rig_20261107_165548",
+    "runs/sac_rig_20261107_165619",
+    "runs/sac_rig_20261107_165745"
+  ],
+  "held_out_runs": [
+    "docs/results/hardware/ilqr/20261107_151300",
+    "docs/results/hardware/ilqr/20261107_160807",
+    "docs/results/hardware/lqr/20261107_022139",
+    "docs/results/hardware/lqr/20261107_022520",
+    "docs/results/hardware/lqr/20261107_025449",
+    "docs/results/hardware/lqr/20261107_030202",
+    "docs/results/hardware/mpc/20261107_150624",
+    "docs/results/hardware/mpc/20261107_151727",
+    "docs/results/hardware/mpc/20261107_152007",
+    "docs/results/hardware/mpc/20261107_153810",
+    "docs/results/hardware/mpc/20261107_154540",
+    "docs/results/hardware/mpc/20261107_155613",
+    "docs/results/hardware/pid/20261107_161502",
+    "docs/results/hardware/sac/20261107_163340",
+    "runs/dqn_rig_20261107_175326",
+    "runs/sac_D_20261107_172455",
+    "runs/sac_F_20261107_174915"
+  ],
+  "real_transitions": {
+    "train": 47430,
+    "held_out": 10666
+  },
+  "monitor": [
+    {
+      "steps": 1725000,
+      "td_train_real": 8.82964038848877,
+      "td_heldout_real": 8.774162292480469
+    },
+    {
+      "steps": 1775000,
+      "td_train_real": 9.803473472595215,
+      "td_heldout_real": 9.98593521118164
+    },
+    {
+      "steps": 1825000,
+      "td_train_real": 10.217260360717773,
+      "td_heldout_real": 10.341957092285156
+    },
+    {
+      "steps": 1875000,
+      "td_train_real": 10.369918823242188,
+      "td_heldout_real": 10.512920379638672
+    },
+    {
+      "steps": 1925000,
+      "td_train_real": 10.646702766418457,
+      "td_heldout_real": 10.720532417297363
+    },
+    {
+      "steps": 1975000,
+      "td_train_real": 11.045419692993164,
+      "td_heldout_real": 11.008257865905762
+    },
+    {
+      "steps": 2025000,
+      "td_train_real": 11.52634334564209,
+      "td_heldout_real": 11.491880416870117
+    },
+    {
+      "steps": 2075000,
+      "td_train_real": 11.618927001953125,
+      "td_heldout_real": 11.633401870727539
+    },
+    {
+      "steps": 2125000,
+      "td_train_real": 11.820080757141113,
+      "td_heldout_real": 12.072141647338867
+    },
+    {
+      "steps": 2175000,
+      "td_train_real": 11.902059555053711,
+      "td_heldout_real": 12.207003593444824
+    },
+    {
+      "steps": 2225000,
+      "td_train_real": 11.822138786315918,
+      "td_heldout_real": 11.993589401245117
+    },
+    {
+      "steps": 2275000,
+      "td_train_real": 12.567930221557617,
+      "td_heldout_real": 12.59872817993164
+    }
+  ],
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  },
+  "params": "configs/my_rig.json"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 8.731747996061975,
+    "final_theta_deg": 0.03423039006101904
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 16.781898044525537,
+    "final_theta_deg": 0.19482487654797429
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 39.65044009414653,
+    "final_theta_deg": 0.03335586872299841
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 0.9693333333333334,
+    "longest_balance_s": 14.4,
+    "max_arm_deg": 30.97964179932309,
+    "final_theta_deg": 0.02427362325291971
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 32.16835086150307,
+    "final_theta_deg": 0.11801468186576204
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 18.096361151442352,
+    "final_theta_deg": -0.22305623904197505
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 31.73357600094581,
+    "final_theta_deg": -0.0761994987504419
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.009333333333333334,
+    "longest_balance_s": 0.04,
+    "max_arm_deg": 45.026017626848464,
+    "final_theta_deg": -61.11126429578866
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 7.097618790274826,
+    "final_theta_deg": 0.08990828016917109
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": true,
+    "balanced_fraction": 1.0,
+    "longest_balance_s": 15.0,
+    "max_arm_deg": 12.207135128271004,
+    "final_theta_deg": 0.053875120463636884
+  }
+]

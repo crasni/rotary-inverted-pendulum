@@ -1,0 +1,40 @@
+[
+  {
+    "stop_reason": "lift_timeout",
+    "samples": 0,
+    "success": false,
+    "longest_balance_s": 0.0,
+    "lift_s": 20.0,
+    "handover": null,
+    "episode": 0,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9882374405651664,
+    "reset_s": 2.7
+  },
+  {
+    "stop_reason": "lift_timeout",
+    "samples": 0,
+    "success": false,
+    "longest_balance_s": 0.0,
+    "lift_s": 20.0,
+    "handover": null,
+    "episode": 1,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9851983316263423,
+    "reset_s": 2.8200000000000003
+  },
+  {
+    "stop_reason": "lift_timeout",
+    "samples": 0,
+    "success": false,
+    "longest_balance_s": 0.0,
+    "lift_s": 20.0,
+    "handover": null,
+    "episode": 2,
+    "deterministic": true,
+    "assisted": true,
+    "target_energy": 0.9959530669273327
+  }
+]

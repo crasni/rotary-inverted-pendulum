@@ -1,0 +1,26 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 300,
+    "success": false,
+    "balanced_fraction": 0.9266666666666666,
+    "longest_balance_s": 5.42,
+    "max_arm_deg": 70.70625000000001,
+    "final_theta_deg": -1.582031249999963,
+    "holds_over_1s": 1,
+    "arm_drift_while_upright_deg_s": 17.798662361623617,
+    "max_arm_while_upright_deg": 70.70625000000001,
+    "limiter_override_fraction": 0.0,
+    "lift_s": 2.6,
+    "handover": [
+      0.3298672286269283,
+      0.1672039058795356,
+      -1.3499030933393634,
+      -0.3834951969712286
+    ],
+    "episode": 0,
+    "deterministic": false,
+    "assisted": true,
+    "target_energy": 0.9885818937209695
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "algorithm": "ppo",
+    "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+    "steps": 1007616,
+    "architecture": "ActorCriticPolicy(\n  (features_extractor): ScaledObservations()\n  (pi_features_extractor): ScaledObservations()\n  (vf_features_extractor): ScaledObservations()\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=24, out_features=128, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=24, out_features=128, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=128, out_features=1, bias=True)\n  (value_net): Linear(in_features=128, out_features=1, bias=True)\n)",
+    "settings": {
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "n_steps": 8192,
+      "batch_size": 1024,
+      "n_epochs": 10,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.01,
+      "vf_coef": 0.5,
+      "max_grad_norm": 0.5
+    },
+    "parameters_with_requires_grad": 39683,
+    "parameter_count_note": "Counts registered parameters with requires_grad; target-network parameters may be counted even when updated by copying rather than gradient descent."
+  },
+  {
+    "algorithm": "dqn",
+    "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+    "steps": 300000,
+    "architecture": "DQNPolicy(\n  (q_net): QNetwork(\n    (features_extractor): ScaledObservations()\n    (q_net): Sequential(\n      (0): Linear(in_features=24, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=5, bias=True)\n    )\n  )\n  (q_net_target): QNetwork(\n    (features_extractor): ScaledObservations()\n    (q_net): Sequential(\n      (0): Linear(in_features=24, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=5, bias=True)\n    )\n  )\n)",
+    "settings": {
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "n_steps": 1,
+      "batch_size": 128,
+      "max_grad_norm": 10,
+      "tau": 1.0,
+      "buffer_size": 200000,
+      "learning_starts": 10000,
+      "gradient_steps": 1,
+      "target_update_interval": 10000,
+      "exploration_fraction": 0.3,
+      "exploration_initial_eps": 1.0,
+      "exploration_final_eps": 0.05,
+      "train_freq": "TrainFreq(frequency=4, unit=<TrainFrequencyUnit.STEP: 'step'>)"
+    },
+    "parameters_with_requires_grad": 40714,
+    "parameter_count_note": "Counts registered parameters with requires_grad; target-network parameters may be counted even when updated by copying rather than gradient descent."
+  },
+  {
+    "algorithm": "sac",
+    "checkpoint": "runs/sac_robustness_20261016/train/policy.zip",
+    "steps": 600000,
+    "architecture": "SACPolicy(\n  (actor): Actor(\n    (features_extractor): ScaledObservations()\n    (latent_pi): Sequential(\n      (0): Linear(in_features=24, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n    )\n    (mu): Linear(in_features=128, out_features=1, bias=True)\n    (log_std): Linear(in_features=128, out_features=1, bias=True)\n  )\n  (critic): ContinuousCritic(\n    (features_extractor): ScaledObservations()\n    (qf0): Sequential(\n      (0): Linear(in_features=25, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=1, bias=True)\n    )\n    (qf1): Sequential(\n      (0): Linear(in_features=25, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=1, bias=True)\n    )\n  )\n  (critic_target): ContinuousCritic(\n    (features_extractor): ScaledObservations()\n    (qf0): Sequential(\n      (0): Linear(in_features=25, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=1, bias=True)\n    )\n    (qf1): Sequential(\n      (0): Linear(in_features=25, out_features=128, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=128, out_features=1, bias=True)\n    )\n  )\n)",
+    "settings": {
+      "learning_rate": 0.0003,
+      "gamma": 0.99,
+      "n_steps": 1,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "tau": 0.005,
+      "buffer_size": 200000,
+      "learning_starts": 310000,
+      "gradient_steps": 1,
+      "target_update_interval": 1,
+      "train_freq": "TrainFreq(frequency=4, unit=<TrainFrequencyUnit.STEP: 'step'>)"
+    },
+    "parameters_with_requires_grad": 99846,
+    "parameter_count_note": "Counts registered parameters with requires_grad; target-network parameters may be counted even when updated by copying rather than gradient descent."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "waveform": "reversal",
+  "scale": 0.3333333333333333,
+  "command_hz": 50,
+  "sample_hz": 200.0,
+  "params": "configs/my_rig.json",
+  "sim_only": false,
+  "complete": true,
+  "replay_tick_s": 0.005,
+  "angle_frame": "firmware hanging-zero, no sign inversion",
+  "motor_rmse_rad": 0.3622806562469194,
+  "pendulum_wrapped_rmse_rad": 0.018169870984913523
+}

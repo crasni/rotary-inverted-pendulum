@@ -1,0 +1,22 @@
+{
+  "arm_command_limits": {
+    "delay_s": 0.015,
+    "speed_rad_s": 4.7,
+    "travel_rad": 1.42
+  },
+  "pid": {
+    "swing_up": "sac",
+    "approach_brake_speed_rad_s": 4.5,
+    "arm_recenter_rate_rad_s": 0.35,
+    "balance_observer": true,
+    "balance_velocity_blend": 0.45,
+    "capture_angle": 0.45,
+    "capture_speed": 6.0,
+    "capture_arm_angle": 0.8,
+    "capture_arm_speed": 3.0,
+    "capture_max_action": 1.0,
+    "balance_state_lead_s": 0.012,
+    "kp": 650,
+    "kd": 60
+  }
+}

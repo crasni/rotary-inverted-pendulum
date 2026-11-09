@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "116": {
+      "holds_lqr_for_final_second": 8,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 11.67
+    },
+    "136": {
+      "holds_lqr_for_final_second": 8,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 8.95
+    },
+    "138": {
+      "holds_lqr_for_final_second": 9,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 6.5
+    }
+  },
+  "braked": {
+    "116": {
+      "holds_lqr_for_final_second": 8,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 8.11
+    },
+    "136": {
+      "holds_lqr_for_final_second": 8,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 3.99
+    },
+    "138": {
+      "holds_lqr_for_final_second": 9,
+      "scenarios": 9,
+      "nominal_20ms_first_crossing_speed_rad_s": 4.31
+    }
+  }
+}

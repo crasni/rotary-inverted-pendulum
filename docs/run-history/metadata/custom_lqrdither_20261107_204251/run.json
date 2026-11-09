@@ -1,0 +1,26 @@
+{
+  "algorithm": "custom",
+  "contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "14d0eab5d939b8fbae869114473ea37e68382706417d076ff1db4ecb0dd4e80f"
+  },
+  "arguments": {
+    "command": "hardware",
+    "algorithm": "custom",
+    "params": "configs/my_rig.json",
+    "config": "configs/custom_lqr_dither_10.json",
+    "output": "runs/custom_lqrdither_20261107_204251",
+    "duration": 15.0,
+    "checkpoint": "docs/results/sac_focused_policy.zip",
+    "port": "/dev/ttyUSB0"
+  }
+}

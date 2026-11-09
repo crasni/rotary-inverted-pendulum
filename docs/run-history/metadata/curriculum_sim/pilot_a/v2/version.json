@@ -1,0 +1,28 @@
+{
+  "method": "offline SAC updates (ordinary SAC losses) on on-rig policy ticks only; no imitation, no other controllers' data",
+  "parent": "runs/curriculum_sim/pilot_a/v1/policy.zip",
+  "parent_sha256": "45d37731b717027ddd88e57ac82e75a81d4375432b8b4bac59a1e365ff75a90d",
+  "batches": [
+    {
+      "batch": "runs/curriculum_sim/pilot_a/train_1",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "balance",
+      "deterministic": false,
+      "episodes": 10
+    },
+    {
+      "batch": "runs/curriculum_sim/pilot_a/train_2",
+      "checkpoint_sha256": "45d37731b717027ddd88e57ac82e75a81d4375432b8b4bac59a1e365ff75a90d",
+      "stage": "balance",
+      "deterministic": false,
+      "episodes": 10
+    }
+  ],
+  "transitions": 5960,
+  "critic_warmup": 0,
+  "gradient_steps": 6000,
+  "learning_rate": 3e-05,
+  "seed": 2,
+  "policy_sha256": "b15ecc83735ceaf7c5f1e5671361930a6e50a65891041be32522683bc4cd6529",
+  "created": "2026-11-07T22:27:49"
+}

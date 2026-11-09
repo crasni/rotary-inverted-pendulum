@@ -1,0 +1,33 @@
+{
+  "algorithm": "sac",
+  "seed": 702,
+  "source": "runs/sac_real_starts/D/policy.zip",
+  "source_sha256": "0707f5cdbb056a71df1cb7e6b29360e97a90afae52eb154d10f3994050144924",
+  "disturbance_rms_range": [
+    0,
+    12.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0001,
+  "requested_steps": 400000,
+  "initial_steps": 2375000,
+  "final_steps": 2775000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  },
+  "reset_bank": "runs/sac_real_starts/bank_train.npz",
+  "bank_frac": 0.25,
+  "delay_range": [
+    0.006,
+    0.02
+  ],
+  "action_rate_weight": 0.0,
+  "pen_lag_range": [
+    0.0,
+    0.025
+  ],
+  "fast_arrival_frac": 0.3,
+  "random_physics": null
+}

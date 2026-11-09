@@ -1,0 +1,283 @@
+{
+ "note": "Held-out simulator stress batch: cases from scripts/transfer_stress.py, hanging starts except varied_starts, 15 s, full-task metric. delay_20ms and delay_30ms use the exact noiseless hanging start, so their 10 seeds are one repeated episode; distinct_* counts each of them once.",
+ "params": "configs/my_rig.json",
+ "seeds": [
+  92000,
+  92009
+ ],
+ "cases": [
+  "varied_starts",
+  "delay_20ms",
+  "delay_30ms",
+  "noise_mild",
+  "combined"
+ ],
+ "methods": {
+  "pid": {
+   "config": "configs/pid_my_rig_lqr_match.json",
+   "checkpoint": "docs/results/sac_focused_policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.62993304681022
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 71.76688253783337
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.553369620250855
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.18198337296634
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 80.83173579810821
+    }
+   },
+   "distinct_passed": 32,
+   "distinct_episodes": 32
+  },
+  "lqr": {
+   "config": "configs/lqr_my_rig_coupling_delay.json",
+   "checkpoint": "docs/results/sac_focused_policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.62993304681022
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 71.76688253783337
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.553369620250855
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.18198337296634
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 81.20900924235274
+    }
+   },
+   "distinct_passed": 32,
+   "distinct_episodes": 32
+  },
+  "ilqr": {
+   "config": "configs/ilqr_my_rig_lqr_match.json",
+   "checkpoint": "docs/results/sac_focused_policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.62993304681022
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 71.76688253783337
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.553369620250855
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.18198337296634
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 80.8662097165665
+    }
+   },
+   "distinct_passed": 32,
+   "distinct_episodes": 32
+  },
+  "mpc": {
+   "config": "configs/mpc_my_rig_transfer.json",
+   "checkpoint": "docs/results/sac_focused_policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.62993304681022
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 71.76688253783337
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.553369620250855
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 73.18198337296634
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 78.27284601054691
+    }
+   },
+   "distinct_passed": 32,
+   "distinct_episodes": 32
+  },
+  "ppo": {
+   "config": "configs/sac_my_rig.json",
+   "checkpoint": "docs/results/rig_rl_disturbance/ppo_ecG/policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.68833095938267
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 52.38130628479049
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 57.03767643054579
+    },
+    "noise_mild": {
+     "passed": 9,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 78.11053155368215
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.8089314519015
+    }
+   },
+   "distinct_passed": 31,
+   "distinct_episodes": 32
+  },
+  "sac": {
+   "config": "configs/sac_my_rig.json",
+   "checkpoint": "docs/results/rig_rl_disturbance/sac_rnA_reward_only/policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 75.18120258483373
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 77.42996414424421
+    },
+    "delay_30ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.5481633757016
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 75.56244808957281
+    },
+    "combined": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.49715125649912
+    }
+   },
+   "distinct_passed": 32,
+   "distinct_episodes": 32
+  },
+  "dqn": {
+   "config": "configs/sac_my_rig.json",
+   "checkpoint": "docs/results/rig_rl_disturbance/dqn_rn05/policy.zip",
+   "cases": {
+    "varied_starts": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.44945924327135
+    },
+    "delay_20ms": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.94517841572231
+    },
+    "delay_30ms": {
+     "passed": 0,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.59239208023615
+    },
+    "noise_mild": {
+     "passed": 10,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 79.01992952619588
+    },
+    "combined": {
+     "passed": 1,
+     "episodes": 10,
+     "safety_stops": 0,
+     "max_arm_deg": 80.80690258495312
+    }
+   },
+   "distinct_passed": 22,
+   "distinct_episodes": 32
+  }
+ }
+}

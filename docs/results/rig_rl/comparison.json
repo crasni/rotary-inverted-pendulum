@@ -1,0 +1,182 @@
+{
+  "params": "configs/my_rig.json",
+  "config": "configs/sac_my_rig.json",
+  "seed": 47200,
+  "cases": {
+    "rig_exact": {
+      "delay_s": 0.018,
+      "speed_limit": 4.4
+    },
+    "rig_varied": {
+      "delay_s": 0.018,
+      "speed_limit": 4.4,
+      "varied_start": true
+    },
+    "combined": {
+      "varied_start": true,
+      "friction_factor": 1.5,
+      "inertia_factor": 1.1,
+      "delay_s": 0.02,
+      "angle_noise": 0.003,
+      "velocity_noise": 0.1,
+      "max_accel": 45.0,
+      "speed_limit": 4.5
+    }
+  },
+  "results": {
+    "ppo": {
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+      "sha256": "9a0859920f9648409f54d2095634c5581d554ecb2c681e55ebe5ef3eb9ac1ffb",
+      "rig_exact": {
+        "passed": 0,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 72.74122429976691
+      },
+      "rig_varied": {
+        "passed": 0,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.3860962479419
+      },
+      "combined": {
+        "passed": 1,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 63.04069914773722
+      }
+    },
+    "dqn": {
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+      "sha256": "b764b165f98b6e9df58721f16787b2864ef9e483ea5445901c4cd2517b38f433",
+      "rig_exact": {
+        "passed": 1,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 38.152445316712374
+      },
+      "rig_varied": {
+        "passed": 3,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 79.15036507062594
+      },
+      "combined": {
+        "passed": 7,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 81.19035839668558
+      }
+    },
+    "sac": {
+      "checkpoint": "docs/results/sac_randomized_policy.zip",
+      "sha256": "d2160f70d548166d86bcb514a87864f53814128b2ea99488f49b4c2910905b12",
+      "rig_exact": {
+        "passed": 1,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 48.408377673057686
+      },
+      "rig_varied": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 49.077655824883465
+      },
+      "combined": {
+        "passed": 1,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 53.91763135352473
+      }
+    },
+    "sac_focused": {
+      "checkpoint": "docs/results/sac_focused_policy.zip",
+      "sha256": "93f85de5e9cce382fc7a4f2a8ff22791e3942a40bf3810f42fcc4eb66c1a5356",
+      "rig_exact": {
+        "passed": 1,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 72.3621600354607
+      },
+      "rig_varied": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 58.93283953971444
+      },
+      "combined": {
+        "passed": 0,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 60.1504097345587
+      }
+    },
+    "ppo_adapted": {
+      "checkpoint": "docs/results/rig_rl/ppo/policy.zip",
+      "sha256": "13b525b6f15e049a18af1f93b41c7b0796e645fb91f53ff3a189cd0538acb082",
+      "rig_exact": {
+        "passed": 0,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 73.68088402215844
+      },
+      "rig_varied": {
+        "passed": 0,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.04544922438593
+      },
+      "combined": {
+        "passed": 0,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 62.956704586513794
+      }
+    },
+    "dqn_adapted": {
+      "checkpoint": "docs/results/rig_rl/dqn/policy.zip",
+      "sha256": "0ea87c69b41d1296af733ff2a224a2b8358e50fe77693d3dddff3e184802347f",
+      "rig_exact": {
+        "passed": 1,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 57.11216664086085
+      },
+      "rig_varied": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 78.26644668724035
+      },
+      "combined": {
+        "passed": 8,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 80.8176544493178
+      }
+    },
+    "sac_adapted": {
+      "checkpoint": "docs/results/rig_rl/sac/policy.zip",
+      "sha256": "82826b47765700d9405f7e21e325c19156a81e9305c6193cae05671deba0ab9d",
+      "rig_exact": {
+        "passed": 1,
+        "episodes": 1,
+        "safety_stops": 0,
+        "max_arm_deg": 54.871039731285286
+      },
+      "rig_varied": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 54.17276135286113
+      },
+      "combined": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 80.70730286102416
+      }
+    }
+  }
+}

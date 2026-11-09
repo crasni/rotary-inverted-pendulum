@@ -1,0 +1,57 @@
+{
+  "profile": "drv8825_32",
+  "microsteps": 32,
+  "baud": 500000,
+  "results": [
+    {
+      "speed_rad_s": 1.5,
+      "accel_rad_s2": 50.0,
+      "cycles": 2,
+      "trace": "v1p5_a50.npz",
+      "passed": true,
+      "measured_peak_speed_rad_s": 3.387005567550659,
+      "measured_max_abs_position_rad": 0.23463770747184753
+    },
+    {
+      "speed_rad_s": 2.5,
+      "accel_rad_s2": 50.0,
+      "cycles": 2,
+      "trace": "v2p5_a50.npz",
+      "passed": true,
+      "measured_peak_speed_rad_s": 4.033575534820557,
+      "measured_max_abs_position_rad": 0.3534291982650757
+    },
+    {
+      "speed_rad_s": 3.5,
+      "accel_rad_s2": 50.0,
+      "cycles": 2,
+      "trace": "v3p5_a50.npz",
+      "passed": true,
+      "measured_peak_speed_rad_s": 5.018909931182861,
+      "measured_max_abs_position_rad": 0.5576327443122864
+    },
+    {
+      "speed_rad_s": 4.5,
+      "accel_rad_s2": 50.0,
+      "cycles": 2,
+      "trace": "v4p5_a50.npz",
+      "passed": true,
+      "measured_peak_speed_rad_s": 5.066628932952881,
+      "measured_max_abs_position_rad": 0.6823146939277649
+    }
+  ],
+  "complete": true,
+  "recommendation_source": {
+    "speed_rad_s": 4.5,
+    "accel_rad_s2": 50.0,
+    "cycles": 2,
+    "trace": "v4p5_a50.npz",
+    "passed": true,
+    "measured_peak_speed_rad_s": 5.066628932952881,
+    "measured_max_abs_position_rad": 0.6823146939277649
+  },
+  "validated_speed_rad_s": 4.5,
+  "recommended_speed_rad_s": 3.6,
+  "validated_accel_rad_s2": 50.0,
+  "recommended_accel_rad_s2": 40.0
+}

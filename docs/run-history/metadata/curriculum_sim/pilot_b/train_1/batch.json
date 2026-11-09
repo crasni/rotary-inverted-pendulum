@@ -1,0 +1,30 @@
+{
+  "checkpoint": "runs/sac_finetune/V1/policy.zip",
+  "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "stage": "balance",
+  "stage_parameters": {
+    "target_energy": [
+      0.985,
+      0.997
+    ],
+    "tolerance": 0.03,
+    "theta_deg": 12,
+    "pen_speed": 3.0,
+    "arm_deg": 20,
+    "arm_speed": 1.5,
+    "hanging_fraction": 0.0
+  },
+  "deterministic": false,
+  "episodes_requested": 10,
+  "episode_seconds": 6.0,
+  "seed": 1,
+  "target": "sim",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T22:39:01",
+  "stop_reason": "completed",
+  "episodes_completed": 10
+}

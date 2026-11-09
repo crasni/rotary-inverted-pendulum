@@ -1,0 +1,7 @@
+[
+  {
+    "stop_reason": "RuntimeError: Non-finite feedback (firmware fault bits=2, encoder)",
+    "samples": 0,
+    "success": false
+  }
+]

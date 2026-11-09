@@ -1,0 +1,7 @@
+[
+  {
+    "stop_reason": "RuntimeError: Start requires a physically centered arm and still hanging pendulum",
+    "samples": 0,
+    "success": false
+  }
+]

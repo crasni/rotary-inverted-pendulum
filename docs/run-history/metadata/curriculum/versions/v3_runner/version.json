@@ -1,0 +1,7 @@
+{
+  "parent": "v3",
+  "parent_sha256": "f04d0be1ab5abf87bf6901184bf77a2cefc373c547acde843d9c9d2cec5df29f",
+  "change": "replay_buffer_class set to SB3 ReplayBuffer so the runner loads it without scripts/; weights unchanged",
+  "weights_identical": true,
+  "sha256": "a9c20948385969bea318052dc5c70eb880edfb655e7bc6892e97687e06781e2b"
+}

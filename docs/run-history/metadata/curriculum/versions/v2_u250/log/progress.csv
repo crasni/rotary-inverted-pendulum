@@ -1,0 +1,2 @@
+train/n_updates,train/learning_rate,train/ent_coef_loss,train/actor_loss,train/critic_loss,train/ent_coef
+558499,3e-05,0.5634606036841869,-324.401990234375,43.30256418609619,0.14961657345294951

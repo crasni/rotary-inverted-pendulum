@@ -1,0 +1,21 @@
+{
+  "checkpoint": "runs/curriculum/versions/v6b_runner/policy.zip",
+  "checkpoint_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "stage": "hanging",
+  "stage_parameters": {
+    "hanging_fraction": 1.0
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 15.0,
+  "seed": 0,
+  "target": "/dev/ttyUSB0",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-08T23:04:49",
+  "stop_reason": "completed",
+  "episodes_completed": 4
+}

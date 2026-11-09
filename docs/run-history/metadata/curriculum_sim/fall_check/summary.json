@@ -1,0 +1,83 @@
+[
+  {
+    "stop_reason": "fell",
+    "samples": 87,
+    "success": false,
+    "balanced_fraction": 0.735632183908046,
+    "longest_balance_s": 1.16,
+    "max_arm_deg": 62.775,
+    "final_theta_deg": 20.91796874999996,
+    "holds_over_1s": 1,
+    "arm_drift_while_upright_deg_s": 59.25646551724139,
+    "max_arm_while_upright_deg": 62.49375,
+    "limiter_override_fraction": 0.011494252873563218,
+    "lift_s": 3.68,
+    "handover": [
+      -0.2159844949342983,
+      -0.004601942363656519,
+      1.3499030933393634,
+      1.3422331893999662
+    ],
+    "episode": 0,
+    "deterministic": false,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 0.38093601412916106,
+    "target_energy": null,
+    "reset_s": 3.3
+  },
+  {
+    "stop_reason": "fell",
+    "samples": 77,
+    "success": false,
+    "balanced_fraction": 0.7272727272727273,
+    "longest_balance_s": 0.94,
+    "max_arm_deg": 38.025,
+    "final_theta_deg": 3.3398437500000457,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 29.022606382978733,
+    "max_arm_while_upright_deg": 38.025,
+    "limiter_override_fraction": 0.07792207792207792,
+    "lift_s": 3.36,
+    "handover": [
+      0.4987278337573797,
+      -0.05982525072754008,
+      -1.2271846303085059,
+      -1.1504855909141298
+    ],
+    "episode": 1,
+    "deterministic": false,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 0.30495829065855873,
+    "target_energy": null,
+    "reset_s": 3.54
+  },
+  {
+    "stop_reason": "fell",
+    "samples": 54,
+    "success": false,
+    "balanced_fraction": 0.5370370370370371,
+    "longest_balance_s": 0.46,
+    "max_arm_deg": 50.90625,
+    "final_theta_deg": 18.98437499999996,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": null,
+    "max_arm_while_upright_deg": 46.63125000000001,
+    "limiter_override_fraction": 0.05555555555555555,
+    "lift_s": 3.86,
+    "handover": [
+      -0.12959069696057898,
+      -0.06442719309119482,
+      -0.36815538909255524,
+      -0.5752427954570649
+    ],
+    "episode": 2,
+    "deterministic": false,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 0.5738266731833165,
+    "target_energy": null,
+    "reset_s": 3.54
+  }
+]

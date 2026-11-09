@@ -1,0 +1,7 @@
+{
+  "parent": "v2m2",
+  "parent_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+  "change": "replay_buffer_class set to stable_baselines3 ReplayBuffer so the checkpoint loads without scripts/finetune_real.py; policy weights unchanged (torch.equal on every tensor)",
+  "weights_identical": true,
+  "sha256": "712a07046b4387d85aaf060d137a9ef250fb6fa998406664261cbe8a35238377"
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "total_steps": 1000000,
+  "learning_rate": 0.0003,
+  "device": "cpu",
+  "checkpoint_every": 25000,
+  "ppo": {
+    "n_steps": 1024,
+    "batch_size": 256,
+    "n_epochs": 10
+  }
+}

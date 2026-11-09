@@ -1,0 +1,1505 @@
+{
+  "date": "2026-10-16",
+  "base_contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+  },
+  "cases": {
+    "nominal_exact": {},
+    "varied_starts": {
+      "varied_start": true
+    },
+    "friction_low": {
+      "friction_factor": 0.5
+    },
+    "friction_high": {
+      "friction_factor": 1.5
+    },
+    "inertia_low": {
+      "inertia_factor": 0.8
+    },
+    "inertia_high": {
+      "inertia_factor": 1.2
+    },
+    "delay_20ms": {
+      "delay_s": 0.02
+    },
+    "delay_30ms": {
+      "delay_s": 0.03
+    },
+    "noise_mild": {
+      "angle_noise": 0.003,
+      "velocity_noise": 0.1
+    },
+    "noise_high": {
+      "angle_noise": 0.01,
+      "velocity_noise": 0.3
+    },
+    "motor_weaker": {
+      "max_accel": 40.0,
+      "speed_limit": 4.0
+    },
+    "combined": {
+      "varied_start": true,
+      "friction_factor": 1.5,
+      "inertia_factor": 1.1,
+      "delay_s": 0.02,
+      "angle_noise": 0.003,
+      "velocity_noise": 0.1,
+      "max_accel": 45.0,
+      "speed_limit": 4.5
+    }
+  },
+  "seed": 30000,
+  "training_seed": 0,
+  "limitations": "Synthetic starter model; stress ranges are hypotheses, not hardware measurements. Deterministic exact hanging cases have one trial; noise and varied-start cases have ten. This suite is used to compare checkpoints, so it is validation evidence, not an independent final hardware-success estimate. Latency covers CPU action computation only, not serial IO or end-to-end loop timing.",
+  "continuation": {
+    "initial_steps": 300000,
+    "final_steps": 600000,
+    "resume_checkpoint": "/home/sean/RPL-hw1-group8/runs/gpu_rl_20261016/sac_train/policy.zip",
+    "replay_restored": false,
+    "note": "Resume keeps saved architecture, preprocessing and optimizer settings; total_steps is additional experience.",
+    "elapsed_seconds": 815.2
+  },
+  "policies": [
+    {
+      "label": "PPO 1.01M",
+      "checkpoint": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+      "policy_sha256": "b933b5cda82cc6d2c2d441ebcb574917fcd9df264e763a3741988ea05a8b232d",
+      "results": [
+        {
+          "algorithm": "ppo",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.8,
+          "max_arm_deg": 64.5502742472287,
+          "action_latency_ms": {
+            "p50": 0.09874800889519975,
+            "p99": 0.22473823613836427,
+            "max": 0.5645920027745888
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.834,
+          "max_arm_deg": 68.53943189683761,
+          "action_latency_ms": {
+            "p50": 0.09922149911290035,
+            "p99": 0.4356883703439979,
+            "max": 1.4525139995384961
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 77.47373071759749,
+          "action_latency_ms": {
+            "p50": 0.10431349801365286,
+            "p99": 0.5811584796174423,
+            "max": 0.902075000340119
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 64.82004888594041,
+          "action_latency_ms": {
+            "p50": 0.10098199709318578,
+            "p99": 0.22446049566497092,
+            "max": 0.5352180014597252
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 60.96195416194806,
+          "action_latency_ms": {
+            "p50": 0.09888650674838573,
+            "p99": 0.8817397897655572,
+            "max": 1.2155919976066798
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.38,
+          "max_arm_deg": 66.30873002854976,
+          "action_latency_ms": {
+            "p50": 0.11218350118724629,
+            "p99": 1.172877820790745,
+            "max": 1.4230990054784343
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.02,
+          "max_arm_deg": 66.89386973410136,
+          "action_latency_ms": {
+            "p50": 0.09937600407283753,
+            "p99": 0.6396687912638295,
+            "max": 1.2089310039300472
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 70.26061572805399,
+          "action_latency_ms": {
+            "p50": 0.09676899935584515,
+            "p99": 0.19243334128987044,
+            "max": 0.2479920076439157
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.394,
+          "max_arm_deg": 64.9716579599878,
+          "action_latency_ms": {
+            "p50": 0.1070849975803867,
+            "p99": 0.27842288196552667,
+            "max": 1.3788959913654253
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 4.46,
+          "max_arm_deg": 65.7576652786809,
+          "action_latency_ms": {
+            "p50": 0.10555600601946935,
+            "p99": 0.2615598084230444,
+            "max": 1.4217220013961196
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.46,
+          "max_arm_deg": 54.13979814530914,
+          "action_latency_ms": {
+            "p50": 0.10043750808108598,
+            "p99": 0.18442367028910667,
+            "max": 0.26303900813218206
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "ppo",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 67.92871681061459,
+          "action_latency_ms": {
+            "p50": 0.1086570046027191,
+            "p99": 0.7779729670437524,
+            "max": 1.6377200081478804
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    {
+      "label": "DQN 300k",
+      "checkpoint": "runs/gpu_rl_20261016/dqn_train/policy.zip",
+      "policy_sha256": "19d2aeb2ba187575740540f610c9c4c10a158d0476b74fab739d53b3cf0bb7f3",
+      "results": [
+        {
+          "algorithm": "dqn",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.56,
+          "max_arm_deg": 71.85480474020862,
+          "action_latency_ms": {
+            "p50": 0.06313750054687262,
+            "p99": 0.14933008293155578,
+            "max": 0.25117200857494026
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.342000000000002,
+          "max_arm_deg": 80.45689950702888,
+          "action_latency_ms": {
+            "p50": 0.06446400220738724,
+            "p99": 0.3981736120476874,
+            "max": 1.1953100038226694
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.54,
+          "max_arm_deg": 42.96920455647042,
+          "action_latency_ms": {
+            "p50": 0.06568399840034544,
+            "p99": 0.17318510115728714,
+            "max": 0.2606900088721886
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 9.18,
+          "max_arm_deg": 61.292922894935046,
+          "action_latency_ms": {
+            "p50": 0.06532500265166163,
+            "p99": 0.5448378644359764,
+            "max": 1.1770730052376166
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.92,
+          "max_arm_deg": 51.756235414402006,
+          "action_latency_ms": {
+            "p50": 0.06522250623675063,
+            "p99": 0.15893270843662313,
+            "max": 0.20447999122552574
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.04,
+          "max_arm_deg": 61.82289384117359,
+          "action_latency_ms": {
+            "p50": 0.06564299837918952,
+            "p99": 0.39763138716807583,
+            "max": 0.7419000030495226
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.6,
+          "max_arm_deg": 60.28568967054219,
+          "action_latency_ms": {
+            "p50": 0.06451900117099285,
+            "p99": 0.16604053074843247,
+            "max": 0.2485919976606965
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 6.8,
+          "max_arm_deg": 78.13839578856562,
+          "action_latency_ms": {
+            "p50": 0.06326550646917894,
+            "p99": 0.16428052185801778,
+            "max": 0.5697689921362326
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.462,
+          "max_arm_deg": 73.00128005729648,
+          "action_latency_ms": {
+            "p50": 0.06843399751232937,
+            "p99": 0.463622328825295,
+            "max": 1.4207439962774515
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 8,
+          "safety_stops": 2,
+          "mean_longest_balance_s": 10.024,
+          "max_arm_deg": 101.01977454430696,
+          "action_latency_ms": {
+            "p50": 0.06865200703032315,
+            "p99": 0.2072888304246588,
+            "max": 0.8725730003789067
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.08,
+          "max_arm_deg": 67.88848225638843,
+          "action_latency_ms": {
+            "p50": 0.06383250001817942,
+            "p99": 0.4561655964062081,
+            "max": 1.1364139936631545
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "dqn",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 47.90665913226396,
+          "action_latency_ms": {
+            "p50": 0.06812700303271413,
+            "p99": 0.1643199966929388,
+            "max": 0.8113399962894619
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    {
+      "label": "SAC 300k",
+      "checkpoint": "runs/gpu_rl_20261016/sac_train/policy.zip",
+      "policy_sha256": "825a44760c36b2f74c358882664cd08418a84a57e122ba5f2ed941046acb752f",
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 1.64,
+          "max_arm_deg": 68.74009280189495,
+          "action_latency_ms": {
+            "p50": 0.12712600437225774,
+            "p99": 0.24660213748575177,
+            "max": 0.8668679947732016
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 3,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 4.226,
+          "max_arm_deg": 80.04406775690185,
+          "action_latency_ms": {
+            "p50": 0.13349000073503703,
+            "p99": 0.6247426847403408,
+            "max": 1.5783899871166795
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.14,
+          "max_arm_deg": 69.20469118319008,
+          "action_latency_ms": {
+            "p50": 0.12982550106244162,
+            "p99": 0.26560996891930694,
+            "max": 0.5742999928770587
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 8.88,
+          "max_arm_deg": 68.61125055395715,
+          "action_latency_ms": {
+            "p50": 0.1316244961344637,
+            "p99": 0.26062631091917865,
+            "max": 0.9578570025041699
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 8.74,
+          "max_arm_deg": 67.98087870101128,
+          "action_latency_ms": {
+            "p50": 0.12573599815368652,
+            "p99": 0.2857787907123565,
+            "max": 1.5438519913004711
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.2,
+          "max_arm_deg": 69.73991478674915,
+          "action_latency_ms": {
+            "p50": 0.12764850544044748,
+            "p99": 0.4550167464185494,
+            "max": 1.2958230072399601
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.74,
+          "max_arm_deg": 72.28813570143701,
+          "action_latency_ms": {
+            "p50": 0.13905049854656681,
+            "p99": 1.0841475456254555,
+            "max": 1.2410140043357387
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 2.22,
+          "max_arm_deg": 81.60218006800373,
+          "action_latency_ms": {
+            "p50": 0.13542050146497786,
+            "p99": 0.8189422934083268,
+            "max": 1.467882000724785
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 4,
+          "safety_stops": 1,
+          "mean_longest_balance_s": 5.512,
+          "max_arm_deg": 101.31651023676336,
+          "action_latency_ms": {
+            "p50": 0.13708400365430862,
+            "p99": 0.2689199958695099,
+            "max": 1.5044629981275648
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 6,
+          "safety_stops": 1,
+          "mean_longest_balance_s": 8.2,
+          "max_arm_deg": 101.04773049840634,
+          "action_latency_ms": {
+            "p50": 0.13768899225397035,
+            "p99": 0.6103340561094224,
+            "max": 1.7286499933106825
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.34,
+          "max_arm_deg": 59.6771675020482,
+          "action_latency_ms": {
+            "p50": 0.1274765090784058,
+            "p99": 0.23414267416228537,
+            "max": 0.3070370003115386
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.718,
+          "max_arm_deg": 90.35572068856752,
+          "action_latency_ms": {
+            "p50": 0.1388160017086193,
+            "p99": 0.604421438620196,
+            "max": 1.6354510007658973
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    {
+      "label": "SAC 350k",
+      "checkpoint": "runs/sac_robustness_20261016/train/checkpoints/sac_350000_steps.zip",
+      "policy_sha256": "07685fe88a702dcb3ce4d13af1a89021386d0bdce9ac858a5ba94c2569c229c0",
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.1,
+          "max_arm_deg": 45.03566306109284,
+          "action_latency_ms": {
+            "p50": 0.13833100092597306,
+            "p99": 0.902318605949403,
+            "max": 1.410231998306699
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.128000000000002,
+          "max_arm_deg": 48.011966870321785,
+          "action_latency_ms": {
+            "p50": 0.13067799591226503,
+            "p99": 0.615321557124844,
+            "max": 1.6702239954611287
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 45.070772469638655,
+          "action_latency_ms": {
+            "p50": 0.12586799857672304,
+            "p99": 0.21749529492808495,
+            "max": 1.0287949990015477
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 6.72,
+          "max_arm_deg": 74.91640555629552,
+          "action_latency_ms": {
+            "p50": 0.12808750034309924,
+            "p99": 0.24422727496130392,
+            "max": 1.435162004781887
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 9.2,
+          "max_arm_deg": 73.53295167212897,
+          "action_latency_ms": {
+            "p50": 0.12735049676848575,
+            "p99": 0.23585464688949284,
+            "max": 0.31112598662730306
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.54,
+          "max_arm_deg": 57.134314221941224,
+          "action_latency_ms": {
+            "p50": 0.1331844978267327,
+            "p99": 0.5415866312978312,
+            "max": 1.4432510070037097
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.82,
+          "max_arm_deg": 47.76558448477892,
+          "action_latency_ms": {
+            "p50": 0.1280404976569116,
+            "p99": 0.2665664193045813,
+            "max": 0.36817499494645745
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 50.51461236110515,
+          "action_latency_ms": {
+            "p50": 0.12738599616568536,
+            "p99": 0.23633194345165973,
+            "max": 0.3007689956575632
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.105999999999998,
+          "max_arm_deg": 46.187589654630266,
+          "action_latency_ms": {
+            "p50": 0.13798099826090038,
+            "p99": 0.5695293418830261,
+            "max": 1.5001360006863251
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 2,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 8.494000000000002,
+          "max_arm_deg": 68.37294693952929,
+          "action_latency_ms": {
+            "p50": 0.13594250049209222,
+            "p99": 0.2945929153065665,
+            "max": 1.4991089992690831
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.44,
+          "max_arm_deg": 40.92545994708317,
+          "action_latency_ms": {
+            "p50": 0.1276600014534779,
+            "p99": 0.27757399613619776,
+            "max": 0.9608160034986213
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.366,
+          "max_arm_deg": 73.19349064153646,
+          "action_latency_ms": {
+            "p50": 0.13635600043926388,
+            "p99": 0.5734897922957335,
+            "max": 1.8015429959632456
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    {
+      "label": "SAC 450k",
+      "checkpoint": "runs/sac_robustness_20261016/train/checkpoints/sac_450000_steps.zip",
+      "policy_sha256": "42a10a8ee6495e78a1427fd43edcea1acceb2a7075b49daa1f2433a62dc4eace",
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.92,
+          "max_arm_deg": 57.6683429987067,
+          "action_latency_ms": {
+            "p50": 0.13553900498664007,
+            "p99": 0.9156380851345597,
+            "max": 2.0641430019168183
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.852,
+          "max_arm_deg": 86.7292973256726,
+          "action_latency_ms": {
+            "p50": 0.13731749641010538,
+            "p99": 0.6523078047030142,
+            "max": 1.7514039936941117
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.16,
+          "max_arm_deg": 50.11903327697895,
+          "action_latency_ms": {
+            "p50": 0.13786499766865745,
+            "p99": 0.2874085018993355,
+            "max": 1.415056991390884
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 50.02419016655333,
+          "action_latency_ms": {
+            "p50": 0.13955950271338224,
+            "p99": 0.704190553806256,
+            "max": 1.1912639893125743
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 50.01251324346581,
+          "action_latency_ms": {
+            "p50": 0.13777850108454004,
+            "p99": 0.626130477903643,
+            "max": 1.5701519878348336
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.12,
+          "max_arm_deg": 51.36872905318222,
+          "action_latency_ms": {
+            "p50": 0.1423325011273846,
+            "p99": 0.3632732183905317,
+            "max": 1.4824550016783178
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.78,
+          "max_arm_deg": 52.2649628512025,
+          "action_latency_ms": {
+            "p50": 0.13617449440062046,
+            "p99": 0.41480129933915943,
+            "max": 1.073117004125379
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 3.04,
+          "max_arm_deg": 91.45127743623003,
+          "action_latency_ms": {
+            "p50": 0.13305249740369618,
+            "p99": 0.26524677668930957,
+            "max": 1.1468950106063858
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.751999999999999,
+          "max_arm_deg": 92.00090501954253,
+          "action_latency_ms": {
+            "p50": 0.14359550550580025,
+            "p99": 0.5858062802872158,
+            "max": 1.579278992721811
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.572,
+          "max_arm_deg": 95.4396716981635,
+          "action_latency_ms": {
+            "p50": 0.14303600619314238,
+            "p99": 0.28467220035963703,
+            "max": 1.5202630020212382
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 4.58,
+          "max_arm_deg": 83.10616950575896,
+          "action_latency_ms": {
+            "p50": 0.13676600065082312,
+            "p99": 0.4086722403008015,
+            "max": 1.5209059929475188
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 52.771391553027705,
+          "action_latency_ms": {
+            "p50": 0.14429850125452504,
+            "p99": 0.577908114646562,
+            "max": 1.7509309982415289
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    {
+      "label": "SAC 600k",
+      "checkpoint": "runs/sac_robustness_20261016/train/policy.zip",
+      "policy_sha256": "047678263e33caed3339c97d113ed1e0d15578d0b348cc2f3215df3b90f07d2d",
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.04,
+          "max_arm_deg": 52.78837126359388,
+          "action_latency_ms": {
+            "p50": 0.13589049922302365,
+            "p99": 0.29386497903033154,
+            "max": 0.6703059916617349
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "varied_starts",
+          "settings": {
+            "varied_start": true
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.054,
+          "max_arm_deg": 68.86532871231596,
+          "action_latency_ms": {
+            "p50": 0.13745250180363655,
+            "p99": 0.28660414347541524,
+            "max": 0.646324988338165
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_low",
+          "settings": {
+            "friction_factor": 0.5
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.16,
+          "max_arm_deg": 51.53044351458019,
+          "action_latency_ms": {
+            "p50": 0.13679049880011007,
+            "p99": 0.2693344339786563,
+            "max": 0.3529319947119802
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "friction_high",
+          "settings": {
+            "friction_factor": 1.5
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 51.505585988162686,
+          "action_latency_ms": {
+            "p50": 0.13494850281858817,
+            "p99": 0.2540396091353614,
+            "max": 0.596593992668204
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_low",
+          "settings": {
+            "inertia_factor": 0.8
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 9.28,
+          "max_arm_deg": 65.20362400137428,
+          "action_latency_ms": {
+            "p50": 0.1481709987274371,
+            "p99": 0.6752880185376853,
+            "max": 1.4974590012570843
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "inertia_high",
+          "settings": {
+            "inertia_factor": 1.2
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.64,
+          "max_arm_deg": 63.69903463938611,
+          "action_latency_ms": {
+            "p50": 0.17409000429324806,
+            "p99": 0.8797245915047823,
+            "max": 1.8287150014657527
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_20ms",
+          "settings": {
+            "delay_s": 0.02
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.38,
+          "max_arm_deg": 58.33506140181887,
+          "action_latency_ms": {
+            "p50": 0.17134649533545598,
+            "p99": 0.7821161182073408,
+            "max": 1.3759240100625902
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "delay_30ms",
+          "settings": {
+            "delay_s": 0.03
+          },
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.36,
+          "max_arm_deg": 58.384201246926324,
+          "action_latency_ms": {
+            "p50": 0.17722749907989055,
+            "p99": 0.9395780230988747,
+            "max": 2.0156329992460087
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_mild",
+          "settings": {
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.102,
+          "max_arm_deg": 96.79470095566973,
+          "action_latency_ms": {
+            "p50": 0.15312500181607902,
+            "p99": 0.6286480590642901,
+            "max": 1.6923270013649017
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "noise_high",
+          "settings": {
+            "angle_noise": 0.01,
+            "velocity_noise": 0.3
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.833999999999998,
+          "max_arm_deg": 83.15655295770817,
+          "action_latency_ms": {
+            "p50": 0.13947649858891964,
+            "p99": 0.26989256264641903,
+            "max": 0.6137960008345544
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "motor_weaker",
+          "settings": {
+            "max_accel": 40.0,
+            "speed_limit": 4.0
+          },
+          "episodes": 1,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 9.18,
+          "max_arm_deg": 70.28570040931695,
+          "action_latency_ms": {
+            "p50": 0.13160950766177848,
+            "p99": 0.24636160349473357,
+            "max": 0.29834599990863353
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 60.658319425973204,
+          "action_latency_ms": {
+            "p50": 0.13625150313600898,
+            "p99": 0.24019584263442098,
+            "max": 0.4193839995423332
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    }
+  ],
+  "holdout": {
+    "contract": {
+      "profile": {
+        "hz": 50,
+        "max_accel": 50.0,
+        "arm_limit_deg": 100.0,
+        "arm_speed_limit": 6.0,
+        "history": 4,
+        "microsteps": 32,
+        "baud": 500000
+      },
+      "action_mode": "accel",
+      "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+    },
+    "episodes_requested": 20,
+    "seed": 40000,
+    "limitations": "Synthetic uncertainty stress tests, not calibrated hardware bounds. One training seed per policy. Exact noiseless hanging resets are deterministic; repeated copies are evaluated once.",
+    "policies": {
+      "sac": "runs/sac_robustness_20261016/train/policy.zip"
+    },
+    "policy_sha256": {
+      "sac": "047678263e33caed3339c97d113ed1e0d15578d0b348cc2f3215df3b90f07d2d"
+    },
+    "results": [
+      {
+        "algorithm": "sac",
+        "case": "varied_starts",
+        "settings": {
+          "varied_start": true
+        },
+        "episodes": 20,
+        "successes": 20,
+        "safety_stops": 0,
+        "mean_longest_balance_s": 11.839999999999998,
+        "max_arm_deg": 91.6457007911028,
+        "action_latency_ms": {
+          "p50": 0.1448405018891208,
+          "p99": 0.6286974278918933,
+          "max": 2.094930998282507
+        },
+        "action_deadline_misses": 0
+      }
+    ]
+  }
+}

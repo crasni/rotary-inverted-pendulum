@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "total_steps": 1000000,
+  "learning_rate": 0.0003,
+  "device": "cpu",
+  "checkpoint_every": 25000,
+  "sac": {
+    "learning_starts": 10000,
+    "buffer_size": 200000,
+    "batch_size": 256
+  }
+}

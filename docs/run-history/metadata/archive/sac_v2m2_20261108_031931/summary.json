@@ -1,0 +1,7 @@
+[
+  {
+    "stop_reason": "RuntimeError: Powered run cancelled",
+    "samples": 0,
+    "success": false
+  }
+]

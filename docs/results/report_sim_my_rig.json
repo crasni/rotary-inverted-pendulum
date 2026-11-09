@@ -1,0 +1,103 @@
+{
+ "note": "Identified-rig simulator GIF runs for Report.md section 7. One deterministic 15 s hanging-start episode each, seed 0, standard simulator, configs/my_rig.json. Regenerated 2026-11-09 on the submitting machine from the committed code (scripts/report_sim_eval.py --check-seed0 reproduces these numbers); the first version, made on another machine, differed by up to 0.3 deg in the final-10 s error.",
+ "runs": {
+  "pid": {
+   "command": "pendulum-lab sim --algorithm pid --params configs/my_rig.json --config configs/pid_my_rig_lqr_match.json --checkpoint docs/results/sac_focused_policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/pid_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 12.88,
+   "balanced_fraction": 0.859,
+   "first_within_15deg_s": 1.62,
+   "final10_max_abs_theta_deg": 0.52,
+   "final10_max_abs_theta_dot_rad_s": 0.15,
+   "max_arm_deg": 54.6,
+   "final10_max_arm_deg": 3.9,
+   "command_rms": 0.284,
+   "final10_command_rms": 0.08
+  },
+  "lqr": {
+   "command": "pendulum-lab sim --algorithm lqr --params configs/my_rig.json --config configs/lqr_my_rig_coupling_delay.json --checkpoint docs/results/sac_focused_policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/lqr_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 12.88,
+   "balanced_fraction": 0.859,
+   "first_within_15deg_s": 1.62,
+   "final10_max_abs_theta_deg": 0.6,
+   "final10_max_abs_theta_dot_rad_s": 0.2,
+   "max_arm_deg": 54.6,
+   "final10_max_arm_deg": 3.1,
+   "command_rms": 0.284,
+   "final10_command_rms": 0.083
+  },
+  "ilqr": {
+   "command": "pendulum-lab sim --algorithm ilqr --params configs/my_rig.json --config configs/ilqr_my_rig_lqr_match.json --checkpoint docs/results/sac_focused_policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/ilqr_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 12.88,
+   "balanced_fraction": 0.859,
+   "first_within_15deg_s": 1.62,
+   "final10_max_abs_theta_deg": 0.5,
+   "final10_max_abs_theta_dot_rad_s": 0.14,
+   "max_arm_deg": 54.6,
+   "final10_max_arm_deg": 5.6,
+   "command_rms": 0.285,
+   "final10_command_rms": 0.085
+  },
+  "mpc": {
+   "command": "pendulum-lab sim --algorithm mpc --params configs/my_rig.json --config configs/mpc_my_rig_transfer.json --checkpoint docs/results/sac_focused_policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/mpc_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 12.88,
+   "balanced_fraction": 0.859,
+   "first_within_15deg_s": 1.62,
+   "final10_max_abs_theta_deg": 0.37,
+   "final10_max_abs_theta_dot_rad_s": 0.2,
+   "max_arm_deg": 54.6,
+   "final10_max_arm_deg": 4.7,
+   "command_rms": 0.284,
+   "final10_command_rms": 0.086
+  },
+  "ppo": {
+   "command": "pendulum-lab sim --algorithm ppo --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/ppo_long/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/ppo_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 13.16,
+   "balanced_fraction": 0.877,
+   "first_within_15deg_s": 1.86,
+   "final10_max_abs_theta_deg": 1.24,
+   "final10_max_abs_theta_dot_rad_s": 0.4,
+   "max_arm_deg": 51.3,
+   "final10_max_arm_deg": 7.1,
+   "command_rms": 0.277,
+   "final10_command_rms": 0.136
+  },
+  "sac": {
+   "command": "pendulum-lab sim --algorithm sac --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/sac_v6b_reward_only/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/sac_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 12.8,
+   "balanced_fraction": 0.853,
+   "first_within_15deg_s": 2.22,
+   "final10_max_abs_theta_deg": 0.46,
+   "final10_max_abs_theta_dot_rad_s": 0.12,
+   "max_arm_deg": 74.5,
+   "final10_max_arm_deg": 6.9,
+   "command_rms": 0.252,
+   "final10_command_rms": 0.077
+  },
+  "dqn": {
+   "command": "pendulum-lab sim --algorithm dqn --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/dqn_long/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "gif": "docs/results/dqn_my_rig.gif",
+   "success": true,
+   "longest_balance_s": 13.28,
+   "balanced_fraction": 0.885,
+   "first_within_15deg_s": 1.74,
+   "final10_max_abs_theta_deg": 2.22,
+   "final10_max_abs_theta_dot_rad_s": 1.05,
+   "max_arm_deg": 61.3,
+   "final10_max_arm_deg": 23.2,
+   "command_rms": 0.89,
+   "final10_command_rms": 0.912
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+  },
+  "episodes_requested": 20,
+  "seed": 40000,
+  "limitations": "Synthetic uncertainty stress tests, not calibrated hardware bounds. One training seed per policy. Exact noiseless hanging resets are deterministic; repeated copies are evaluated once.",
+  "policies": {
+    "sac": "runs/sac_robustness_20261016/train/policy.zip"
+  },
+  "policy_sha256": {
+    "sac": "047678263e33caed3339c97d113ed1e0d15578d0b348cc2f3215df3b90f07d2d"
+  },
+  "results": [
+    {
+      "algorithm": "sac",
+      "case": "varied_starts",
+      "settings": {
+        "varied_start": true
+      },
+      "episodes": 20,
+      "successes": 20,
+      "safety_stops": 0,
+      "mean_longest_balance_s": 11.839999999999998,
+      "max_arm_deg": 91.6457007911028,
+      "action_latency_ms": {
+        "p50": 0.1448405018891208,
+        "p99": 0.6286974278918933,
+        "max": 2.094930998282507
+      },
+      "action_deadline_misses": 0
+    }
+  ]
+}

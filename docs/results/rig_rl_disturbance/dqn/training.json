@@ -1,0 +1,20 @@
+{
+  "algorithm": "dqn",
+  "seed": 174,
+  "source": "docs/results/rig_rl/dqn/policy.zip",
+  "source_sha256": "0ea87c69b41d1296af733ff2a224a2b8358e50fe77693d3dddff3e184802347f",
+  "disturbance_rms_range": [
+    0,
+    12.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0001,
+  "requested_steps": 100000,
+  "initial_steps": 375000,
+  "final_steps": 475000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

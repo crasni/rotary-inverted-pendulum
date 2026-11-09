@@ -1,0 +1,95 @@
+{
+ "note": "Side-by-side material for the passing learning-based policies (2026-11-09). Simulator: one deterministic 15 s hanging-start episode, seed 0, standard simulator, configs/my_rig.json, same command style as docs/results/report_sim_my_rig.json. Hardware: the report run through the official runner. Metrics computed the same way for both.",
+ "runs": {
+  "sac": {
+   "checkpoint": "docs/results/rig_rl_disturbance/sac_rnA_reward_only/policy.zip",
+   "sim_command": "pendulum-lab sim --algorithm sac --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/sac_rnA_reward_only/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "sim_gif": "docs/results/sac_sac_rnA_reward_only_my_rig.gif",
+   "sim": {
+    "success": true,
+    "longest_balance_s": 12.84,
+    "balanced_fraction": 0.856,
+    "first_within_15deg_s": 2.14,
+    "final10_max_abs_theta_deg": 0.32,
+    "final10_max_abs_theta_dot_rad_s": 0.1,
+    "max_arm_deg": 75.3,
+    "final10_max_arm_deg": 9.5,
+    "command_rms": 0.253,
+    "final10_command_rms": 0.041
+   },
+   "hardware_run": "docs/results/hardware/sac/20261109_004713",
+   "hardware": {
+    "success": true,
+    "longest_balance_s": 13.12,
+    "balanced_fraction": 0.875,
+    "first_within_15deg_s": 1.88,
+    "final10_max_abs_theta_deg": 3.08,
+    "final10_max_abs_theta_dot_rad_s": 2.21,
+    "max_arm_deg": 73.7,
+    "final10_max_arm_deg": 36.8,
+    "command_rms": 0.363,
+    "final10_command_rms": 0.31
+   }
+  },
+  "dqn": {
+   "checkpoint": "docs/results/rig_rl_disturbance/dqn_rn05/policy.zip",
+   "sim_command": "pendulum-lab sim --algorithm dqn --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/dqn_rn05/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "sim_gif": "docs/results/dqn_dqn_rn05_my_rig.gif",
+   "sim": {
+    "success": true,
+    "longest_balance_s": 12.68,
+    "balanced_fraction": 0.845,
+    "first_within_15deg_s": 2.32,
+    "final10_max_abs_theta_deg": 0.93,
+    "final10_max_abs_theta_dot_rad_s": 0.47,
+    "max_arm_deg": 77.7,
+    "final10_max_arm_deg": 15.0,
+    "command_rms": 0.439,
+    "final10_command_rms": 0.36
+   },
+   "hardware_run": "docs/results/hardware/dqn/20261109_010341",
+   "hardware": {
+    "success": true,
+    "longest_balance_s": 13.56,
+    "balanced_fraction": 0.904,
+    "first_within_15deg_s": 1.42,
+    "final10_max_abs_theta_deg": 4.22,
+    "final10_max_abs_theta_dot_rad_s": 3.0,
+    "max_arm_deg": 79.8,
+    "final10_max_arm_deg": 25.9,
+    "command_rms": 0.713,
+    "final10_command_rms": 0.709
+   }
+  },
+  "ppo": {
+   "checkpoint": "docs/results/rig_rl_disturbance/ppo_ecG/policy.zip",
+   "sim_command": "pendulum-lab sim --algorithm ppo --params configs/my_rig.json --config configs/sac_my_rig.json --checkpoint docs/results/rig_rl_disturbance/ppo_ecG/policy.zip --start hanging --duration 15 --seed 0 --gif",
+   "sim_gif": "docs/results/ppo_ppo_ecG_my_rig.gif",
+   "sim": {
+    "success": true,
+    "longest_balance_s": 13.2,
+    "balanced_fraction": 0.88,
+    "first_within_15deg_s": 1.8,
+    "final10_max_abs_theta_deg": 5.56,
+    "final10_max_abs_theta_dot_rad_s": 1.53,
+    "max_arm_deg": 48.8,
+    "final10_max_arm_deg": 47.5,
+    "command_rms": 0.838,
+    "final10_command_rms": 0.846
+   },
+   "hardware_run": "docs/results/hardware/ppo/20261109_013508",
+   "hardware": {
+    "success": true,
+    "longest_balance_s": 13.14,
+    "balanced_fraction": 0.876,
+    "first_within_15deg_s": 1.86,
+    "final10_max_abs_theta_deg": 7.12,
+    "final10_max_abs_theta_dot_rad_s": 2.85,
+    "max_arm_deg": 65.8,
+    "final10_max_arm_deg": 65.8,
+    "command_rms": 0.796,
+    "final10_command_rms": 0.812
+   }
+  }
+ }
+}

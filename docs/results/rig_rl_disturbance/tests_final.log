@@ -1,0 +1,160 @@
+..................Using cpu device
+Wrapping the env in a DummyVecEnv.
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 10       |
+|    ep_rew_mean     | 5.62     |
+| time/              |          |
+|    fps             | 981      |
+|    iterations      | 1        |
+|    time_elapsed    | 0        |
+|    total_timesteps | 16       |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 10          |
+|    ep_rew_mean          | 5.41        |
+| time/                   |             |
+|    fps                  | 1142        |
+|    iterations           | 2           |
+|    time_elapsed         | 0           |
+|    total_timesteps      | 32          |
+| train/                  |             |
+|    approx_kl            | 2.30968e-07 |
+|    clip_fraction        | 0           |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.42       |
+|    explained_variance   | -0.0443     |
+|    learning_rate        | 0.0003      |
+|    loss                 | 2.66        |
+|    n_updates            | 1           |
+|    policy_gradient_loss | -7.33e-05   |
+|    std                  | 1           |
+|    value_loss           | 6.78        |
+-----------------------------------------
+....Using cpu device
+Wrapping the env in a DummyVecEnv.
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+Wrapping the env in a DummyVecEnv.
+Wrapping the env in a DummyVecEnv.
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 10       |
+|    ep_rew_mean     | 52       |
+| time/              |          |
+|    fps             | 2127     |
+|    iterations      | 1        |
+|    time_elapsed    | 0        |
+|    total_timesteps | 16       |
+---------------------------------
+..............FFF............/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: Failed to open display :0'
+  warnings.warn(message, GLFWError)
+/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'
+  warnings.warn(message, GLFWError)
+s........................./home/sean/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-fnuaeiub because there was an issue with the default path (/home/sean/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+.............
+======================================================================
+FAIL: test_passing_runs_replay_exactly (test_hardware_replay.HardwarePassReplay.test_passing_runs_replay_exactly) (run='20261107_025738')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sean/RPL-hw1-group8/rig-training/tests/test_hardware_replay.py", line 24, in test_passing_runs_replay_exactly
+    np.testing.assert_allclose(replayed[WARMUP_TICKS:], recorded[WARMUP_TICKS:],
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0, atol=1e-09
+
+Mismatched elements: 60 / 746 (8.04%)
+First 5 mismatches are at indices:
+ [1]: 0.15169191360473633 (ACTUAL), 0.15169239044189453 (DESIRED)
+ [2]: -0.09287118911743164 (ACTUAL), -0.09287172555923462 (DESIRED)
+ [3]: -0.2267322540283203 (ACTUAL), -0.226731538772583 (DESIRED)
+ [5]: -0.3941361904144287 (ACTUAL), -0.39413559436798096 (DESIRED)
+ [6]: -0.7784649133682251 (ACTUAL), -0.7784645557403564 (DESIRED)
+Max absolute difference among violations: 1.54972076e-06
+Max relative difference among violations: 0.00011275
+ ACTUAL: array([-6.037117e-01,  1.516919e-01, -9.287119e-02, -2.267323e-01,
+        1.973927e-02, -3.941362e-01, -7.784649e-01, -9.003416e-01,
+       -9.587292e-01, -9.863021e-01, -9.876589e-01, -4.757252e-01,...
+ DESIRED: array([-6.037117e-01,  1.516924e-01, -9.287173e-02, -2.267315e-01,
+        1.973927e-02, -3.941356e-01, -7.784646e-01, -9.003415e-01,
+       -9.587292e-01, -9.863021e-01, -9.876589e-01, -4.757252e-01,...
+
+======================================================================
+FAIL: test_passing_runs_replay_exactly (test_hardware_replay.HardwarePassReplay.test_passing_runs_replay_exactly) (run='20261107_025856')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sean/RPL-hw1-group8/rig-training/tests/test_hardware_replay.py", line 24, in test_passing_runs_replay_exactly
+    np.testing.assert_allclose(replayed[WARMUP_TICKS:], recorded[WARMUP_TICKS:],
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0, atol=1e-09
+
+Mismatched elements: 111 / 746 (14.9%)
+First 5 mismatches are at indices:
+ [0]: -0.6481937170028687 (ACTUAL), -0.6481937766075134 (DESIRED)
+ [1]: 0.24919748306274414 (ACTUAL), 0.24919664859771729 (DESIRED)
+ [2]: 0.15652823448181152 (ACTUAL), 0.15652871131896973 (DESIRED)
+ [3]: -0.4200895428657532 (ACTUAL), -0.4200890064239502 (DESIRED)
+ [4]: -0.20342761278152466 (ACTUAL), -0.20342731475830078 (DESIRED)
+Max absolute difference among violations: 2.15654675e-06
+Max relative difference among violations: 0.00040964
+ ACTUAL: array([-6.481937e-01,  2.491975e-01,  1.565282e-01, -4.200895e-01,
+       -2.034276e-01, -7.304672e-01, -8.944495e-01, -9.461684e-01,
+       -9.863913e-01, -9.892563e-01, -4.699478e-01, -2.497171e-01,...
+ DESIRED: array([-6.481938e-01,  2.491966e-01,  1.565287e-01, -4.200890e-01,
+       -2.034273e-01, -7.304673e-01, -8.944496e-01, -9.461683e-01,
+       -9.863912e-01, -9.892563e-01, -4.699478e-01, -2.497171e-01,...
+
+======================================================================
+FAIL: test_passing_runs_replay_exactly (test_hardware_replay.HardwarePassReplay.test_passing_runs_replay_exactly) (run='20261107_030202')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sean/RPL-hw1-group8/rig-training/tests/test_hardware_replay.py", line 24, in test_passing_runs_replay_exactly
+    np.testing.assert_allclose(replayed[WARMUP_TICKS:], recorded[WARMUP_TICKS:],
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/home/sean/RPL-hw1-group8/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0, atol=1e-09
+
+Mismatched elements: 49 / 746 (6.57%)
+First 5 mismatches are at indices:
+ [0]: -0.544685959815979 (ACTUAL), -0.5446856617927551 (DESIRED)
+ [1]: 0.3579294681549072 (ACTUAL), 0.3579291105270386 (DESIRED)
+ [2]: -0.0041522979736328125 (ACTUAL), -0.004152119159698486 (DESIRED)
+ [3]: -0.3087780475616455 (ACTUAL), -0.30877721309661865 (DESIRED)
+ [4]: -0.06137716770172119 (ACTUAL), -0.06137722730636597 (DESIRED)
+Max absolute difference among violations: 8.34465027e-07
+Max relative difference among violations: 4.30657039e-05
+ ACTUAL: array([-5.446860e-01,  3.579295e-01, -4.152298e-03, -3.087780e-01,
+       -6.137717e-02, -6.778964e-01, -8.527502e-01, -9.166357e-01,
+       -9.836407e-01, -9.881461e-01, -7.680093e-01, -4.265579e-01,...
+ DESIRED: array([-5.446857e-01,  3.579291e-01, -4.152119e-03, -3.087772e-01,
+       -6.137723e-02, -6.778963e-01, -8.527505e-01, -9.166358e-01,
+       -9.836407e-01, -9.881461e-01, -7.680093e-01, -4.265579e-01,...
+
+----------------------------------------------------------------------
+Ran 88 tests in 4.097s
+
+FAILED (failures=3, skipped=1)
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+
+── Fit + analysis ──────────────────────────────────────────────────────
+  In:  /tmp/tmp3pbcb2vi/train
+  Out: /tmp/tmp3pbcb2vi/rig.json

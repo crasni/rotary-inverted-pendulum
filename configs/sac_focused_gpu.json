@@ -1,0 +1,11 @@
+{
+  "seed": 174,
+  "total_steps": 300000,
+  "device": "cuda",
+  "checkpoint_every": 100000,
+  "normalize_observations": true,
+  "reward_scale": 0.2,
+  "resume_checkpoint": "docs/results/sac_randomized_policy.zip",
+  "resume_warmup_steps": 10000,
+  "save_replay_buffer": true
+}

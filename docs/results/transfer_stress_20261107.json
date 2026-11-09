@@ -1,0 +1,143 @@
+{
+  "params": "configs/my_rig.json",
+  "checkpoint": "docs/results/sac_focused_policy.zip",
+  "episodes_per_case": 10,
+  "seed": 40000,
+  "note": "Simulation only. The LQR reference also passes here but passed 3 of 16 hardware attempts.",
+  "presets": {
+    "lqr": "configs/lqr_my_rig_coupling_delay.json",
+    "mpc": "configs/mpc_my_rig_transfer.json",
+    "ilqr": "configs/ilqr_my_rig_transfer.json",
+    "pid": "configs/pid_my_rig_transfer.json"
+  },
+  "results": {
+    "lqr": {
+      "varied_starts": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 75.53328242864
+      },
+      "delay_20ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 71.76688253783337
+      },
+      "delay_30ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 52.553369620250855
+      },
+      "noise_mild": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.24290423760515
+      },
+      "combined": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 79.28177990937488
+      }
+    },
+    "mpc": {
+      "varied_starts": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 75.53328242864
+      },
+      "delay_20ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 71.76688253783337
+      },
+      "delay_30ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 52.553369620250855
+      },
+      "noise_mild": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.24290423760515
+      },
+      "combined": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 79.65111919449095
+      }
+    },
+    "ilqr": {
+      "varied_starts": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 75.53328242864
+      },
+      "delay_20ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 71.76688253783337
+      },
+      "delay_30ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 52.553369620250855
+      },
+      "noise_mild": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.24290423760515
+      },
+      "combined": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 66.82388731510105
+      }
+    },
+    "pid": {
+      "varied_starts": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 75.53328242864
+      },
+      "delay_20ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 71.76688253783337
+      },
+      "delay_30ms": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 67.48918501380304
+      },
+      "noise_mild": {
+        "passed": 10,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 74.24290423760515
+      },
+      "combined": {
+        "passed": 9,
+        "episodes": 10,
+        "safety_stops": 0,
+        "max_arm_deg": 68.2236517109208
+      }
+    }
+  }
+}

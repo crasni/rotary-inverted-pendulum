@@ -1,0 +1,7 @@
+{
+  "params_sha256": "d382306869df2c0cd8fad25c065e1ccae61469bf40393ec3573d935411388257",
+  "recording": "free_run_2.npz",
+  "samples": 940,
+  "angle_rmse_rad": 0.4724203847372555,
+  "physical_parameters_refitted": false
+}

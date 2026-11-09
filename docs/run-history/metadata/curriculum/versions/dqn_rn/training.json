@@ -1,0 +1,39 @@
+{
+  "algorithm": "dqn",
+  "seed": 73,
+  "source": "docs/results/rig_rl_disturbance/dqn_long/policy.zip",
+  "source_sha256": "897c68e12b37cc9c1a2fe28b2b12d18822dd7977ffccd91ab3f5fcc4330ea963",
+  "disturbance_rms_range": [
+    0,
+    6.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0001,
+  "requested_steps": 600000,
+  "initial_steps": 675000,
+  "final_steps": 1275000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  },
+  "reset_bank": null,
+  "bank_frac": 0.0,
+  "delay_range": [
+    0.006,
+    0.02
+  ],
+  "action_rate_weight": 0.0,
+  "pen_lag_range": [
+    0.0,
+    0.0
+  ],
+  "fast_arrival_frac": 0.0,
+  "residual": null,
+  "residual_gain": [
+    1.0,
+    1.0
+  ],
+  "random_physics": null,
+  "rig_noise": 1.0
+}

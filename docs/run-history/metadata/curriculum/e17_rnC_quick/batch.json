@@ -1,0 +1,21 @@
+{
+  "checkpoint": "runs/curriculum/versions/rnC/policy.zip",
+  "checkpoint_sha256": "0bf961b1090da4693fa859d2db234bbe36dcdb10ae11e8e692f0f03fd880e1a4",
+  "stage": "hanging",
+  "stage_parameters": {
+    "hanging_fraction": 1.0
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 15.0,
+  "seed": 0,
+  "target": "/dev/ttyUSB0",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-09T00:07:19",
+  "stop_reason": "KeyboardInterrupt: ",
+  "episodes_completed": 1
+}

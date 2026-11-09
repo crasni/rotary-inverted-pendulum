@@ -1,0 +1,17 @@
+{
+  "lqr": {
+    "delay": 0.015,
+    "r": 30.0,
+    "energy_gain": 0.12,
+    "swing_target_energy_ratio": 1.02,
+    "swing_energy_max_ratio": 1.18,
+    "swing_drive_cap": 26.0,
+    "swing_arm_kp": 16.0,
+    "swing_arm_kd": 3.0,
+    "capture_angle": 0.45,
+    "capture_speed": 6.0,
+    "capture_arm_angle": 0.8,
+    "capture_arm_speed": 3.0,
+    "capture_max_action": 1.0
+  }
+}

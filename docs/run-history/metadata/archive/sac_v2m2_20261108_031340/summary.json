@@ -1,0 +1,7 @@
+[
+  {
+    "stop_reason": "RuntimeError: Firmware safety fault latched (bits=2); inspect before resetting",
+    "samples": 0,
+    "success": false
+  }
+]

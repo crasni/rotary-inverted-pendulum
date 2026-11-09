@@ -1,0 +1,38 @@
+{
+  "braked_swing": {
+    "screen": {
+      "simulated_handoffs": 99,
+      "held_through_final_second": 85,
+      "held_without_release": 79,
+      "median_peak_arm_speed_rad_s": 3.873573218409609,
+      "p90_peak_arm_deg": 74.52277430431504,
+      "arm_limit_interventions": 432
+    },
+    "holdout": {
+      "simulated_handoffs": 99,
+      "held_through_final_second": 83,
+      "held_without_release": 78,
+      "median_peak_arm_speed_rad_s": 4.1936667486425065,
+      "p90_peak_arm_deg": 76.18528191439573,
+      "arm_limit_interventions": 435
+    }
+  },
+  "recenter": {
+    "screen": {
+      "simulated_handoffs": 99,
+      "held_through_final_second": 86,
+      "held_without_release": 84,
+      "median_peak_arm_speed_rad_s": 3.810982563438184,
+      "p90_peak_arm_deg": 69.18576183832478,
+      "arm_limit_interventions": 333
+    },
+    "holdout": {
+      "simulated_handoffs": 99,
+      "held_through_final_second": 86,
+      "held_without_release": 81,
+      "median_peak_arm_speed_rad_s": 4.180677664969811,
+      "p90_peak_arm_deg": 77.645389804192,
+      "arm_limit_interventions": 368
+    }
+  }
+}

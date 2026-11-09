@@ -1,0 +1,8 @@
+{
+  "method": "on-rig SAC session s01_v6b_online (scripts/rig_sac_online.py): checkpoint after episode 49, 105,308 updates; the actor that passed eval episode 49 was published at 105,208 updates (about 12 actor steps earlier); no imitation, no other controllers' data",
+  "parent": "runs/curriculum/versions/v6b_runner/policy.zip",
+  "parent_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "session": "runs/curriculum/s01_v6b_online",
+  "policy_sha256": "bdce96d817d2d7c721a7136aa81ed0fd87e79af5fcc0fef908b62f879a761ecc",
+  "note": "re-saved without the learner-only _update_learning_rate attribute; weights unchanged"
+}

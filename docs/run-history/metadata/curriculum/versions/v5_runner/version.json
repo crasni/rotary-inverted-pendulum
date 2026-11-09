@@ -1,0 +1,7 @@
+{
+  "parent": "v5",
+  "parent_sha256": "159778e4c547ec4a865cf122f2f3b30da2826f0daec592b77d846701250fa259",
+  "change": "replay_buffer_class set to SB3 ReplayBuffer; weights unchanged",
+  "weights_identical": true,
+  "sha256": "ed8cc1ffecc7ea2137d34f59deb6424f62b8852e1eaeba737a94124d2453bce0"
+}

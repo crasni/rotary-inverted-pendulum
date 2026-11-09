@@ -1,0 +1,41 @@
+{
+  "algorithm": "ppo",
+  "seed": 73,
+  "source": "docs/results/rig_rl_disturbance/ppo_long/policy.zip",
+  "source_sha256": "d21e5af6c8711d7b2dfbf319e656b8e16540cb40011b8c4032b925200bb6e80d",
+  "disturbance_rms_range": [
+    0,
+    6.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0003,
+  "requested_steps": 400000,
+  "initial_steps": 1728512,
+  "final_steps": 2129920,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  },
+  "reset_bank": null,
+  "bank_frac": 0.0,
+  "delay_range": [
+    0.006,
+    0.02
+  ],
+  "action_rate_weight": 0.0,
+  "pen_lag_range": [
+    0.0,
+    0.0
+  ],
+  "fast_arrival_frac": 0.3,
+  "residual": null,
+  "residual_gain": [
+    1.0,
+    1.0
+  ],
+  "random_physics": null,
+  "rig_noise": 0.0,
+  "energy_cap": 0.0,
+  "energy_threshold": 1.1
+}

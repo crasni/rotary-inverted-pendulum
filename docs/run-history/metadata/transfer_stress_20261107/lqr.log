@@ -1,0 +1,1 @@
+lqr {'varied_starts': {'pass': 10, 'of': 10, 'safety_stops': 0}, 'delay_20ms': {'pass': 10, 'of': 10, 'safety_stops': 0}, 'delay_30ms': {'pass': 10, 'of': 10, 'safety_stops': 0}, 'noise_mild': {'pass': 10, 'of': 10, 'safety_stops': 0}, 'combined': {'pass': 10, 'of': 10, 'safety_stops': 0}}

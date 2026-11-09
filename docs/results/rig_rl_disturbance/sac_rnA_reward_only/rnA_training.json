@@ -1,0 +1,19 @@
+{
+  "method": "SAC fine-tuned in V1's training simulator, reward only; optional near-upright penalty on the command change per tick, rig-like reading noise, observation-smoothness loss, discount; swing-up anchored to the parent; no rig data, no imitation",
+  "parent": "runs/curriculum/versions/v6b_runner/policy.zip",
+  "parent_sha256": "7b652fd44c70cbb753b1acc1e680761bd0fb7511e8ba2476e6490becfdbc80a4",
+  "weight": 0.0,
+  "rig_noise": 1.0,
+  "caps_weight": 0.0,
+  "caps_scale": 1.0,
+  "gamma": 0.99,
+  "sigma_deg": 30.0,
+  "steps": 200000,
+  "learning_rate": 0.0001,
+  "anchor_min_deg": 45.0,
+  "anchor_states": 73560,
+  "seed": 0,
+  "minutes": 5.4,
+  "policy_sha256": "02b6eb568131dc1bd37a0f708c86103a3fe8b12d5719cfcb1b75b45f4290a4c5",
+  "created": "2026-11-08T23:53:54"
+}

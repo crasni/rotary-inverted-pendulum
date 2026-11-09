@@ -1,0 +1,20 @@
+{
+  "algorithm": "ppo",
+  "seed": 275,
+  "source": "runs/disturbance_rl_v2/ppo/policy.zip",
+  "source_sha256": "456557815a41a7fee6b986cd055d8e74015d925976133616c3784aa0692eb7f4",
+  "disturbance_rms_range": [
+    0,
+    12.0
+  ],
+  "correlation": 0.3,
+  "learning_rate": 0.0003,
+  "requested_steps": 524288,
+  "initial_steps": 1204224,
+  "final_steps": 1728512,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

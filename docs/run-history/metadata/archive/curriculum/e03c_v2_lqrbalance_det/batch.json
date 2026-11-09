@@ -1,0 +1,31 @@
+{
+  "checkpoint": "runs/curriculum/versions/v2/policy.zip",
+  "checkpoint_sha256": "0e25387a208e7cb15310051983e3339c503f30c57879e13284d0c149f53dce2a",
+  "stage": "lqr_balance",
+  "stage_parameters": {
+    "lift": "lqr",
+    "hold_s": [
+      0.3,
+      0.6
+    ],
+    "theta_deg": 10,
+    "pen_speed": 2.0,
+    "arm_deg": 40,
+    "arm_speed": 3.0,
+    "hanging_fraction": 0.0,
+    "end_after_fall_s": 0.5
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 8.0,
+  "seed": 0,
+  "target": "/dev/ttyUSB0",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T23:57:11",
+  "stop_reason": "NonFiniteFeedback: Non-finite feedback (firmware fault bits=2: encoder)",
+  "episodes_completed": 0
+}

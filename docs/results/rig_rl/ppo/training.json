@@ -1,0 +1,12 @@
+{
+  "algorithm": "ppo",
+  "seed": 73,
+  "source": "runs/gpu_rl_20261016/ppo_hybrid_train/policy.zip",
+  "initial_steps": 1007616,
+  "final_steps": 1073152,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

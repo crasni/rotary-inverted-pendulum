@@ -1,0 +1,13 @@
+{
+  "lqr": {
+    "r": 30.0,
+    "energy_gain": 0.15,
+    "swing_arm_kp": 5.0,
+    "swing_arm_kd": 4.0,
+    "capture_angle": 0.35,
+    "capture_speed": 1.5,
+    "capture_arm_angle": 0.45,
+    "capture_arm_speed": 2.0,
+    "capture_max_action": 1.0
+  }
+}

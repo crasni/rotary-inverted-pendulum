@@ -1,0 +1,30 @@
+{
+  "algorithm": "pid",
+  "contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "5523d430cc824abd70a6966a760de5566bcb8b102bcc33029c2f4fa55527bec0"
+  },
+  "arguments": {
+    "command": "sim",
+    "algorithm": "pid",
+    "params": "configs/my_rig.json",
+    "config": "configs/pid_my_rig_lqr_match.json",
+    "output": "runs/report_sim_eval/upright/pid",
+    "duration": 15.0,
+    "checkpoint": "docs/results/sac_focused_policy.zip",
+    "start": "upright",
+    "seed": 93000,
+    "episodes": 20,
+    "render": false,
+    "gif": false
+  }
+}

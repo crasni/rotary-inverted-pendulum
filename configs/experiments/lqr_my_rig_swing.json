@@ -1,0 +1,26 @@
+{
+  "arm_speed_target_rad_s": 4.7,
+  "arm_travel_target_rad": 1.42,
+  "lqr": {
+    "swing_up": "sac",
+    "swing_energy_mix": 0.2,
+    "swing_target_energy_ratio": 1.025,
+    "swing_drive_cap": 38.0,
+    "energy_gain": 0.095,
+    "swing_arm_kp": 8.0,
+    "swing_arm_kd": 2.0,
+    "approach_brake_speed_rad_s": 4.5,
+    "arm_recenter_rate_rad_s": 0.35,
+    "delay": 0.015,
+    "pendulum_input_delay_s": 0.027,
+    "balance_coupling_scale": 1.1,
+    "r": 30.0,
+    "balance_observer": true,
+    "balance_velocity_blend": 0.45,
+    "capture_angle": 0.45,
+    "capture_speed": 6.0,
+    "capture_arm_angle": 0.8,
+    "capture_arm_speed": 3.0,
+    "capture_max_action": 1.0
+  }
+}

@@ -1,0 +1,7 @@
+anchor states (>= 30 deg from upright): 31299
+rig ticks within 45 deg of upright: 26992 of 54391
+catch-transient rig ticks: 14640 of 26992, repeated x2
+mirrored rig transitions added: 41632
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+runs/curriculum/versions/v8/policy.zip: 40000 simulator steps, 50% of every batch from 83264 rig transitions

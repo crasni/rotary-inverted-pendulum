@@ -1,0 +1,30 @@
+{
+  "checkpoint": "runs/curriculum_sim/pilot_b/v1/policy.zip",
+  "checkpoint_sha256": "ce85157bcc8b164799cb9a9ab096651d020528d56b9f6d47fecea59dad5685da",
+  "stage": "balance",
+  "stage_parameters": {
+    "target_energy": [
+      0.985,
+      0.997
+    ],
+    "tolerance": 0.03,
+    "theta_deg": 12,
+    "pen_speed": 3.0,
+    "arm_deg": 20,
+    "arm_speed": 1.5,
+    "hanging_fraction": 0.0
+  },
+  "deterministic": false,
+  "episodes_requested": 10,
+  "episode_seconds": 6.0,
+  "seed": 2,
+  "target": "sim",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T22:39:32",
+  "stop_reason": "SessionStop: Arm did not settle on zero after the position move",
+  "episodes_completed": 1
+}

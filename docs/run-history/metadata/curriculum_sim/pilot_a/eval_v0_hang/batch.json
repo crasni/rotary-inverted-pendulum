@@ -1,0 +1,21 @@
+{
+  "checkpoint": "runs/sac_finetune/V1/policy.zip",
+  "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "stage": "hanging",
+  "stage_parameters": {
+    "hanging_fraction": 1.0
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 6.0,
+  "seed": 200,
+  "target": "sim",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T22:26:51",
+  "stop_reason": "completed",
+  "episodes_completed": 4
+}

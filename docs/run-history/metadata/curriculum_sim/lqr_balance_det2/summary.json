@@ -1,0 +1,83 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 400,
+    "success": false,
+    "balanced_fraction": 0.42,
+    "longest_balance_s": 0.96,
+    "max_arm_deg": 72.73125000000002,
+    "final_theta_deg": -119.09179687500006,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 43.142578125,
+    "max_arm_while_upright_deg": 72.73125000000002,
+    "limiter_override_fraction": 0.045,
+    "lift_s": 4.28,
+    "handover": [
+      -0.0854120502694725,
+      0.024543692606171064,
+      1.3499030933393652,
+      0.9587379924285155
+    ],
+    "episode": 0,
+    "deterministic": true,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 0.9888506996347093,
+    "target_energy": null,
+    "reset_s": 4.08
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 400,
+    "success": false,
+    "balanced_fraction": 0.4225,
+    "longest_balance_s": 0.7,
+    "max_arm_deg": 58.78125,
+    "final_theta_deg": -100.01953124999999,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 62.362768696820424,
+    "max_arm_while_upright_deg": 58.78125,
+    "limiter_override_fraction": 0.0475,
+    "lift_s": 4.12,
+    "handover": [
+      0.05203262832508095,
+      0.004601942363660072,
+      -1.472621556370215,
+      -1.1504855909141298
+    ],
+    "episode": 1,
+    "deterministic": true,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 0.8115693448699705,
+    "target_energy": null,
+    "reset_s": 4.12
+  },
+  {
+    "stop_reason": "duration",
+    "samples": 400,
+    "success": false,
+    "balanced_fraction": 0.4275,
+    "longest_balance_s": 0.96,
+    "max_arm_deg": 80.325,
+    "final_theta_deg": -2.285156249999935,
+    "holds_over_1s": 0,
+    "arm_drift_while_upright_deg_s": 33.33902261636637,
+    "max_arm_while_upright_deg": 80.325,
+    "limiter_override_fraction": 0.035,
+    "lift_s": 4.54,
+    "handover": [
+      0.5144357970253287,
+      -0.003067961575771605,
+      -1.8407769454627658,
+      -0.9587379924285155
+    ],
+    "episode": 2,
+    "deterministic": true,
+    "assisted": true,
+    "lift": "lqr",
+    "hold_s": 1.4389289040944053,
+    "target_energy": null,
+    "reset_s": 3.4000000000000004
+  }
+]

@@ -1,0 +1,1376 @@
+{
+  "experiment": {
+    "contract": {
+      "profile": {
+        "hz": 50,
+        "max_accel": 50.0,
+        "arm_limit_deg": 100.0,
+        "arm_speed_limit": 6.0,
+        "history": 4,
+        "microsteps": 32,
+        "baud": 500000
+      },
+      "action_mode": "accel",
+      "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+    },
+    "gpu": "NVIDIA GeForce RTX 4070 Ti",
+    "training_ranges": {
+      "friction_factor": [
+        0.5,
+        1.5
+      ],
+      "inertia_factor": [
+        0.8,
+        1.2
+      ],
+      "delay_s": [
+        0.01,
+        0.03
+      ],
+      "max_accel": [
+        40.0,
+        50.0
+      ],
+      "speed_limit": [
+        4.0,
+        5.0
+      ],
+      "angle_noise": [
+        0.0,
+        0.01
+      ],
+      "velocity_noise": [
+        0.0,
+        0.3
+      ]
+    },
+    "config": {
+      "seed": 73,
+      "total_steps": 600000,
+      "learning_rate": 0.0003,
+      "device": "cuda",
+      "checkpoint_every": 100000,
+      "sac": {
+        "learning_starts": 10000,
+        "buffer_size": 200000,
+        "batch_size": 256,
+        "train_freq": 4,
+        "gradient_steps": 1,
+        "policy_kwargs": {
+          "net_arch": [
+            128,
+            128
+          ]
+        }
+      },
+      "normalize_observations": true,
+      "reward_scale": 0.2,
+      "resume_checkpoint": "runs/sac_robustness_20261016/train/policy.zip",
+      "resume_warmup_steps": 10000,
+      "save_replay_buffer": false
+    },
+    "training_start": "mixed",
+    "validation_seed": 51000,
+    "test_seed": 91000,
+    "limitations": "Synthetic ranges; one training seed; no hardware validation."
+  },
+  "continuation": {
+    "initial_steps": 600000,
+    "final_steps": 1200000,
+    "resume_checkpoint": "runs/sac_robustness_20261016/train/policy.zip",
+    "replay_restored": false,
+    "note": "Resume keeps saved architecture, preprocessing and optimizer settings; total_steps is additional experience."
+  },
+  "selection": {
+    "scores": [
+      {
+        "policy": "runs/sac_robustness_20261016/train/policy.zip",
+        "successes": 11,
+        "safety_stops": 0,
+        "balance": 6.869999999999999
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_1000000_steps.zip",
+        "successes": 20,
+        "safety_stops": 1,
+        "balance": 10.813333333333333
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_1100000_steps.zip",
+        "successes": 17,
+        "safety_stops": 1,
+        "balance": 9.575833333333334
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_1200000_steps.zip",
+        "successes": 21,
+        "safety_stops": 0,
+        "balance": 11.640833333333333
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_700000_steps.zip",
+        "successes": 15,
+        "safety_stops": 0,
+        "balance": 6.906666666666666
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_800000_steps.zip",
+        "successes": 16,
+        "safety_stops": 0,
+        "balance": 9.921666666666667
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_900000_steps.zip",
+        "successes": 17,
+        "safety_stops": 0,
+        "balance": 9.580833333333333
+      },
+      {
+        "policy": "runs/sac_randomized_20261022/train/policy.zip",
+        "successes": 21,
+        "safety_stops": 0,
+        "balance": 11.589166666666667
+      }
+    ],
+    "selected": {
+      "policy": "runs/sac_randomized_20261022/train/checkpoints/sac_1200000_steps.zip",
+      "successes": 21,
+      "safety_stops": 0,
+      "balance": 11.640833333333333
+    }
+  },
+  "aggregates": {
+    "baseline": {
+      "unseen_episodes": 200,
+      "unseen_successes": 111,
+      "unseen_safety_stops": 0,
+      "unseen_max_arm_deg": 97.70456886204873,
+      "nominal": {
+        "algorithm": "sac",
+        "case": "nominal_exact",
+        "settings": {},
+        "episodes": 1,
+        "successes": 1,
+        "safety_stops": 0,
+        "mean_longest_balance_s": 12.04,
+        "max_arm_deg": 52.78837126359388,
+        "action_latency_ms": {
+          "p50": 0.14481099969998468,
+          "p99": 0.3846082987365658,
+          "max": 0.6549729987455066
+        },
+        "action_deadline_misses": 0
+      },
+      "original_combined": {
+        "algorithm": "sac",
+        "case": "original_combined",
+        "settings": {
+          "varied_start": true,
+          "friction_factor": 1.5,
+          "inertia_factor": 1.1,
+          "delay_s": 0.02,
+          "angle_noise": 0.003,
+          "velocity_noise": 0.1,
+          "max_accel": 45.0,
+          "speed_limit": 4.5
+        },
+        "episodes": 10,
+        "successes": 0,
+        "safety_stops": 0,
+        "mean_longest_balance_s": 0.0,
+        "max_arm_deg": 60.547588051685,
+        "action_latency_ms": {
+          "p50": 0.15437649744853843,
+          "p99": 0.4024670220314885,
+          "max": 1.0696210010792129
+        },
+        "action_deadline_misses": 0
+      }
+    },
+    "randomized": {
+      "unseen_episodes": 200,
+      "unseen_successes": 162,
+      "unseen_safety_stops": 0,
+      "unseen_max_arm_deg": 94.99145494037087,
+      "nominal": {
+        "algorithm": "sac",
+        "case": "nominal_exact",
+        "settings": {},
+        "episodes": 1,
+        "successes": 1,
+        "safety_stops": 0,
+        "mean_longest_balance_s": 13.2,
+        "max_arm_deg": 54.93430590029375,
+        "action_latency_ms": {
+          "p50": 0.15879449892963748,
+          "p99": 0.4273311406723222,
+          "max": 0.5402349997893907
+        },
+        "action_deadline_misses": 0
+      },
+      "original_combined": {
+        "algorithm": "sac",
+        "case": "original_combined",
+        "settings": {
+          "varied_start": true,
+          "friction_factor": 1.5,
+          "inertia_factor": 1.1,
+          "delay_s": 0.02,
+          "angle_noise": 0.003,
+          "velocity_noise": 0.1,
+          "max_accel": 45.0,
+          "speed_limit": 4.5
+        },
+        "episodes": 10,
+        "successes": 10,
+        "safety_stops": 0,
+        "mean_longest_balance_s": 10.728,
+        "max_arm_deg": 63.486048755025024,
+        "action_latency_ms": {
+          "p50": 0.16465149928990286,
+          "p99": 0.42964767835655954,
+          "max": 0.6081909996282775
+        },
+        "action_deadline_misses": 0
+      }
+    }
+  },
+  "tests": {
+    "baseline": {
+      "contract": {
+        "profile": {
+          "hz": 50,
+          "max_accel": 50.0,
+          "arm_limit_deg": 100.0,
+          "arm_speed_limit": 6.0,
+          "history": 4,
+          "microsteps": 32,
+          "baud": 500000
+        },
+        "action_mode": "accel",
+        "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+      },
+      "episodes_requested": 10,
+      "seed": 91000,
+      "limitations": "Synthetic uncertainty stress tests, not calibrated hardware bounds. One training seed per policy. Exact noiseless hanging resets are deterministic; repeated copies are evaluated once.",
+      "policies": {
+        "sac": "runs/sac_robustness_20261016/train/policy.zip"
+      },
+      "policy_sha256": {
+        "sac": "1a7b30008fa179c4867583fb99aeba0bd5b15719b0602d8349895bda61ce31c6"
+      },
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "unseen_00",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5135393163141531,
+            "inertia_factor": 1.0837397724224591,
+            "delay_s": 0.02053795409047159,
+            "max_accel": 40.0937714421512,
+            "speed_limit": 4.579571960184974,
+            "angle_noise": 0.006785819660480707,
+            "velocity_noise": 0.16750979612735004
+          },
+          "episodes": 10,
+          "successes": 2,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 2.588,
+          "max_arm_deg": 75.65778472484774,
+          "action_latency_ms": {
+            "p50": 0.15004200031398796,
+            "p99": 0.3803465472446988,
+            "max": 1.055359000019962
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_01",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0541448924435777,
+            "inertia_factor": 0.8273535642059198,
+            "delay_s": 0.01453932627459369,
+            "max_accel": 46.31183115360554,
+            "speed_limit": 4.373717946948449,
+            "angle_noise": 0.00010813269522059854,
+            "velocity_noise": 0.12195182440638222
+          },
+          "episodes": 10,
+          "successes": 2,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 7.634,
+          "max_arm_deg": 91.99322624941394,
+          "action_latency_ms": {
+            "p50": 0.15489150064240675,
+            "p99": 0.43406744163803634,
+            "max": 0.7598740012326743
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_02",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5892955069194883,
+            "inertia_factor": 1.1071954604173029,
+            "delay_s": 0.012443834140409976,
+            "max_accel": 46.803030104821474,
+            "speed_limit": 4.274798817107311,
+            "angle_noise": 0.004949245127941287,
+            "velocity_noise": 0.03570363154402662
+          },
+          "episodes": 10,
+          "successes": 6,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 7.818,
+          "max_arm_deg": 69.12893299564622,
+          "action_latency_ms": {
+            "p50": 0.15344600069511216,
+            "p99": 0.4211642171139829,
+            "max": 0.7388199992419686
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_03",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.027566255184236,
+            "inertia_factor": 0.9975971157829473,
+            "delay_s": 0.02375940247105901,
+            "max_accel": 47.72334752838032,
+            "speed_limit": 4.8239807489209054,
+            "angle_noise": 0.004031870605540269,
+            "velocity_noise": 0.06396862301718821
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.416,
+          "max_arm_deg": 74.59992230740096,
+          "action_latency_ms": {
+            "p50": 0.15961399913066998,
+            "p99": 0.4621403394048685,
+            "max": 0.8059220017457847
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_04",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.1044845357472235,
+            "inertia_factor": 1.0677950713282571,
+            "delay_s": 0.018323399091999613,
+            "max_accel": 42.71612847232743,
+            "speed_limit": 4.0267757817657195,
+            "angle_noise": 0.008502293975668457,
+            "velocity_noise": 0.15040969770708842
+          },
+          "episodes": 10,
+          "successes": 6,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 9.633999999999999,
+          "max_arm_deg": 88.64775428181999,
+          "action_latency_ms": {
+            "p50": 0.15551300020888448,
+            "p99": 0.436504807767051,
+            "max": 1.251646001037443
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_05",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4506023808054702,
+            "inertia_factor": 1.1038699258537858,
+            "delay_s": 0.0156904710856959,
+            "max_accel": 42.2064926535295,
+            "speed_limit": 4.838960177283405,
+            "angle_noise": 0.003041085594566886,
+            "velocity_noise": 0.11769714260547506
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 59.01864474162303,
+          "action_latency_ms": {
+            "p50": 0.1524279978184495,
+            "p99": 0.3845439830183754,
+            "max": 0.675813000270864
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_06",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0524717854423065,
+            "inertia_factor": 1.1903183890663231,
+            "delay_s": 0.01658969125491328,
+            "max_accel": 47.62444707914981,
+            "speed_limit": 4.256704549482067,
+            "angle_noise": 0.0059372048873687555,
+            "velocity_noise": 0.13936917034030075
+          },
+          "episodes": 10,
+          "successes": 7,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 8.540000000000001,
+          "max_arm_deg": 70.92853739889598,
+          "action_latency_ms": {
+            "p50": 0.15327899927797262,
+            "p99": 0.3912871911597906,
+            "max": 0.746884001273429
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_07",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0891996099666996,
+            "inertia_factor": 0.9547893065556855,
+            "delay_s": 0.01727454255540526,
+            "max_accel": 49.895640346141036,
+            "speed_limit": 4.164130084834055,
+            "angle_noise": 0.00350765942665214,
+            "velocity_noise": 0.27066193165400115
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.581999999999999,
+          "max_arm_deg": 85.75453327707187,
+          "action_latency_ms": {
+            "p50": 0.15703049939475022,
+            "p99": 0.4059136710930035,
+            "max": 1.060080001479946
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_08",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0775989156039838,
+            "inertia_factor": 1.1020872034359785,
+            "delay_s": 0.029815463031520703,
+            "max_accel": 45.486115515482524,
+            "speed_limit": 4.8772787774353334,
+            "angle_noise": 0.004901102874928949,
+            "velocity_noise": 0.29123382350148846
+          },
+          "episodes": 10,
+          "successes": 2,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 3.668,
+          "max_arm_deg": 84.67115397024328,
+          "action_latency_ms": {
+            "p50": 0.15438449918292463,
+            "p99": 0.3896444794736455,
+            "max": 0.6376970013661776
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_09",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4512758410934108,
+            "inertia_factor": 1.135343334910517,
+            "delay_s": 0.028618282716326895,
+            "max_accel": 47.00551485816206,
+            "speed_limit": 4.530044651053624,
+            "angle_noise": 0.009781700952715626,
+            "velocity_noise": 0.2793163765892256
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 4.82,
+          "max_arm_deg": 94.51681420920123,
+          "action_latency_ms": {
+            "p50": 0.15554299898212776,
+            "p99": 0.4118372594894029,
+            "max": 0.6734329981554765
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_10",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.727026348356691,
+            "inertia_factor": 1.0388031610288087,
+            "delay_s": 0.023510083254492713,
+            "max_accel": 40.343231713321515,
+            "speed_limit": 4.198909757362285,
+            "angle_noise": 0.0022265980533583696,
+            "velocity_noise": 0.204087922969781
+          },
+          "episodes": 10,
+          "successes": 4,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 5.72,
+          "max_arm_deg": 86.2400674104217,
+          "action_latency_ms": {
+            "p50": 0.15266049922502134,
+            "p99": 0.4249731024901853,
+            "max": 0.7087320009304676
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_11",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5319558365289153,
+            "inertia_factor": 0.9360644289276586,
+            "delay_s": 0.020957541435407352,
+            "max_accel": 47.87589044821872,
+            "speed_limit": 4.8451874158873265,
+            "angle_noise": 0.007552647051525885,
+            "velocity_noise": 0.12183789738906517
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.738000000000001,
+          "max_arm_deg": 87.7077648247236,
+          "action_latency_ms": {
+            "p50": 0.15432349937327672,
+            "p99": 0.41324595957121374,
+            "max": 0.6385550004779361
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_12",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4346652807552218,
+            "inertia_factor": 0.8916248688438765,
+            "delay_s": 0.017019926087443182,
+            "max_accel": 42.18636408048508,
+            "speed_limit": 4.869056495177695,
+            "angle_noise": 0.0009601997330593637,
+            "velocity_noise": 0.24440181647117093
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 53.11642731938152,
+          "action_latency_ms": {
+            "p50": 0.1540414996270556,
+            "p99": 0.4062677801266548,
+            "max": 0.6443780002882704
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_13",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5124988686966182,
+            "inertia_factor": 0.9007027725135428,
+            "delay_s": 0.029577124498964893,
+            "max_accel": 48.46691250528987,
+            "speed_limit": 4.2435626192032005,
+            "angle_noise": 0.00815876190374704,
+            "velocity_noise": 0.007426915721194426
+          },
+          "episodes": 10,
+          "successes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 7.614,
+          "max_arm_deg": 97.70456886204873,
+          "action_latency_ms": {
+            "p50": 0.1530565004941309,
+            "p99": 0.41790645063883863,
+            "max": 0.7407459997921251
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_14",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.639109082848403,
+            "inertia_factor": 1.1482035633335301,
+            "delay_s": 0.010283663820407449,
+            "max_accel": 43.51128891679857,
+            "speed_limit": 4.4267810886808565,
+            "angle_noise": 0.0019207198943927818,
+            "velocity_noise": 0.2048303435188555
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.72,
+          "max_arm_deg": 66.50013607366047,
+          "action_latency_ms": {
+            "p50": 0.15189449914032593,
+            "p99": 0.41243841889809124,
+            "max": 1.3787030002276879
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_15",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.7116537438813493,
+            "inertia_factor": 0.8516725135593917,
+            "delay_s": 0.0276663056119476,
+            "max_accel": 44.464548801346915,
+            "speed_limit": 4.195497106407056,
+            "angle_noise": 0.001344007648874267,
+            "velocity_noise": 0.2321385299973855
+          },
+          "episodes": 10,
+          "successes": 6,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.575999999999999,
+          "max_arm_deg": 88.43312662098917,
+          "action_latency_ms": {
+            "p50": 0.1540889988973504,
+            "p99": 0.4288120874116435,
+            "max": 0.981234999926528
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_16",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.7878160403694888,
+            "inertia_factor": 0.8402189155231582,
+            "delay_s": 0.019306799577133958,
+            "max_accel": 42.317396482210185,
+            "speed_limit": 4.506792583479423,
+            "angle_noise": 0.0007862263929989655,
+            "velocity_noise": 0.08525947158839615
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.228,
+          "max_arm_deg": 84.06624991891043,
+          "action_latency_ms": {
+            "p50": 0.1544070000818465,
+            "p99": 0.42554993171506816,
+            "max": 0.6517709989566356
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_17",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5501523703823233,
+            "inertia_factor": 0.9120570196187364,
+            "delay_s": 0.01791477735854166,
+            "max_accel": 44.68430142192632,
+            "speed_limit": 4.268814684413884,
+            "angle_noise": 0.005757852945625765,
+            "velocity_noise": 0.281730933935752
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.388000000000002,
+          "max_arm_deg": 83.67382831232867,
+          "action_latency_ms": {
+            "p50": 0.15330249880207703,
+            "p99": 0.3955060374573805,
+            "max": 1.3968200000817887
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_18",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.2653023883426822,
+            "inertia_factor": 1.032839032182526,
+            "delay_s": 0.028297734737369164,
+            "max_accel": 46.116220892901715,
+            "speed_limit": 4.881695103102375,
+            "angle_noise": 0.009811514545804971,
+            "velocity_noise": 0.09368158993595706
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.57,
+          "max_arm_deg": 88.01605630911801,
+          "action_latency_ms": {
+            "p50": 0.1523494993307395,
+            "p99": 0.4015187310869815,
+            "max": 0.6154059992695693
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_19",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.9826970806585859,
+            "inertia_factor": 1.0898978359785154,
+            "delay_s": 0.029075017304172862,
+            "max_accel": 40.13843278905495,
+            "speed_limit": 4.010539151400525,
+            "angle_noise": 0.0008222355150457938,
+            "velocity_noise": 0.14697322809365979
+          },
+          "episodes": 10,
+          "successes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 5.837999999999999,
+          "max_arm_deg": 75.73686963937246,
+          "action_latency_ms": {
+            "p50": 0.15466900003957562,
+            "p99": 0.4078372412550383,
+            "max": 0.8589250028308015
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.04,
+          "max_arm_deg": 52.78837126359388,
+          "action_latency_ms": {
+            "p50": 0.14481099969998468,
+            "p99": 0.3846082987365658,
+            "max": 0.6549729987455066
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "original_combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 60.547588051685,
+          "action_latency_ms": {
+            "p50": 0.15437649744853843,
+            "p99": 0.4024670220314885,
+            "max": 1.0696210010792129
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    },
+    "randomized": {
+      "contract": {
+        "profile": {
+          "hz": 50,
+          "max_accel": 50.0,
+          "arm_limit_deg": 100.0,
+          "arm_speed_limit": 6.0,
+          "history": 4,
+          "microsteps": 32,
+          "baud": 500000
+        },
+        "action_mode": "accel",
+        "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+      },
+      "episodes_requested": 10,
+      "seed": 91000,
+      "limitations": "Synthetic uncertainty stress tests, not calibrated hardware bounds. One training seed per policy. Exact noiseless hanging resets are deterministic; repeated copies are evaluated once.",
+      "policies": {
+        "sac": "runs/sac_randomized_20261022/train/checkpoints/sac_1200000_steps.zip"
+      },
+      "policy_sha256": {
+        "sac": "d2160f70d548166d86bcb514a87864f53814128b2ea99488f49b4c2910905b12"
+      },
+      "results": [
+        {
+          "algorithm": "sac",
+          "case": "unseen_00",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5135393163141531,
+            "inertia_factor": 1.0837397724224591,
+            "delay_s": 0.02053795409047159,
+            "max_accel": 40.0937714421512,
+            "speed_limit": 4.579571960184974,
+            "angle_noise": 0.006785819660480707,
+            "velocity_noise": 0.16750979612735004
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.095999999999998,
+          "max_arm_deg": 55.62168125978556,
+          "action_latency_ms": {
+            "p50": 0.1520830010122154,
+            "p99": 0.4194131388794632,
+            "max": 6.086933000915451
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_01",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0541448924435777,
+            "inertia_factor": 0.8273535642059198,
+            "delay_s": 0.01453932627459369,
+            "max_accel": 46.31183115360554,
+            "speed_limit": 4.373717946948449,
+            "angle_noise": 0.00010813269522059854,
+            "velocity_noise": 0.12195182440638222
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.32,
+          "max_arm_deg": 91.62659733047803,
+          "action_latency_ms": {
+            "p50": 0.15397199967992492,
+            "p99": 0.388263341810671,
+            "max": 0.7003979990258813
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_02",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5892955069194883,
+            "inertia_factor": 1.1071954604173029,
+            "delay_s": 0.012443834140409976,
+            "max_accel": 46.803030104821474,
+            "speed_limit": 4.274798817107311,
+            "angle_noise": 0.004949245127941287,
+            "velocity_noise": 0.03570363154402662
+          },
+          "episodes": 10,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 1.3419999999999999,
+          "max_arm_deg": 65.53886720325941,
+          "action_latency_ms": {
+            "p50": 0.15521000204898883,
+            "p99": 0.39992257996345904,
+            "max": 0.73430699922028
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_03",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.027566255184236,
+            "inertia_factor": 0.9975971157829473,
+            "delay_s": 0.02375940247105901,
+            "max_accel": 47.72334752838032,
+            "speed_limit": 4.8239807489209054,
+            "angle_noise": 0.004031870605540269,
+            "velocity_noise": 0.06396862301718821
+          },
+          "episodes": 10,
+          "successes": 5,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 8.994,
+          "max_arm_deg": 91.96852459350637,
+          "action_latency_ms": {
+            "p50": 0.156541500473395,
+            "p99": 0.4097045401431389,
+            "max": 0.8658180013298988
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_04",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.1044845357472235,
+            "inertia_factor": 1.0677950713282571,
+            "delay_s": 0.018323399091999613,
+            "max_accel": 42.71612847232743,
+            "speed_limit": 4.0267757817657195,
+            "angle_noise": 0.008502293975668457,
+            "velocity_noise": 0.15040969770708842
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.947999999999999,
+          "max_arm_deg": 56.56668619369287,
+          "action_latency_ms": {
+            "p50": 0.15557649930997286,
+            "p99": 0.40081327726511523,
+            "max": 0.933802999497857
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_05",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4506023808054702,
+            "inertia_factor": 1.1038699258537858,
+            "delay_s": 0.0156904710856959,
+            "max_accel": 42.2064926535295,
+            "speed_limit": 4.838960177283405,
+            "angle_noise": 0.003041085594566886,
+            "velocity_noise": 0.11769714260547506
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.482,
+          "max_arm_deg": 91.07411138673848,
+          "action_latency_ms": {
+            "p50": 0.1564244994369801,
+            "p99": 0.4005958777634079,
+            "max": 2.066626002488192
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_06",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0524717854423065,
+            "inertia_factor": 1.1903183890663231,
+            "delay_s": 0.01658969125491328,
+            "max_accel": 47.62444707914981,
+            "speed_limit": 4.256704549482067,
+            "angle_noise": 0.0059372048873687555,
+            "velocity_noise": 0.13936917034030075
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.686,
+          "max_arm_deg": 56.74714538232061,
+          "action_latency_ms": {
+            "p50": 0.1603505024831975,
+            "p99": 0.4321569210515012,
+            "max": 1.822038997488562
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_07",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0891996099666996,
+            "inertia_factor": 0.9547893065556855,
+            "delay_s": 0.01727454255540526,
+            "max_accel": 49.895640346141036,
+            "speed_limit": 4.164130084834055,
+            "angle_noise": 0.00350765942665214,
+            "velocity_noise": 0.27066193165400115
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.669999999999998,
+          "max_arm_deg": 94.99145494037087,
+          "action_latency_ms": {
+            "p50": 0.1618309997866163,
+            "p99": 0.4060891801418621,
+            "max": 0.7144640003389213
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_08",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.0775989156039838,
+            "inertia_factor": 1.1020872034359785,
+            "delay_s": 0.029815463031520703,
+            "max_accel": 45.486115515482524,
+            "speed_limit": 4.8772787774353334,
+            "angle_noise": 0.004901102874928949,
+            "velocity_noise": 0.29123382350148846
+          },
+          "episodes": 10,
+          "successes": 8,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.236,
+          "max_arm_deg": 93.02683665872117,
+          "action_latency_ms": {
+            "p50": 0.16402950132032856,
+            "p99": 0.41725592986040305,
+            "max": 0.9577689997968264
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_09",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4512758410934108,
+            "inertia_factor": 1.135343334910517,
+            "delay_s": 0.028618282716326895,
+            "max_accel": 47.00551485816206,
+            "speed_limit": 4.530044651053624,
+            "angle_noise": 0.009781700952715626,
+            "velocity_noise": 0.2793163765892256
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.187999999999999,
+          "max_arm_deg": 70.00766979309017,
+          "action_latency_ms": {
+            "p50": 0.1629664984648116,
+            "p99": 0.3908382485315096,
+            "max": 0.6416809992515482
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_10",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.727026348356691,
+            "inertia_factor": 1.0388031610288087,
+            "delay_s": 0.023510083254492713,
+            "max_accel": 40.343231713321515,
+            "speed_limit": 4.198909757362285,
+            "angle_noise": 0.0022265980533583696,
+            "velocity_noise": 0.204087922969781
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.77,
+          "max_arm_deg": 51.4200902731249,
+          "action_latency_ms": {
+            "p50": 0.1639125002839137,
+            "p99": 0.44644405745202737,
+            "max": 1.2128060006943997
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_11",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5319558365289153,
+            "inertia_factor": 0.9360644289276586,
+            "delay_s": 0.020957541435407352,
+            "max_accel": 47.87589044821872,
+            "speed_limit": 4.8451874158873265,
+            "angle_noise": 0.007552647051525885,
+            "velocity_noise": 0.12183789738906517
+          },
+          "episodes": 10,
+          "successes": 3,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 3.978,
+          "max_arm_deg": 53.20322086153235,
+          "action_latency_ms": {
+            "p50": 0.16475499796797521,
+            "p99": 0.42171120887360364,
+            "max": 0.6855929968878627
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_12",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.4346652807552218,
+            "inertia_factor": 0.8916248688438765,
+            "delay_s": 0.017019926087443182,
+            "max_accel": 42.18636408048508,
+            "speed_limit": 4.869056495177695,
+            "angle_noise": 0.0009601997330593637,
+            "velocity_noise": 0.24440181647117093
+          },
+          "episodes": 10,
+          "successes": 0,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 0.0,
+          "max_arm_deg": 54.66717970265174,
+          "action_latency_ms": {
+            "p50": 0.16195800162677187,
+            "p99": 0.3998296071949881,
+            "max": 0.6681369995931163
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_13",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5124988686966182,
+            "inertia_factor": 0.9007027725135428,
+            "delay_s": 0.029577124498964893,
+            "max_accel": 48.46691250528987,
+            "speed_limit": 4.2435626192032005,
+            "angle_noise": 0.00815876190374704,
+            "velocity_noise": 0.007426915721194426
+          },
+          "episodes": 10,
+          "successes": 9,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.512,
+          "max_arm_deg": 51.75555261530749,
+          "action_latency_ms": {
+            "p50": 0.1659259996813489,
+            "p99": 0.4150156103059999,
+            "max": 0.7478539992007427
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_14",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.639109082848403,
+            "inertia_factor": 1.1482035633335301,
+            "delay_s": 0.010283663820407449,
+            "max_accel": 43.51128891679857,
+            "speed_limit": 4.4267810886808565,
+            "angle_noise": 0.0019207198943927818,
+            "velocity_noise": 0.2048303435188555
+          },
+          "episodes": 10,
+          "successes": 8,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.212,
+          "max_arm_deg": 63.125490907849965,
+          "action_latency_ms": {
+            "p50": 0.1607309968676418,
+            "p99": 0.40031684111454535,
+            "max": 0.6639269995503128
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_15",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.7116537438813493,
+            "inertia_factor": 0.8516725135593917,
+            "delay_s": 0.0276663056119476,
+            "max_accel": 44.464548801346915,
+            "speed_limit": 4.195497106407056,
+            "angle_noise": 0.001344007648874267,
+            "velocity_noise": 0.2321385299973855
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.776,
+          "max_arm_deg": 69.10259892687085,
+          "action_latency_ms": {
+            "p50": 0.16708450129954144,
+            "p99": 0.43148202985321404,
+            "max": 1.529506000224501
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_16",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.7878160403694888,
+            "inertia_factor": 0.8402189155231582,
+            "delay_s": 0.019306799577133958,
+            "max_accel": 42.317396482210185,
+            "speed_limit": 4.506792583479423,
+            "angle_noise": 0.0007862263929989655,
+            "velocity_noise": 0.08525947158839615
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.732000000000001,
+          "max_arm_deg": 79.75461735726492,
+          "action_latency_ms": {
+            "p50": 0.16491650058014784,
+            "p99": 0.43128673885803465,
+            "max": 0.6895080005051568
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_17",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.5501523703823233,
+            "inertia_factor": 0.9120570196187364,
+            "delay_s": 0.01791477735854166,
+            "max_accel": 44.68430142192632,
+            "speed_limit": 4.268814684413884,
+            "angle_noise": 0.005757852945625765,
+            "velocity_noise": 0.281730933935752
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.094,
+          "max_arm_deg": 52.80696981663417,
+          "action_latency_ms": {
+            "p50": 0.16622899966023397,
+            "p99": 0.41157214811391907,
+            "max": 2.163248002034379
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_18",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.2653023883426822,
+            "inertia_factor": 1.032839032182526,
+            "delay_s": 0.028297734737369164,
+            "max_accel": 46.116220892901715,
+            "speed_limit": 4.881695103102375,
+            "angle_noise": 0.009811514545804971,
+            "velocity_noise": 0.09368158993595706
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 12.282,
+          "max_arm_deg": 54.258979033823216,
+          "action_latency_ms": {
+            "p50": 0.1632604999031173,
+            "p99": 0.4052251624307247,
+            "max": 1.2475130024540704
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "unseen_19",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 0.9826970806585859,
+            "inertia_factor": 1.0898978359785154,
+            "delay_s": 0.029075017304172862,
+            "max_accel": 40.13843278905495,
+            "speed_limit": 4.010539151400525,
+            "angle_noise": 0.0008222355150457938,
+            "velocity_noise": 0.14697322809365979
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 11.922,
+          "max_arm_deg": 63.54701917638988,
+          "action_latency_ms": {
+            "p50": 0.16445200162706897,
+            "p99": 0.40248385197628556,
+            "max": 0.6674739997833967
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "nominal_exact",
+          "settings": {},
+          "episodes": 1,
+          "successes": 1,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 13.2,
+          "max_arm_deg": 54.93430590029375,
+          "action_latency_ms": {
+            "p50": 0.15879449892963748,
+            "p99": 0.4273311406723222,
+            "max": 0.5402349997893907
+          },
+          "action_deadline_misses": 0
+        },
+        {
+          "algorithm": "sac",
+          "case": "original_combined",
+          "settings": {
+            "varied_start": true,
+            "friction_factor": 1.5,
+            "inertia_factor": 1.1,
+            "delay_s": 0.02,
+            "angle_noise": 0.003,
+            "velocity_noise": 0.1,
+            "max_accel": 45.0,
+            "speed_limit": 4.5
+          },
+          "episodes": 10,
+          "successes": 10,
+          "safety_stops": 0,
+          "mean_longest_balance_s": 10.728,
+          "max_arm_deg": 63.486048755025024,
+          "action_latency_ms": {
+            "p50": 0.16465149928990286,
+            "p99": 0.42964767835655954,
+            "max": 0.6081909996282775
+          },
+          "action_deadline_misses": 0
+        }
+      ]
+    }
+  },
+  "preserved_policy": "docs/results/sac_randomized_policy.zip",
+  "limitations": "One training seed; synthetic bounds; final tests were not used for checkpoint selection. Success rates describe these sampled simulator cases only."
+}

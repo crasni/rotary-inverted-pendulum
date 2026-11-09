@@ -1,0 +1,185 @@
+{
+  "source_dir": "runs/envelope_01",
+  "trace_files": [
+    "v1p5_a25.npz"
+  ],
+  "hardware_profile": "drv8825_32",
+  "fixed_terms": {
+    "gravity_w2_s_2": 150.5188466925682,
+    "viscous_damping_s_1": 0.21878971092243057,
+    "arm_length_m": 0.065,
+    "unit_sim_geometric_coupling": 0.9973216141709411,
+    "tip_mass": {}
+  },
+  "selected_window_max_samples": 7,
+  "selected_fit": {
+    "savgol_window_max_samples": 7,
+    "global_fit": {
+      "tangential_coupling": -0.9225786687174052,
+      "centrifugal_coupling": -36.62138793697727,
+      "constant_bias_rad_s2": 1.0774722748830623,
+      "r2": 0.8570259253669489,
+      "samples_used": 67,
+      "sim_coupling_gain": 0.9250563264733126
+    },
+    "positive_accel_fit": {
+      "tangential_coupling": -1.4973027842116002,
+      "centrifugal_coupling": -34.79514203462853,
+      "constant_bias_rad_s2": 17.735660256687808,
+      "r2": 0.6288245536765331,
+      "samples_used": 31,
+      "sim_coupling_gain": 1.5013239088940091
+    },
+    "negative_accel_fit": {
+      "tangential_coupling": -1.4067468616473495,
+      "centrifugal_coupling": -48.992321464887155,
+      "constant_bias_rad_s2": -14.555959046555344,
+      "r2": 0.6481192262260083,
+      "samples_used": 36,
+      "sim_coupling_gain": 1.410524791259796
+    },
+    "directional_half_range_fraction": 0.031182635838674262
+  },
+  "window_sensitivity": [
+    {
+      "savgol_window_max_samples": 5,
+      "global_fit": {
+        "tangential_coupling": -0.8908124468635252,
+        "centrifugal_coupling": -29.691940796703417,
+        "constant_bias_rad_s2": 1.6351844825324513,
+        "r2": 0.7585168547452423,
+        "samples_used": 75,
+        "sim_coupling_gain": 0.8932047939260241
+      },
+      "positive_accel_fit": {
+        "tangential_coupling": -1.1687894922215254,
+        "centrifugal_coupling": -46.09082530404433,
+        "constant_bias_rad_s2": 10.553697773983187,
+        "r2": 0.47854525639707357,
+        "samples_used": 35,
+        "sim_coupling_gain": 1.1719283685565394
+      },
+      "negative_accel_fit": {
+        "tangential_coupling": -1.1941928795456933,
+        "centrifugal_coupling": -39.98465802686974,
+        "constant_bias_rad_s2": -8.590911131872339,
+        "r2": 0.4775056503468722,
+        "samples_used": 40,
+        "sim_coupling_gain": 1.197399978680306
+      },
+      "directional_half_range_fraction": 0.010750561505530503
+    },
+    {
+      "savgol_window_max_samples": 7,
+      "global_fit": {
+        "tangential_coupling": -0.9225786687174052,
+        "centrifugal_coupling": -36.62138793697727,
+        "constant_bias_rad_s2": 1.0774722748830623,
+        "r2": 0.8570259253669489,
+        "samples_used": 67,
+        "sim_coupling_gain": 0.9250563264733126
+      },
+      "positive_accel_fit": {
+        "tangential_coupling": -1.4973027842116002,
+        "centrifugal_coupling": -34.79514203462853,
+        "constant_bias_rad_s2": 17.735660256687808,
+        "r2": 0.6288245536765331,
+        "samples_used": 31,
+        "sim_coupling_gain": 1.5013239088940091
+      },
+      "negative_accel_fit": {
+        "tangential_coupling": -1.4067468616473495,
+        "centrifugal_coupling": -48.992321464887155,
+        "constant_bias_rad_s2": -14.555959046555344,
+        "r2": 0.6481192262260083,
+        "samples_used": 36,
+        "sim_coupling_gain": 1.410524791259796
+      },
+      "directional_half_range_fraction": 0.031182635838674262
+    },
+    {
+      "savgol_window_max_samples": 9,
+      "global_fit": {
+        "tangential_coupling": -0.9208244324195729,
+        "centrifugal_coupling": -45.60694564198646,
+        "constant_bias_rad_s2": 0.6010915247722435,
+        "r2": 0.9200861901304309,
+        "samples_used": 59,
+        "sim_coupling_gain": 0.9232973790355891
+      },
+      "positive_accel_fit": {
+        "tangential_coupling": -1.7328839330007493,
+        "centrifugal_coupling": -13.52791514128973,
+        "constant_bias_rad_s2": 22.466621195787734,
+        "r2": 0.7632436349375602,
+        "samples_used": 27,
+        "sim_coupling_gain": 1.737537729432717
+      },
+      "negative_accel_fit": {
+        "tangential_coupling": -1.485982699487108,
+        "centrifugal_coupling": -56.93101606606407,
+        "constant_bias_rad_s2": -17.196874348284396,
+        "r2": 0.7801260707226733,
+        "samples_used": 32,
+        "sim_coupling_gain": 1.4899734231894528
+      },
+      "directional_half_range_fraction": 0.0767043999343371
+    },
+    {
+      "savgol_window_max_samples": 11,
+      "global_fit": {
+        "tangential_coupling": -0.8996751802533608,
+        "centrifugal_coupling": -50.80547166901794,
+        "constant_bias_rad_s2": 0.32544015090140366,
+        "r2": 0.9502398826611554,
+        "samples_used": 51,
+        "sim_coupling_gain": 0.9020913288851637
+      },
+      "positive_accel_fit": {
+        "tangential_coupling": -1.687089279274349,
+        "centrifugal_coupling": -6.691683136193705,
+        "constant_bias_rad_s2": 20.807424933811905,
+        "r2": 0.8213713370139899,
+        "samples_used": 23,
+        "sim_coupling_gain": 1.6916200905530376
+      },
+      "negative_accel_fit": {
+        "tangential_coupling": -1.4473517291914473,
+        "centrifugal_coupling": -57.75641374846432,
+        "constant_bias_rad_s2": -16.436187712924855,
+        "r2": 0.8421525845398445,
+        "samples_used": 28,
+        "sim_coupling_gain": 1.4512387063771897
+      },
+      "directional_half_range_fraction": 0.07648494562041394
+    },
+    {
+      "savgol_window_max_samples": 15,
+      "global_fit": {
+        "tangential_coupling": -0.8783417394031481,
+        "centrifugal_coupling": -47.07186755104672,
+        "constant_bias_rad_s2": 0.3383610926629851,
+        "r2": 0.9666011425724097,
+        "samples_used": 35,
+        "sim_coupling_gain": 0.8807005953975044
+      },
+      "positive_accel_fit": {
+        "tangential_coupling": -1.656217040180922,
+        "centrifugal_coupling": 0.08349130665084559,
+        "constant_bias_rad_s2": 19.716773573131288,
+        "r2": 0.7940507255089473,
+        "samples_used": 15,
+        "sim_coupling_gain": 1.6606649416273918
+      },
+      "negative_accel_fit": {
+        "tangential_coupling": -1.5199414302971481,
+        "centrifugal_coupling": -46.54641343534587,
+        "constant_bias_rad_s2": -18.514409412226936,
+        "r2": 0.9019730226383694,
+        "samples_used": 20,
+        "sim_coupling_gain": 1.5240233528485725
+      },
+      "directional_half_range_fraction": 0.04290579678263409
+    }
+  ]
+}

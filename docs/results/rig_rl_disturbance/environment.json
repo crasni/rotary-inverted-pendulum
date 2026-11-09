@@ -1,0 +1,11 @@
+{
+  "python": "3.12.15",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "stable-baselines3": "2.9.0",
+    "numpy": "2.5.4",
+    "gymnasium": "1.4.0",
+    "mujoco": "3.16.0"
+  }
+}

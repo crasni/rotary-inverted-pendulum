@@ -1,0 +1,32 @@
+{
+  "3": {
+    "windows": 20,
+    "raw_rms_deg": 7.19,
+    "existing_blend_rms_deg": 7.73,
+    "observer_rms_deg": 5.94
+  },
+  "9": {
+    "windows": 13,
+    "raw_rms_deg": 10.05,
+    "existing_blend_rms_deg": 9.96,
+    "observer_rms_deg": 7.45
+  },
+  "12": {
+    "windows": 5,
+    "raw_rms_deg": 14.84,
+    "existing_blend_rms_deg": 14.3,
+    "observer_rms_deg": 14.62
+  },
+  "13": {
+    "windows": 19,
+    "raw_rms_deg": 18.24,
+    "existing_blend_rms_deg": 19.45,
+    "observer_rms_deg": 15.79
+  },
+  "14": {
+    "windows": 14,
+    "raw_rms_deg": 17.67,
+    "existing_blend_rms_deg": 17.95,
+    "observer_rms_deg": 16.62
+  }
+}

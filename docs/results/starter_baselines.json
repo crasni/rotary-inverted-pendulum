@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-16",
+  "start": "hanging",
+  "seed": 0,
+  "episodes_per_algorithm": 1,
+  "duration_s": 15,
+  "contract": {
+    "profile": {
+      "hz": 50,
+      "max_accel": 50.0,
+      "arm_limit_deg": 100.0,
+      "arm_speed_limit": 6.0,
+      "history": 4,
+      "microsteps": 32,
+      "baud": 500000
+    },
+    "action_mode": "accel",
+    "params_sha256": "9b972ab14d3f1ae9697b78dc8a78fea13081091a0af3986e421338c02ffd4c7d"
+  },
+  "limitation": "Synthetic starter parameters; exact hanging reset is deterministic; no hardware or robustness validation.",
+  "results": {
+    "pid": {
+      "stop_reason": "duration",
+      "samples": 750,
+      "success": true,
+      "balanced_fraction": 0.7733333333333333,
+      "longest_balance_s": 11.6,
+      "max_arm_deg": 84.6628111615275,
+      "final_theta_deg": -0.03324596648174604
+    },
+    "lqr": {
+      "stop_reason": "duration",
+      "samples": 750,
+      "success": true,
+      "balanced_fraction": 0.7733333333333333,
+      "longest_balance_s": 11.6,
+      "max_arm_deg": 84.6628111615275,
+      "final_theta_deg": -1.0279849251522193
+    },
+    "ilqr": {
+      "stop_reason": "duration",
+      "samples": 750,
+      "success": true,
+      "balanced_fraction": 0.7733333333333333,
+      "longest_balance_s": 11.6,
+      "max_arm_deg": 84.6628111615275,
+      "final_theta_deg": 0.7487442868238712
+    },
+    "mpc": {
+      "stop_reason": "duration",
+      "samples": 750,
+      "success": true,
+      "balanced_fraction": 0.7733333333333333,
+      "longest_balance_s": 11.6,
+      "max_arm_deg": 84.6628111615275,
+      "final_theta_deg": -0.16054019735788408
+    }
+  }
+}

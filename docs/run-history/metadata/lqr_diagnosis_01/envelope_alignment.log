@@ -1,0 +1,3 @@
+window 0.02 [lag ms, coupling, train RMSE, hold RMSE, counts] [(0.0, 0.952, 0.667, 0.782, 277, 91), (8.0, 1.035, 0.614, 0.774, 277, 91)]
+window 0.032 [lag ms, coupling, train RMSE, hold RMSE, counts] [(0.0, 0.967, 0.798, 0.953, 226, 78), (10.0, 1.087, 0.717, 0.897, 222, 77)]
+window 0.044 [lag ms, coupling, train RMSE, hold RMSE, counts] [(0.0, 0.983, 0.913, 1.008, 197, 70), (10.0, 1.091, 0.796, 0.912, 193, 69)]

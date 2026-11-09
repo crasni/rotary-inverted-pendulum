@@ -1,0 +1,1 @@
+First standalone SAC pass. Run used runs/sac_finetune/P1/policy.zip, promoted unchanged as rig_rl_disturbance/sac_lqr_pretrained/policy.zip (sha256 396595023ece9ba198cd9e45d9153b1bab1d76fd683ecd1dc1ca8d290fd10929). No video recorded.

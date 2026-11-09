@@ -1,0 +1,105 @@
+{
+  "episodes_per_batch": 24,
+  "batches": {
+    "343421": {
+      "mode": "none",
+      "outcome": {
+        "recenter_lqr": {
+          "passes": 20,
+          "passes_with_full_final_10s_lqr": 20,
+          "arm_guard_stops": 0,
+          "releases": 2,
+          "mean_clipped_commands": 6.46,
+          "max_arm_deg": 85.68,
+          "mean_outward_commands_near_rail": 0.21,
+          "max_act_ms": 0.829
+        },
+        "observed_lqr": {
+          "passes": 20,
+          "passes_with_full_final_10s_lqr": 20,
+          "arm_guard_stops": 0,
+          "releases": 2,
+          "mean_clipped_commands": 5.46,
+          "max_arm_deg": 85.68,
+          "mean_outward_commands_near_rail": 0.21,
+          "max_act_ms": 0.584
+        }
+      }
+    },
+    "427665": {
+      "mode": "none",
+      "outcome": {
+        "recenter_lqr": {
+          "passes": 19,
+          "passes_with_full_final_10s_lqr": 19,
+          "arm_guard_stops": 0,
+          "releases": 1,
+          "mean_clipped_commands": 11.5,
+          "max_arm_deg": 83.88,
+          "mean_outward_commands_near_rail": 0.04,
+          "max_act_ms": 0.588
+        },
+        "observed_lqr": {
+          "passes": 19,
+          "passes_with_full_final_10s_lqr": 19,
+          "arm_guard_stops": 0,
+          "releases": 1,
+          "mean_clipped_commands": 18.58,
+          "max_arm_deg": 83.88,
+          "mean_outward_commands_near_rail": 0.04,
+          "max_act_ms": 0.542
+        }
+      }
+    },
+    "940413": {
+      "mode": "extra",
+      "outcome": {
+        "recenter_lqr": {
+          "passes": 16,
+          "passes_with_full_final_10s_lqr": 16,
+          "arm_guard_stops": 0,
+          "releases": 9,
+          "mean_clipped_commands": 58.88,
+          "max_arm_deg": 85.02,
+          "mean_outward_commands_near_rail": 6.88,
+          "max_act_ms": 0.812
+        },
+        "observed_lqr": {
+          "passes": 16,
+          "passes_with_full_final_10s_lqr": 16,
+          "arm_guard_stops": 0,
+          "releases": 10,
+          "mean_clipped_commands": 47.75,
+          "max_arm_deg": 84.72,
+          "mean_outward_commands_near_rail": 6.75,
+          "max_act_ms": 0.709
+        }
+      }
+    },
+    "929133": {
+      "mode": "extra",
+      "outcome": {
+        "recenter_lqr": {
+          "passes": 15,
+          "passes_with_full_final_10s_lqr": 15,
+          "arm_guard_stops": 0,
+          "releases": 5,
+          "mean_clipped_commands": 57.92,
+          "max_arm_deg": 84.43,
+          "mean_outward_commands_near_rail": 8.38,
+          "max_act_ms": 0.808
+        },
+        "observed_lqr": {
+          "passes": 15,
+          "passes_with_full_final_10s_lqr": 15,
+          "arm_guard_stops": 0,
+          "releases": 6,
+          "mean_clipped_commands": 49.38,
+          "max_arm_deg": 84.6,
+          "mean_outward_commands_near_rail": 8.42,
+          "max_act_ms": 1.055
+        }
+      }
+    }
+  }
+}

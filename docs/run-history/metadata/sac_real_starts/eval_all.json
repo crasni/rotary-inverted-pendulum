@@ -1,0 +1,82 @@
+{
+  "docs/results/rig_rl_disturbance/sac_long/policy.zip": {
+    "real_30": {
+      "full_strength": 0.30812907225396524,
+      "big_swings": 0.2689628727551131,
+      "held_1s": 0.5531914893617021,
+      "n": 235
+    },
+    "hang_30": {
+      "pass": 6,
+      "full_strength": 0.4947430743254346
+    },
+    "hang_36": {
+      "pass": 6,
+      "full_strength": 0.21909726923738956
+    },
+    "hang_42": {
+      "pass": 0,
+      "full_strength": 0.44460713844033145
+    }
+  },
+  "runs/sac_real_starts/A/policy.zip": {
+    "real_30": {
+      "full_strength": 0.10797878869843826,
+      "big_swings": 0.11569390959697921,
+      "held_1s": 0.5319148936170213,
+      "n": 235
+    },
+    "hang_30": {
+      "pass": 6,
+      "full_strength": 0.004177509583038276
+    },
+    "hang_36": {
+      "pass": 6,
+      "full_strength": 0.0051846571805148345
+    },
+    "hang_42": {
+      "pass": 0,
+      "full_strength": 0.32176251273298767
+    }
+  },
+  "runs/sac_real_starts/D/policy.zip": {
+    "real_30": {
+      "full_strength": 0.09965160394941042,
+      "big_swings": 0.12472145969511095,
+      "held_1s": 0.5063829787234042,
+      "n": 235
+    },
+    "hang_30": {
+      "pass": 6,
+      "full_strength": 0.017431933999765403
+    },
+    "hang_36": {
+      "pass": 6,
+      "full_strength": 0.0
+    },
+    "hang_42": {
+      "pass": 6,
+      "full_strength": 0.007631708517971442
+    }
+  },
+  "runs/sac_real_starts/E/policy.zip": {
+    "real_30": {
+      "full_strength": 0.1536698224997744,
+      "big_swings": 0.203547038123153,
+      "held_1s": 0.48936170212765956,
+      "n": 235
+    },
+    "hang_30": {
+      "pass": 6,
+      "full_strength": 0.03509149864249394
+    },
+    "hang_36": {
+      "pass": 6,
+      "full_strength": 0.0
+    },
+    "hang_42": {
+      "pass": 6,
+      "full_strength": 0.026901182661129286
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "lqr": {
+    "success": 23,
+    "n": 48,
+    "arm_guard": 0,
+    "errors": [],
+    "median_max_arm_deg": 47.849999999999994,
+    "act_ms_mean": 0.01,
+    "act_ms_max": 0.21
+  }
+}

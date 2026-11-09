@@ -1,0 +1,30 @@
+{
+  "checkpoint": "runs/sac_finetune/V1/policy.zip",
+  "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+  "stage": "lqr_balance",
+  "stage_parameters": {
+    "lift": "lqr",
+    "hold_s": [
+      0.8,
+      1.5
+    ],
+    "theta_deg": 10,
+    "pen_speed": 2.0,
+    "arm_deg": 30,
+    "arm_speed": 2.5,
+    "hanging_fraction": 0.0
+  },
+  "deterministic": true,
+  "episodes_requested": 4,
+  "episode_seconds": 8.0,
+  "seed": 0,
+  "target": "/dev/ttyUSB0",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "started": "2026-11-07T22:45:05",
+  "stop_reason": "completed",
+  "episodes_completed": 4
+}

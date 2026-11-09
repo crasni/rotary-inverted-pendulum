@@ -1,0 +1,30 @@
+{
+  "profile": "drv8825_32",
+  "microsteps": 32,
+  "baud": 500000,
+  "results": [
+    {
+      "speed_rad_s": 1.5,
+      "accel_rad_s2": 25.0,
+      "cycles": 2,
+      "trace": "v1p5_a25.npz",
+      "passed": true,
+      "measured_peak_speed_rad_s": 2.557903528213501,
+      "measured_max_abs_position_rad": 0.25819966197013855
+    }
+  ],
+  "complete": true,
+  "recommendation_source": {
+    "speed_rad_s": 1.5,
+    "accel_rad_s2": 25.0,
+    "cycles": 2,
+    "trace": "v1p5_a25.npz",
+    "passed": true,
+    "measured_peak_speed_rad_s": 2.557903528213501,
+    "measured_max_abs_position_rad": 0.25819966197013855
+  },
+  "validated_speed_rad_s": 1.5,
+  "recommended_speed_rad_s": 1.2000000000000002,
+  "validated_accel_rad_s2": 25.0,
+  "recommended_accel_rad_s2": 20.0
+}

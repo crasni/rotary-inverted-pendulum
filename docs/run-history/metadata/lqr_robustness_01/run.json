@@ -1,0 +1,42 @@
+{
+  "args": {
+    "algorithms": [
+      "lqr"
+    ],
+    "params": "configs/my_rig.json",
+    "config": "configs/lqr_my_rig_guarded.json",
+    "checkpoint": null,
+    "rigs": 24,
+    "workers": 3,
+    "start": "hanging",
+    "duration": 15.0,
+    "seed": 185,
+    "output": "runs/lqr_robustness_01"
+  },
+  "ranges": {
+    "mass": [
+      0.85,
+      1.15
+    ],
+    "inertia": [
+      0.85,
+      1.15
+    ],
+    "com": [
+      0.9,
+      1.1
+    ],
+    "viscous": [
+      0.3333333333333333,
+      3.0
+    ],
+    "coulomb": [
+      0.2,
+      5.0
+    ],
+    "delay_s": [
+      0.005,
+      0.03
+    ]
+  }
+}

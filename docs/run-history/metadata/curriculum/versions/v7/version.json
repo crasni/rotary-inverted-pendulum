@@ -1,0 +1,128 @@
+{
+  "method": "SAC on simulator experience (V1's training simulator) with each batch 50% on-rig policy ticks; no imitation, no other controllers' data",
+  "parent": "runs/curriculum/versions/v3b/policy.zip",
+  "parent_sha256": "e60e73269cf09154a5334f2dcfae7d649078c8ad07dc9fdaca25a68eb75ce50c",
+  "batches": [
+    {
+      "batch": "runs/curriculum/b03_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 2
+    },
+    {
+      "batch": "runs/curriculum/b04_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 9
+    },
+    {
+      "batch": "runs/curriculum/b05_v1_lqrbalance_train",
+      "checkpoint_sha256": "d27a50c6dfa3666a753d105c917beaa59084fd0b2450085b22ac683056650a66",
+      "stage": "lqr_balance",
+      "deterministic": false,
+      "episodes": 10
+    },
+    {
+      "batch": "runs/curriculum/e05_v2m2_lqrbalance_det",
+      "checkpoint_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+      "stage": "lqr_balance",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/e06_v2m2_hanging_det",
+      "checkpoint_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/e06_v2m2_hanging_det_2",
+      "checkpoint_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/b06_v2m2_hanging_train",
+      "checkpoint_sha256": "bc40824aed2462dc60c2e58d04b281b951f110d04c13fb720210ac4026b82737",
+      "stage": "hanging",
+      "deterministic": false,
+      "episodes": 10
+    },
+    {
+      "batch": "runs/curriculum/e07_v3_hanging_det",
+      "checkpoint_sha256": "f04d0be1ab5abf87bf6901184bf77a2cefc373c547acde843d9c9d2cec5df29f",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/e08_v3b_hanging_det",
+      "checkpoint_sha256": "e60e73269cf09154a5334f2dcfae7d649078c8ad07dc9fdaca25a68eb75ce50c",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/e08_v3b_hanging_det_2",
+      "checkpoint_sha256": "e60e73269cf09154a5334f2dcfae7d649078c8ad07dc9fdaca25a68eb75ce50c",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/b07_v3b_hanging_train",
+      "checkpoint_sha256": "e60e73269cf09154a5334f2dcfae7d649078c8ad07dc9fdaca25a68eb75ce50c",
+      "stage": "hanging",
+      "deterministic": false,
+      "episodes": 10
+    },
+    {
+      "batch": "runs/curriculum/b08_v3b_hanging_train",
+      "checkpoint_sha256": "e60e73269cf09154a5334f2dcfae7d649078c8ad07dc9fdaca25a68eb75ce50c",
+      "stage": "hanging",
+      "deterministic": false,
+      "episodes": 10
+    },
+    {
+      "batch": "runs/curriculum/e09_v5_hanging_det",
+      "checkpoint_sha256": "159778e4c547ec4a865cf122f2f3b30da2826f0daec592b77d846701250fa259",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "batch": "runs/curriculum/e10_v6b_hanging_det",
+      "checkpoint_sha256": "0888e24dc345034d0267a15534f07d6d99aeb238e0577bbdbc729a763870361d",
+      "stage": "hanging",
+      "deterministic": true,
+      "episodes": 4
+    },
+    {
+      "anchor_min_deg": 30.0,
+      "anchor_states": 29438,
+      "anchor_steps": 2
+    },
+    {
+      "rig_max_theta_deg": 45.0,
+      "kept": 25601
+    },
+    {
+      "catch_oversample": 2,
+      "catch_ticks": 13935
+    },
+    {
+      "sim_min_deg": 45.0
+    }
+  ],
+  "transitions": 39536,
+  "sim_steps": 40000,
+  "rig_fraction": 0.5,
+  "learning_rate": 0.0001,
+  "seed": 3,
+  "policy_sha256": "b4ab0f4355cb4cfbcc63e365ad3f28069d0c72b4ccd39c21d528be129f8f74c0",
+  "created": "2026-11-08T04:24:26"
+}

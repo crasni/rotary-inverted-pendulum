@@ -1,0 +1,13 @@
+{
+  "waveform": "chirp",
+  "scale": 0.003,
+  "command_hz": 50,
+  "sample_hz": 200.0,
+  "params": "configs/my_rig.json",
+  "sim_only": false,
+  "complete": true,
+  "replay_tick_s": 0.005,
+  "angle_frame": "firmware hanging-zero, no sign inversion",
+  "motor_rmse_rad": 0.32932689878874016,
+  "pendulum_wrapped_rmse_rad": 0.0019832359805601633
+}

@@ -1,0 +1,12 @@
+{
+  "algorithm": "sac",
+  "seed": 73,
+  "source": "docs/results/sac_randomized_policy.zip",
+  "initial_steps": 1200000,
+  "final_steps": 1275000,
+  "params": "configs/my_rig.json",
+  "rig": {
+    "delay_s": 0.018,
+    "speed_limit": 4.4
+  }
+}

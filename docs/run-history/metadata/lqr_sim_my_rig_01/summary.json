@@ -1,0 +1,11 @@
+[
+  {
+    "stop_reason": "arm_guard",
+    "samples": 110,
+    "success": false,
+    "balanced_fraction": 0.0,
+    "longest_balance_s": 0.0,
+    "max_arm_deg": 104.51386242711129,
+    "final_theta_deg": -31.64607983800622
+  }
+]

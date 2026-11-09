@@ -1,0 +1,422 @@
+{
+ "case": "combined",
+ "seeds": [
+  94000,
+  94009
+ ],
+ "duration_s": 15,
+ "params": "configs/my_rig.json",
+ "config": "configs/sac_my_rig.json",
+ "methods": {
+  "ppo": [
+   {
+    "checkpoint": "ppo_2957736_steps.zip",
+    "steps": 2957736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_2982736_steps.zip",
+    "steps": 2982736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3007736_steps.zip",
+    "steps": 3007736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3032736_steps.zip",
+    "steps": 3032736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3057736_steps.zip",
+    "steps": 3057736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3082736_steps.zip",
+    "steps": 3082736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3107736_steps.zip",
+    "steps": 3107736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3132736_steps.zip",
+    "steps": 3132736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3157736_steps.zip",
+    "steps": 3157736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3182736_steps.zip",
+    "steps": 3182736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3207736_steps.zip",
+    "steps": 3207736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3232736_steps.zip",
+    "steps": 3232736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3257736_steps.zip",
+    "steps": 3257736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3282736_steps.zip",
+    "steps": 3282736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3307736_steps.zip",
+    "steps": 3307736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3332736_steps.zip",
+    "steps": 3332736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3357736_steps.zip",
+    "steps": 3357736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3382736_steps.zip",
+    "steps": 3382736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3407736_steps.zip",
+    "steps": 3407736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3432736_steps.zip",
+    "steps": 3432736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3457736_steps.zip",
+    "steps": 3457736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3482736_steps.zip",
+    "steps": 3482736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3507736_steps.zip",
+    "steps": 3507736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3532736_steps.zip",
+    "steps": 3532736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3557736_steps.zip",
+    "steps": 3557736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3582736_steps.zip",
+    "steps": 3582736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3607736_steps.zip",
+    "steps": 3607736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3632736_steps.zip",
+    "steps": 3632736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3657736_steps.zip",
+    "steps": 3657736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3682736_steps.zip",
+    "steps": 3682736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3707736_steps.zip",
+    "steps": 3707736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3732736_steps.zip",
+    "steps": 3732736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3757736_steps.zip",
+    "steps": 3757736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3782736_steps.zip",
+    "steps": 3782736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3807736_steps.zip",
+    "steps": 3807736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3832736_steps.zip",
+    "steps": 3832736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3857736_steps.zip",
+    "steps": 3857736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3882736_steps.zip",
+    "steps": 3882736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3907736_steps.zip",
+    "steps": 3907736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "ppo_3932736_steps.zip",
+    "steps": 3932736,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "policy.zip",
+    "steps": 3940352,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   }
+  ],
+  "dqn": [
+   {
+    "checkpoint": "dqn_700000_steps.zip",
+    "steps": 700000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_725000_steps.zip",
+    "steps": 725000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_750000_steps.zip",
+    "steps": 750000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_775000_steps.zip",
+    "steps": 775000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_800000_steps.zip",
+    "steps": 800000,
+    "passes": 8,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_825000_steps.zip",
+    "steps": 825000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_850000_steps.zip",
+    "steps": 850000,
+    "passes": 6,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_875000_steps.zip",
+    "steps": 875000,
+    "passes": 8,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_900000_steps.zip",
+    "steps": 900000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_925000_steps.zip",
+    "steps": 925000,
+    "passes": 0,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_950000_steps.zip",
+    "steps": 950000,
+    "passes": 9,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_975000_steps.zip",
+    "steps": 975000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_1000000_steps.zip",
+    "steps": 1000000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_1025000_steps.zip",
+    "steps": 1025000,
+    "passes": 10,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_1050000_steps.zip",
+    "steps": 1050000,
+    "passes": 8,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "dqn_1075000_steps.zip",
+    "steps": 1075000,
+    "passes": 0,
+    "episodes": 10,
+    "safety_stops": 0
+   },
+   {
+    "checkpoint": "policy.zip",
+    "steps": 1075000,
+    "passes": 0,
+    "episodes": 10,
+    "safety_stops": 0
+   }
+  ]
+ }
+}

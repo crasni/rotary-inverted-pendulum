@@ -1,0 +1,22 @@
+{
+  "seed": 0,
+  "total_steps": 300000,
+  "learning_rate": 0.0003,
+  "device": "cuda",
+  "checkpoint_every": 100000,
+  "sac": {
+    "learning_starts": 10000,
+    "buffer_size": 200000,
+    "batch_size": 256,
+    "train_freq": 4,
+    "gradient_steps": 1,
+    "policy_kwargs": {
+      "net_arch": [
+        128,
+        128
+      ]
+    }
+  },
+  "normalize_observations": true,
+  "reward_scale": 0.2
+}

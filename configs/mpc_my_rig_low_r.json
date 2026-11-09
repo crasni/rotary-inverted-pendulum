@@ -1,0 +1,28 @@
+{
+  "arm_command_limits": {
+    "delay_s": 0.015,
+    "speed_rad_s": 4.7,
+    "travel_rad": 1.42
+  },
+  "mpc": {
+    "swing_up": "sac",
+    "approach_brake_speed_rad_s": 4.5,
+    "arm_recenter_rate_rad_s": 0.35,
+    "balance_observer": true,
+    "balance_velocity_blend": 0.45,
+    "capture_angle": 0.45,
+    "capture_speed": 6.0,
+    "capture_arm_angle": 0.8,
+    "capture_arm_speed": 3.0,
+    "capture_max_action": 1.0,
+    "delay": 0.015,
+    "pendulum_input_delay_s": 0.025,
+    "r": 3.0,
+    "capture_r": 30.0,
+    "horizon": 8,
+    "max_iterations": 20,
+    "solver_ftol": 1e-08,
+    "arm_constraint_rad": 1.42,
+    "arm_speed_constraint_rad_s": 4.7
+  }
+}

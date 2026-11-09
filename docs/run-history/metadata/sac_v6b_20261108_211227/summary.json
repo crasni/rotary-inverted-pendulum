@@ -1,0 +1,11 @@
+[
+  {
+    "stop_reason": "duration",
+    "samples": 750,
+    "success": false,
+    "balanced_fraction": 0.3333333333333333,
+    "longest_balance_s": 1.4,
+    "max_arm_deg": 78.41250461528149,
+    "final_theta_deg": 155.46159737918939
+  }
+]

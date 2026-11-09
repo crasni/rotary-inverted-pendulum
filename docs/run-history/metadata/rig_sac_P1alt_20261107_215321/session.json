@@ -1,0 +1,29 @@
+{
+  "checkpoint": "runs/sac_finetune/P1/policy.zip",
+  "output": "runs/rig_sac_P1alt_20261107_215321",
+  "learn": "False",
+  "evaluate": "True",
+  "port": "/dev/ttyUSB0",
+  "sim": "False",
+  "realtime": "False",
+  "episodes": "12",
+  "episode_seconds": "15.0",
+  "alternate": "True",
+  "eval_every": "5",
+  "utd": "1.0",
+  "prior_fraction": "0.5",
+  "learning_rate": "0.0001",
+  "warmup_episodes": "1",
+  "bc_ratio": "0.0",
+  "bc_learning_rate": "0.0001",
+  "critic_warmup": "3000",
+  "buffer_size": "300000",
+  "learner_threads": "2",
+  "arm_limits": [
+    0.018,
+    4.4,
+    1.35
+  ],
+  "stop_reason": "completed",
+  "episodes_completed": 12
+}
